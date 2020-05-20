@@ -1,0 +1,126 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ESP32 modules recommended by Espressif &#8212; iocafe 0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="esp32-modules-recommended-by-espressif">
+<h1>ESP32 modules recommended by Espressif<a class="headerlink" href="#esp32-modules-recommended-by-espressif" title="Permalink to this headline">¶</a></h1>
+<p>﻿https://www.espressif.com/en/products/hardware/modules</p>
+<p>notes 27.3.2020/pekka</p>
+<p>Espressif recommends ESP32 chips listed below. There are many versions on the market, and for production use it is important to check exact match of chip type to avoid potential for “difficult to solve” problems on field.</p>
+<ul class="simple">
+<li>ESP32-WROOM-32E integrates ESP32-D0WD-V3, with higher stability and safety performance.</li>
+<li>ESP32-WROOM-32UE integrates ESP32-D0WD-V3, with higher stability and safety performance.</li>
+<li>ESP32-WROVER-E integrates ESP32-D0WD-V3, with higher stability and safety performance.</li>
+<li>ESP32-WROVER-IE integrates ESP32-D0WD-V3, with higher stability and safety performance.</li>
+</ul>
+<p>The difference is that wrover integrates directly with sofware debugger, just plug USB cable in and you should be ready to test it. Wroom required external debugger, ESP prog. Wiring the external debugger reuires a bot of precision and is not doable on field. But wrover is more expensive.</p>
+<p>My view is to start with Wrover. In beginnig it is likely that some bugs need to be worked out, and it is easier with this one. Later on, when product is mature, it can be switched to wroom.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">iocafe</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introduction.html">introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../get_started/get_started.html">get started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/examples.html">examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../implementation/implementation.html">library implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../platform_abstraction/platform_abstraction.html">platform abstraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hw_io_abstraction/hw_io_abstraction.html">hardware IO abstraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/extensions.html">extension libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_tools/dev_tools.html">development tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../micro_controllers.html">microcontroller specific</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../demos/demos.html">demo projects</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Pekka Lehtikoski, Markku Nissinen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/micro_controllers/esp32/200327-ESP32-modules-recommended-by-espressif.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -11,14 +11,15 @@ IOCOM library
    :caption: Contents:
 
    introduction/introduction
-   get_started/get_started
-   examples/examples
-   api/api_reference
+   get-started/get-started
+   tutorials/tutorials
+   api-reference/api-reference
    implementation/implementation
-   platform_abstraction/platform_abstraction
-   hw_io_abstraction/hw_io_abstraction
-   dev_tools/dev_tools
-   micro_controllers/micro_controllers
+   platform-abstraction/platform-abstraction
+   hw-io-abstraction/hw-io-abstraction
+   extensions/extensions
+   dev-tools/dev-tools
+   micro-controllers/micro-controllers
    demos/demos
 
 Indices and tables
