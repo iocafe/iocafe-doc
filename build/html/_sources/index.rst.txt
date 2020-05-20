@@ -23,9 +23,7 @@ IOCOM library
    micro-controllers/micro-controllers
    examples/examples
 
-Indices and tables
+Search
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
