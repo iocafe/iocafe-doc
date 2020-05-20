@@ -72,6 +72,34 @@ Linux development. Distribution is Ubuntu 20.04 DDE desktop remix.</li>
 <p>To make sure that build, uploading, debugging and hardware really work, build and test example projects which
 come with the development environment. Build and test expecially some socket client. Development environments
 come usually with very good documentation and examples.</p>
+</div>
+<div class="section" id="notes-about-uploading-the-program">
+<h2>Notes about uploading the program<a class="headerlink" href="#notes-about-uploading-the-program" title="Permalink to this headline">¶</a></h2>
+<p>During development, code is usually uploaded to micro-controller trough USB, UART (TTL level serial) or JTAG
+port. The development computer has USB, so unless the IO device has USB port capable of programming one needs
+either USB/JTAG adapter, like ESP prog, or USB to TTL level serial converter.</p>
+<p>The USB serial ports like /dev/ttyUSB0 typically require extra configuration on Linux end: At minimum one must
+give permissions to normal user to access these. More often than not, one must copy rules file to /etc/udev/rules.d
+directory to set up serial port. For example on this computer I have files 45-maple.rules, 49-stlinkv2.rules,
+49-teensy.rules, and so on. The rules file comes with microcontroller development tools.</p>
+<p>If one is using a virtual machine, the USB adapter needs to be connected to virtual machine, not to host.
+This is done from vmware menu.</p>
+<p>Then port, like /dev/ttyUSB0 needs to be selected in the development environment. For PlatformIO this is
+in platformio.ini.</p>
+<p>Connecting the JTAG or TTL serial adapter to micro-controller board takes some care: With JTAG, connect both
+wires for JTAG and for serial port to monitor boar doutput.</p>
+<p>We will place IO device specific notes and links in “microcontrollers” or “development tools” sections
+of this document.</p>
+</div>
+<div class="section" id="notes-about-debugging">
+<h2>Notes about debugging<a class="headerlink" href="#notes-about-debugging" title="Permalink to this headline">¶</a></h2>
+<p>Development tools like PlatformIO/VisualStudio Code and STM True Studio integrate GNU degugger into
+user interface. Once you get wiring and settings right, this is extremely useful. It is not foolproof
+anyhow and includes several pitfalls. For example when micro-controller crashes, it becomes “undebuggable”,
+other than stack trace.</p>
+<p>Keeping also PC builds up to date pays back quickly. Debugging the code in PC helps to find majority of
+problems easily, unfortunately not all of them. Thus best way of working is to test software in PC environment
+as far as possible, and then continuing with microcontroller testing.</p>
 <p>200329, updated 19.5.2020/pekka</p>
 </div>
 </div>

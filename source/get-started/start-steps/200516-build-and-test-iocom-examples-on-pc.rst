@@ -1,24 +1,10 @@
 Build and test IOCOM examples on Linux or Windows
 =================================================
 
-We start with this, because building and debuggin on PC is much easier than on microcontroller.
-This also gives idea how things are supposed to work.
+To make sure that everything works, one can build gina and frank examples, start both of these and see from command line 
+output that they start communication. Both examples are in /coderoot/iocom/examples directory.
 
-
-Place library source code in /coderoot directory
-************************************************
-At least for now, the library development has been done under directory /coderoot. I strongly recommend to do so,
-since using other paths is untested and would require modifications to build, etc, scripts. 
-To create the /coderoot directory and set it's owner:
-
-.. code-block:: shell
-
-   cd /
-   sudo mkdir coderoot
-   sudo chown <yourusername> coderoot
-
-On windows create directory c:\\coderoot
-
-
+The ispy can be used to connect to frank example to provide simple UI. It is started by ispy.sh or ispy.bat in 
+/coderoot/iocom/extensions/iocompython/examples/ispy directory. It is Python program and requires Kivy library.
 
 200516, updated 19.5.2020/pekka

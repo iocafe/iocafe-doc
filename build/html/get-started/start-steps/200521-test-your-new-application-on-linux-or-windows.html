@@ -16,7 +16,7 @@
     <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Test your new application on target hardware" href="200521-test-your-new-application-on-target-hardware.html" />
+    <link rel="next" title="Test your new application on the target hardware" href="200521-test-your-new-application-on-target-hardware.html" />
     <link rel="prev" title="Add your new project to version management system" href="200520-add-new-project-to-your-version-management-system.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -36,16 +36,29 @@
             
   <div class="section" id="test-your-new-application-on-linux-or-windows">
 <h1>Test your new application on Linux or Windows<a class="headerlink" href="#test-your-new-application-on-linux-or-windows" title="Permalink to this headline">¶</a></h1>
-<p>It is a lot easier</p>
+<p>It is a lot easier to build and debug the micro-controller application in PC than in actual target environment.
+Making and testing PC build first allows one to work out most of bugs.</p>
 <div class="section" id="build">
 <h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
-<p>If your goal is to create IO application, use stable version. If there is one for your hardware and development environment.
-The stable versions will be marked by github tags. If there is none, please email me <a class="reference external" href="mailto:pekka&#46;lehtikoski&#37;&#52;&#48;iocafe&#46;org">pekka<span>&#46;</span>lehtikoski<span>&#64;</span>iocafe<span>&#46;</span>org</a>.</p>
+<ul class="simple">
+<li>Linux: Cmake build can be used from command line, from QT creator, etc.</li>
+<li>Windows: Use Visual Studio 2019, the library has native .sln files for it.</li>
+</ul>
 </div>
 <div class="section" id="test-communication">
 <h2>Test communication<a class="headerlink" href="#test-communication" title="Permalink to this headline">¶</a></h2>
-<p>The latest version should be used if you participate in development of IOCOM or another related library.
-If your goal is to create IO device application, latest code from “master” is likely to bring you unwelcome issues.</p>
+<ul class="simple">
+<li>Run both ends of communication in PC.</li>
+<li>Often you can test your IO code against one of the examples</li>
+<li>ispy example can be used to view how it works.</li>
+</ul>
+</div>
+<div class="section" id="serial-communication">
+<h2>Serial communication<a class="headerlink" href="#serial-communication" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>In Windows we have com0com to generate loop back serial ports. Unfortunately this has issues with modern Windows and requires disabling much security to work.</li>
+<li>In linux, tty0tty is really useful. It generates loop back serial port.</li>
+</ul>
 </div>
 </div>
 
@@ -91,7 +104,7 @@ If your goal is to create IO device application, latest code from “master” i
   <li><a href="../get-started.html">Get started</a><ul>
   <li><a href="start-steps.html">Steps to get started</a><ul>
       <li>Previous: <a href="200520-add-new-project-to-your-version-management-system.html" title="previous chapter">Add your new project to version management system</a></li>
-      <li>Next: <a href="200521-test-your-new-application-on-target-hardware.html" title="next chapter">Test your new application on target hardware</a></li>
+      <li>Next: <a href="200521-test-your-new-application-on-target-hardware.html" title="next chapter">Test your new application on the target hardware</a></li>
   </ul></li>
   </ul></li>
   </ul></li>

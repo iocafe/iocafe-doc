@@ -1,15 +1,15 @@
-Test your new application on target hardware
-============================================
+Test your new application on the target hardware
+================================================
 
-
-Build
-***************
-If your goal is to create IO application, use stable version. If there is one for your hardware and development environment. 
-The stable versions will be marked by github tags. If there is none, please email me pekka.lehtikoski@iocafe.org.
+Building
+********
+Before compiling, run script to convert JSON configuratio to C code and to binary compressed JSON data. 
+Refer to development tool documentation for build instructions, extra notes will be in "development tools" 
+section of this document. 
 
 Uploading
-**************
-The latest version should be used if you participate in development of IOCOM or another related library. 
+*********
+See notes in "﻿Set up and test development tools". 
 
 Testing & debugging
 ********************
@@ -17,12 +17,18 @@ The latest version should be used if you participate in development of IOCOM or 
 If your goal is to create IO device application, latest code from "master" is likely to bring you unwelcome issues.
 
 Test communication
-********************
-The latest version should be used if you participate in development of IOCOM or another related library. 
-If your goal is to create IO device application, latest code from "master" is likely to bring you unwelcome issues.
+******************
+Both socket and serial communication can be tested by running other end of communication in PC and other in 
+microcontroller. Use putty to see that you that you have correct serial or socket port.
 
-
-Getting help
-**************
-The latest version should be used if you participate in development of IOCOM or another related library. 
+TLS and security
+****************
+This is where it gets quite complicated, just to get main idea:
+* Test first with unencrypted sockets, and move on to TLS only when that is working. 
+* Server side is identified by client from server certificate. 
+  Client must have accepted certificate bundle loaded.
+* Client (IO device) is identified by user name/password over TLS connection. 
+  Server needs to have account for the device which is allowed to connect.
+* Defining macro EOSAL_RELAX_SECURITY=1 disables most of security. If you compile both ends of communication 
+  with this define, no username/password nor server certificate checks are done.
 

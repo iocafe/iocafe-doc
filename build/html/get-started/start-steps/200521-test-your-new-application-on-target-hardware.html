@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Test your new application on target hardware &#8212; iocafe 0.1 documentation</title>
+    <title>Test your new application on the target hardware &#8212; iocafe 0.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -34,16 +34,17 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="test-your-new-application-on-target-hardware">
-<h1>Test your new application on target hardware<a class="headerlink" href="#test-your-new-application-on-target-hardware" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="build">
-<h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
-<p>If your goal is to create IO application, use stable version. If there is one for your hardware and development environment.
-The stable versions will be marked by github tags. If there is none, please email me <a class="reference external" href="mailto:pekka&#46;lehtikoski&#37;&#52;&#48;iocafe&#46;org">pekka<span>&#46;</span>lehtikoski<span>&#64;</span>iocafe<span>&#46;</span>org</a>.</p>
+  <div class="section" id="test-your-new-application-on-the-target-hardware">
+<h1>Test your new application on the target hardware<a class="headerlink" href="#test-your-new-application-on-the-target-hardware" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="building">
+<h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h2>
+<p>Before compiling, run script to convert JSON configuratio to C code and to binary compressed JSON data.
+Refer to development tool documentation for build instructions, extra notes will be in “development tools”
+section of this document.</p>
 </div>
 <div class="section" id="uploading">
 <h2>Uploading<a class="headerlink" href="#uploading" title="Permalink to this headline">¶</a></h2>
-<p>The latest version should be used if you participate in development of IOCOM or another related library.</p>
+<p>See notes in “﻿Set up and test development tools”.</p>
 </div>
 <div class="section" id="testing-debugging">
 <h2>Testing &amp; debugging<a class="headerlink" href="#testing-debugging" title="Permalink to this headline">¶</a></h2>
@@ -52,12 +53,22 @@ If your goal is to create IO device application, latest code from “master” i
 </div>
 <div class="section" id="test-communication">
 <h2>Test communication<a class="headerlink" href="#test-communication" title="Permalink to this headline">¶</a></h2>
-<p>The latest version should be used if you participate in development of IOCOM or another related library.
-If your goal is to create IO device application, latest code from “master” is likely to bring you unwelcome issues.</p>
+<p>Both socket and serial communication can be tested by running other end of communication in PC and other in
+microcontroller. Use putty to see that you that you have correct serial or socket port.</p>
 </div>
-<div class="section" id="getting-help">
-<h2>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
-<p>The latest version should be used if you participate in development of IOCOM or another related library.</p>
+<div class="section" id="tls-and-security">
+<h2>TLS and security<a class="headerlink" href="#tls-and-security" title="Permalink to this headline">¶</a></h2>
+<p>This is where it gets quite complicated, just to get main idea:
+* Test first with unencrypted sockets, and move on to TLS only when that is working.
+* Server side is identified by client from server certificate.</p>
+<blockquote>
+<div>Client must have accepted certificate bundle loaded.</div></blockquote>
+<ul class="simple">
+<li>Client (IO device) is identified by user name/password over TLS connection.
+Server needs to have account for the device which is allowed to connect.</li>
+<li>Defining macro EOSAL_RELAX_SECURITY=1 disables most of security. If you compile both ends of communication
+with this define, no username/password nor server certificate checks are done.</li>
+</ul>
 </div>
 </div>
 
