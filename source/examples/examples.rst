@@ -1,4 +1,4 @@
-Demo and example projects
+Example projects
 ================================
 
 Democar

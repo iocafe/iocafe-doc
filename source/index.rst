@@ -20,7 +20,7 @@ IOCOM library
    extensions/extensions
    dev-tools/dev-tools
    micro-controllers/micro-controllers
-   demos/demos
+   examples/examples
 
 Indices and tables
 ==================

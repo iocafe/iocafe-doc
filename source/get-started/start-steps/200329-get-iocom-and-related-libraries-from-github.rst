@@ -34,7 +34,7 @@ On windows create directory c:\\coderoot
 Get Git
 ************************************************
 You need Git, if you have not it already. Git is a distributed version control system which allows many people 
-to share and work on the same souce code. On Debian Linux:
+to share and work on the same souce code. On Debian based Linux distros:
 
 .. code-block:: shell
 
