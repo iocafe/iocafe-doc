@@ -37,40 +37,60 @@
   <div class="section" id="alternative-1-copy-example-project">
 <h1>Alternative 1, copy example project<a class="headerlink" href="#alternative-1-copy-example-project" title="Permalink to this headline">¶</a></h1>
 <p>Most example code comes with optional libraries to make iocom appear more like framework than library.
-This is not perhaps typical use case, we assume that more often iocom is plainly used as communication library.
 Reason for this is simple, we need to be able to run the examples on many different microcontrollers and development
 tools and they need to contain necessary supporting code.</p>
+<p>We assume that more often iocom is used as plain communication library within an application, see “alternative 2”
+for discussion about.</p>
 <div class="section" id="select-name-for-project">
 <h2>Select name for project<a class="headerlink" href="#select-name-for-project" title="Permalink to this headline">¶</a></h2>
-<p>Difficult to change</p>
-<p>Choose name for your IO application, only alpha ‘a’ -’z’ and ‘A’ - ‘Z’, no underlines, special chatacters or numbers. Make it short.</p>
+<ul class="simple">
+<li>Choose a good name for your IO application, it will be extra work to change it later on.</li>
+<li>Keep it short, so it can be displayed in user interface menus, etc. Maximum 15 characters.</li>
+<li>Use only alphabet’s characters ‘a’ -’z’ and ‘A’ - ‘Z’, no underlines, special characters or numbers.</li>
+</ul>
 </div>
 <div class="section" id="copy-example-project">
 <h2>Copy example project<a class="headerlink" href="#copy-example-project" title="Permalink to this headline">¶</a></h2>
-<p>Copy gina
-Delete temporary and other unnecessary files</p>
+<ul class="simple">
+<li>Copy example project to start from.</li>
+<li>In this text I “copy” gina example in /coderoot/iocom/examples/gina directory to /coderoot/myproject/myapp directory.</li>
+<li>Delete temporary and other unnecessary files and folders from /coderoot/myproject/myapp.</li>
+</ul>
 </div>
-<div class="section" id="change-application-name">
-<h2>Change application name<a class="headerlink" href="#change-application-name" title="Permalink to this headline">¶</a></h2>
-<p>Use your editors “replace in files” function to change most
-Replace in files, change
-* “examples/gina” -&gt; “newname”
-* “gina” -&gt; “newname”
-* “Gina” -&gt; “Newname”
-* “GINA” -&gt; “NEWNAME”</p>
+<div class="section" id="change-application-name-in-files">
+<h2>Change application name in files<a class="headerlink" href="#change-application-name-in-files" title="Permalink to this headline">¶</a></h2>
+<p>Editor’s “replace in files” function to change most stings containing project path or name.</p>
+<ul class="simple">
+<li>“iocom/examples/gina” -&gt; “myproject/myapp”</li>
+<li>“iocom/examples” -&gt; “myproject”</li>
+<li>“gina” -&gt; “myapp”</li>
+<li>“Gina” -&gt; “Myapp”</li>
+<li>“GINA” -&gt; “MYAPP”</li>
+</ul>
 </div>
 <div class="section" id="test-json-processor-script">
 <h2>Test JSON processor script<a class="headerlink" href="#test-json-processor-script" title="Permalink to this headline">¶</a></h2>
-<p>Try to build C code</p>
+<p>Run script to convert JSON to C code and to compressed format from terminal.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span class="nb">cd</span> /coderoot/myproject/myapp
+python3 config_to_c_code
+</pre></div>
 </div>
-<div class="section" id="remove-add-optional-libraries-as-needed">
-<h2>Remove/add optional libraries as needed<a class="headerlink" href="#remove-add-optional-libraries-as-needed" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="modify-io-pin-configuration">
-<h2>Modify IO pin configuration<a class="headerlink" href="#modify-io-pin-configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="name-your-io-board-and-modify-io-pin-configuration">
+<h2>Name your IO board and modify IO pin configuration<a class="headerlink" href="#name-your-io-board-and-modify-io-pin-configuration" title="Permalink to this headline">¶</a></h2>
+<p>If you will be using pins library for IO device, the IO pins are configured in pins-io.json file.
+Amongh other files, this file is further converted to C code by config_to_c_code script.
+This file is located in /coderoot/iocom/examples/gina/config/pins/&lt;yourdevicename&gt;/pins-io.json</p>
+<p>Your hardware (physical IO device) needs a name. This allows building same application on different boards.
+Hardware name specifies underlying IO API, etc, to use and to which purpose each IO pin is used.</p>
+<p>If you are using platform’s IO hardware directly or trough platform specific API, you should delete
+all pins-io.json file and all pins library related things.</p>
 </div>
 <div class="section" id="setup-signal-configuration">
 <h2>Setup signal configuration<a class="headerlink" href="#setup-signal-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Similarly to pins, signals passed trough IOCOM communication are defined in JSON file signals.json
+(/coderoot/iocom/examples/gina/config/signals/signals.json). The file merge.json is used to include
+typically device configuration signals or orther common signal collections.</p>
 <p>200518, updated 19.5.2020/pekka</p>
 </div>
 </div>
@@ -101,6 +121,7 @@ Replace in files, change
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api-reference/api-reference.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementation/implementation.html">Library implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../platform-abstraction/platform-abstraction.html">Platform abstraction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../hw-io-abstraction/hw-io-abstraction.html">Hardware IO abstraction</a></li>

@@ -14,6 +14,7 @@ IOCOM library
    get-started/get-started
    tutorials/tutorials
    api-reference/api-reference
+   security/security
    implementation/implementation
    platform-abstraction/platform-abstraction
    hw-io-abstraction/hw-io-abstraction

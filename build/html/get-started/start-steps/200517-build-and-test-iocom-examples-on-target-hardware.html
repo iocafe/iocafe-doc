@@ -36,27 +36,13 @@
             
   <div class="section" id="build-and-test-iocom-example-on-target-hardware">
 <h1>Build and test IOCOM example on target hardware<a class="headerlink" href="#build-and-test-iocom-example-on-target-hardware" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="stable-versions">
-<h2>Stable versions<a class="headerlink" href="#stable-versions" title="Permalink to this headline">¶</a></h2>
-<p>If your goal is to create IO application, use stable version. If there is one for your hardware and development environment.
-The stable versions will be marked by github tags. If there is none, please email me <a class="reference external" href="mailto:pekka&#46;lehtikoski&#37;&#52;&#48;iocafe&#46;org">pekka<span>&#46;</span>lehtikoski<span>&#64;</span>iocafe<span>&#46;</span>org</a>.</p>
+<div class="section" id="build-gina-project-for-target-hardware">
+<h2>Build gina project for target hardware<a class="headerlink" href="#build-gina-project-for-target-hardware" title="Permalink to this headline">¶</a></h2>
+<p>Gina is good startint point for testing IO device.</p>
 </div>
-<div class="section" id="latest-version">
-<h2>Latest version<a class="headerlink" href="#latest-version" title="Permalink to this headline">¶</a></h2>
-<p>The latest version should be used if you participate in development of IOCOM or another related library.
-If your goal is to create IO device application, latest code from “master” is likely to bring you unwelcome issues.</p>
-</div>
-<div class="section" id="place-library-source-code-in-coderoot-directory">
-<h2>Place library source code in /coderoot directory<a class="headerlink" href="#place-library-source-code-in-coderoot-directory" title="Permalink to this headline">¶</a></h2>
-<p>At least for now, the library development has been done under directory /coderoot. I strongly recommend to do so,
-since using other paths is untested and would require modifications to build, etc, scripts.
-To create the /coderoot directory and set it’s owner:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span class="nb">cd</span> /
-sudo mkdir coderoot
-sudo chown &lt;yourusername&gt; coderoot
-</pre></div>
-</div>
-<p>On windows create directory c:\coderoot</p>
+<div class="section" id="run-frank-and-ispy-in-pc-to-test-communication">
+<h2>Run frank and ispy in PC to test communication<a class="headerlink" href="#run-frank-and-ispy-in-pc-to-test-communication" title="Permalink to this headline">¶</a></h2>
+<p>Run other end of communication in Linux or Windows computer.</p>
 <p>200517, updated 19.5.2020/pekka</p>
 </div>
 </div>
@@ -87,6 +73,7 @@ sudo chown &lt;yourusername&gt; coderoot
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api-reference/api-reference.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementation/implementation.html">Library implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../platform-abstraction/platform-abstraction.html">Platform abstraction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../hw-io-abstraction/hw-io-abstraction.html">Hardware IO abstraction</a></li>
