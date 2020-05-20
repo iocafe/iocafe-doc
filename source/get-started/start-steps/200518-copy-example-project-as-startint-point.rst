@@ -9,8 +9,8 @@ We assume that more often iocom is used as plain communication library within an
 for discussion about.
 
 
-Select name for project
-***********************
+Select name for the new application
+***********************************
 * Choose a good name for your IO application, it will be extra work to change it later on.
 * Keep it short, so it can be displayed in user interface menus, etc. Maximum 15 characters.
 * Use only alphabet's characters ‘a’ -’z’ and ‘A’ - ‘Z’, no underlines, special characters or numbers. 
@@ -20,6 +20,8 @@ Copy example project
 ********************
 * Copy example project to start from.
 * In this text I "copy" gina example in /coderoot/iocom/examples/gina directory to /coderoot/myproject/myapp directory.
+* I could as well /coderoot/myapp directory, using /coderoot/myproject/myapp gives extra layer in directoryy tree.
+  This is useful if something else project includes other things besides one IO device application.
 * Delete temporary and other unnecessary files and folders from /coderoot/myproject/myapp. 
 
 

@@ -1,5 +1,5 @@
 Micro-controllers
-================================
+=================
 
 .. toctree::
    :maxdepth: 2

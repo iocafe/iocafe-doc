@@ -1,0 +1,17 @@
+Simple IO device code structure
+===============================================================
+
+Initialize
+**********
+* IOCOM library initialization
+* Memory block setup 
+* Server connection  setup
+
+Loop
+****
+* Run communication (signle threaded)
+* Syncronized receive
+* Operation logic Set/get signal values
+* Syncronized send
+
+200510, updated 20.5.2020/pekka
