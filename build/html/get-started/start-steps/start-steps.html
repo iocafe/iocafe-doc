@@ -16,7 +16,7 @@
     <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Get IOCOM and related libraries" href="200329-get-iocom-and-related-libraries-from-github.html" />
+    <link rel="next" title="Set up and test development tools" href="200329-set-up-and-test-development-environment.html" />
     <link rel="prev" title="Get started" href="../get-started.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -36,71 +36,72 @@
             
   <div class="section" id="steps-to-get-started">
 <h1>Steps to get started<a class="headerlink" href="#steps-to-get-started" title="Permalink to this headline">¶</a></h1>
-<p>When working with micro-controllers, we have very wide scope of detail to sort out. One step at a time approach has worked well for me.</p>
-<div class="section" id="set-up-and-test-your-development-environment">
-<h2>Set up and test your development environment<a class="headerlink" href="#set-up-and-test-your-development-environment" title="Permalink to this headline">¶</a></h2>
-<p>X…</p>
-</div>
-<div class="section" id="get-iocom-and-related-libraries-from-github">
-<h2>Get IOCOM and related libraries from Github<a class="headerlink" href="#get-iocom-and-related-libraries-from-github" title="Permalink to this headline">¶</a></h2>
-<p>X…</p>
-</div>
-<div class="section" id="prepare-iocom-for-use">
-<h2>Prepare IOCOM for use<a class="headerlink" href="#prepare-iocom-for-use" title="Permalink to this headline">¶</a></h2>
-<p>We avoid placing compiled binaries in shipping com</p>
-<ul class="simple">
-<li>json tool</li>
-<li>iocompython</li>
-</ul>
-<p>ESP32/Arduino: Run scripts</p>
-</div>
-<div class="section" id="build-and-test-iocom-examples-on-linux-or-windows">
-<h2>Build and test IOCOM examples on Linux or Windows<a class="headerlink" href="#build-and-test-iocom-examples-on-linux-or-windows" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="build-and-test-iocom-examples-on-your-target-hardware">
-<h2>Build and test iocom examples on your target hardware<a class="headerlink" href="#build-and-test-iocom-examples-on-your-target-hardware" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="copy-example-project-as-staring-point-alternative-1">
-<h2>Copy example project as staring point (alternative 1)<a class="headerlink" href="#copy-example-project-as-staring-point-alternative-1" title="Permalink to this headline">¶</a></h2>
-<p>Choose name for your application, only alpha ‘a’ -’z’ and ‘A’ - ‘Z’, no underlines, special chatacters or numbers. Make it short.
-Copy gina
-Delete temporary and other unnecessary files</p>
-</div>
-<div class="section" id="add-iocom-calls-to-your-application-alternative-2">
-<h2>Add IOCOM calls to your application (alternative 2)<a class="headerlink" href="#add-iocom-calls-to-your-application-alternative-2" title="Permalink to this headline">¶</a></h2>
-<p>Change gina to your application name add ne it to your version management
-Rename files
-Replace text gina with your ptoject name
-Add to GIT or SVN repo.</p>
-</div>
-<div class="section" id="add-new-project-to-your-version-management-system">
-<h2>Add new project to your version management system<a class="headerlink" href="#add-new-project-to-your-version-management-system" title="Permalink to this headline">¶</a></h2>
-<p>Clean it upXx</p>
-</div>
-<div class="section" id="see-that-your-new-application-builds-loads-and-starts-on-windows-or-linux">
-<h2>See that your new application builds, loads and starts on Windows or Linux<a class="headerlink" href="#see-that-your-new-application-builds-loads-and-starts-on-windows-or-linux" title="Permalink to this headline">¶</a></h2>
-<p>Test the communication</p>
-</div>
-<div class="section" id="see-that-your-new-application-builds-loads-and-starts-on-target-hardware">
-<h2>See that your new application builds, loads and starts on target hardware<a class="headerlink" href="#see-that-your-new-application-builds-loads-and-starts-on-target-hardware" title="Permalink to this headline">¶</a></h2>
-<p>Test the communication</p>
+<p>When working with micro-controllers, we have much detail to sort out. One step at a time approach has worked well for me.</p>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="200329-set-up-and-test-development-environment.html">Set up and test development tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="200329-set-up-and-test-development-environment.html#pc-development-environment">PC development environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200329-set-up-and-test-development-environment.html#micro-controller-development-tools">Micro-controller development tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200329-set-up-and-test-development-environment.html#download-virtual-machine">Download virtual machine?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200329-set-up-and-test-development-environment.html#build-and-test-micro-controller-example-code">Build and test micro-controller example code</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="200329-get-iocom-and-related-libraries-from-github.html">Get IOCOM and related libraries</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="200329-get-iocom-and-related-libraries-from-github.html#stable-versions">Stable versions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="200329-get-iocom-and-related-libraries-from-github.html#latest-version">Latest version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="200329-get-iocom-and-related-libraries-from-github.html#place-library-source-code-in-coderoot-directory">Place library source code in /coderoot directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="200329-get-iocom-and-related-libraries-from-github.html#get-git">Get Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="200329-get-iocom-and-related-libraries-from-github.html#clone-iocom-eosal-and-pins-libraries">Clone IOCOM, EOSAL and PINS libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200329-get-iocom-and-related-libraries-from-github.html#updating-library-code">Updating library code</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="200329-set-up-and-test-development-environment.html">Set up and test development environment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="200329-set-up-and-test-development-environment.html#one-thing-at-a-time">One thing at a time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="200515-prepare-iocom-for-use.html">Prepare IOCOM for use</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="200515-prepare-iocom-for-use.html#place-library-source-code-in-coderoot-directory">Place library source code in /coderoot directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="200516-build-and-test-iocom-examples-on-pc.html">Build and test IOCOM examples on Linux or Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="200516-build-and-test-iocom-examples-on-pc.html#place-library-source-code-in-coderoot-directory">Place library source code in /coderoot directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="200517-build-and-test-iocom-examples-on-target-hardware.html">Build and test IOCOM example on target hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="200517-build-and-test-iocom-examples-on-target-hardware.html#stable-versions">Stable versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200517-build-and-test-iocom-examples-on-target-hardware.html#latest-version">Latest version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200517-build-and-test-iocom-examples-on-target-hardware.html#place-library-source-code-in-coderoot-directory">Place library source code in /coderoot directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="200518-copy-example-project-as-startint-point.html">Alternative 1, copy example project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="200518-copy-example-project-as-startint-point.html#select-name-for-project">Select name for project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200518-copy-example-project-as-startint-point.html#copy-example-project">Copy example project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200518-copy-example-project-as-startint-point.html#change-application-name">Change application name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200518-copy-example-project-as-startint-point.html#test-json-processor-script">Test JSON processor script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200518-copy-example-project-as-startint-point.html#remove-add-optional-libraries-as-needed">Remove/add optional libraries as needed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200518-copy-example-project-as-startint-point.html#modify-io-pin-configuration">Modify IO pin configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200518-copy-example-project-as-startint-point.html#setup-signal-configuration">Setup signal configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="200519-add-iocom-calls-to-your-application.html">Alternative 2, add IOCOM API calls to your existing application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="200519-add-iocom-calls-to-your-application.html#stable-versions">Stable versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="200520-add-new-project-to-your-version-management-system.html">Add your new project to version management system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="200520-add-new-project-to-your-version-management-system.html#using-gitignore">Using .gitignore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="200521-test-your-new-application-on-linux-or-windows.html">Test your new application on Linux or Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="200521-test-your-new-application-on-linux-or-windows.html#build">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200521-test-your-new-application-on-linux-or-windows.html#test-communication">Test communication</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="200521-test-your-new-application-on-target-hardware.html">Test your new application on target hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="200521-test-your-new-application-on-target-hardware.html#build">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200521-test-your-new-application-on-target-hardware.html#uploading">Uploading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200521-test-your-new-application-on-target-hardware.html#testing-debugging">Testing &amp; debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200521-test-your-new-application-on-target-hardware.html#test-communication">Test communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200521-test-your-new-application-on-target-hardware.html#getting-help">Getting help</a></li>
 </ul>
 </li>
 </ul>
-</div>
 </div>
 </div>
 
@@ -136,7 +137,7 @@ Add to GIT or SVN repo.</p>
 <li class="toctree-l1"><a class="reference internal" href="../../extensions/extensions.html">Extension libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dev-tools/dev-tools.html">Development tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../micro-controllers/micro-controllers.html">Micro-controllers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../demos/demos.html">Demo and example projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/examples.html">Example projects</a></li>
 </ul>
 
 <div class="relations">
@@ -145,7 +146,7 @@ Add to GIT or SVN repo.</p>
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../get-started.html">Get started</a><ul>
       <li>Previous: <a href="../get-started.html" title="previous chapter">Get started</a></li>
-      <li>Next: <a href="200329-get-iocom-and-related-libraries-from-github.html" title="next chapter">Get IOCOM and related libraries</a></li>
+      <li>Next: <a href="200329-set-up-and-test-development-environment.html" title="next chapter">Set up and test development tools</a></li>
   </ul></li>
   </ul></li>
 </ul>

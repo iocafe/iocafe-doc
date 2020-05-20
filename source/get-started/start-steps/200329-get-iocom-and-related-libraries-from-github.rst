@@ -85,4 +85,19 @@ You should get someting like tree below under /coderoot directory:
     │   └── scripts
 
 
+Updating library code
+************************************************
+To get the newest library code, pull it for GitHub. If you have a working development environment,
+make a backup of /coderoot directory before doing this: Since the library is in development phase, 
+compatibility issues may arise. 
+
+.. code-block:: shell
+
+   cd /coderoot/iocom
+   git pull
+   cd /coderoot/eosal
+   git pull
+   cd /coderoot/pins
+   git pull
+
 200329, updated 19.5.2020/pekka

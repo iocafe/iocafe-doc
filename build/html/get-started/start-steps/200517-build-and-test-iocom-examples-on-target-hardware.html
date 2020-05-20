@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Get IOCOM and related libraries &#8212; iocafe 0.1 documentation</title>
+    <title>Build and test IOCOM example on target hardware &#8212; iocafe 0.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -16,8 +16,8 @@
     <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Prepare IOCOM for use" href="200515-prepare-iocom-for-use.html" />
-    <link rel="prev" title="Set up and test development tools" href="200329-set-up-and-test-development-environment.html" />
+    <link rel="next" title="Alternative 1, copy example project" href="200518-copy-example-project-as-startint-point.html" />
+    <link rel="prev" title="Build and test IOCOM examples on Linux or Windows" href="200516-build-and-test-iocom-examples-on-pc.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -34,10 +34,8 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="get-iocom-and-related-libraries">
-<h1>Get IOCOM and related libraries<a class="headerlink" href="#get-iocom-and-related-libraries" title="Permalink to this headline">¶</a></h1>
-<p>NOTICE: WE ARE IN PROCESS OF LIBRARY DEVELOPMENT. THE TEXT BELOW IS ONLY A PLAN HOW TO DEAL WITH STABLE VERSIONS
-ONCE WE GET THE FIRST IOCOM RELEASE PUBLISHED.</p>
+  <div class="section" id="build-and-test-iocom-example-on-target-hardware">
+<h1>Build and test IOCOM example on target hardware<a class="headerlink" href="#build-and-test-iocom-example-on-target-hardware" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="stable-versions">
 <h2>Stable versions<a class="headerlink" href="#stable-versions" title="Permalink to this headline">¶</a></h2>
 <p>If your goal is to create IO application, use stable version. If there is one for your hardware and development environment.
@@ -59,69 +57,7 @@ sudo chown &lt;yourusername&gt; coderoot
 </pre></div>
 </div>
 <p>On windows create directory c:\coderoot</p>
-</div>
-<div class="section" id="get-git">
-<h2>Get Git<a class="headerlink" href="#get-git" title="Permalink to this headline">¶</a></h2>
-<p>You need Git, if you have not it already. Git is a distributed version control system which allows many people
-to share and work on the same souce code. On Debian based Linux distros:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre>sudo apt install git
-</pre></div>
-</div>
-</div>
-<div class="section" id="clone-iocom-eosal-and-pins-libraries">
-<h2>Clone IOCOM, EOSAL and PINS libraries<a class="headerlink" href="#clone-iocom-eosal-and-pins-libraries" title="Permalink to this headline">¶</a></h2>
-<p>The IOCOM and related source code is stored in GitHub repository. The GitHub is a website and service that stores
-code repositories. IOCOM is public repository, GitHub account is not needed. To clone the library code
-to your computer do:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span class="nb">cd</span> /coderoot
-git clone https://github.com/iocafe/iocom.git
-git clone https://github.com/iocafe/eosal.git
-git clone https://github.com/iocafe/pins.git
-</pre></div>
-</div>
-<p>You should get someting like tree below under /coderoot directory:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre>├── eosal
-│   ├── code
-│   ├── dependencies
-│   ├── doc
-│   ├── examples
-│   ├── extensions
-│   ├── metals
-│   ├── osbuild
-│   ├── scripts
-│   └── util
-├── iocom
-│   ├── code
-│   ├── config
-│   ├── doc
-│   ├── examples
-│   ├── extensions
-│   ├── osbuild
-│   └── scripts
-├── pins
-│   ├── code
-│   ├── doc
-│   ├── examples
-│   ├── extensions
-│   ├── osbuild
-│   └── scripts
-</pre></div>
-</div>
-</div>
-<div class="section" id="updating-library-code">
-<h2>Updating library code<a class="headerlink" href="#updating-library-code" title="Permalink to this headline">¶</a></h2>
-<p>To get the newest library code, pull it for GitHub. If you have a working development environment,
-make a backup of /coderoot directory before doing this: Since the library is in development phase,
-compatibility issues may arise.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span class="nb">cd</span> /coderoot/iocom
-git pull
-<span class="nb">cd</span> /coderoot/eosal
-git pull
-<span class="nb">cd</span> /coderoot/pins
-git pull
-</pre></div>
-</div>
-<p>200329, updated 19.5.2020/pekka</p>
+<p>200517, updated 19.5.2020/pekka</p>
 </div>
 </div>
 
@@ -166,8 +102,8 @@ git pull
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../get-started.html">Get started</a><ul>
   <li><a href="start-steps.html">Steps to get started</a><ul>
-      <li>Previous: <a href="200329-set-up-and-test-development-environment.html" title="previous chapter">Set up and test development tools</a></li>
-      <li>Next: <a href="200515-prepare-iocom-for-use.html" title="next chapter">Prepare IOCOM for use</a></li>
+      <li>Previous: <a href="200516-build-and-test-iocom-examples-on-pc.html" title="previous chapter">Build and test IOCOM examples on Linux or Windows</a></li>
+      <li>Next: <a href="200518-copy-example-project-as-startint-point.html" title="next chapter">Alternative 1, copy example project</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -203,7 +139,7 @@ git pull
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="../../_sources/get-started/start-steps/200329-get-iocom-and-related-libraries-from-github.rst.txt"
+      <a href="../../_sources/get-started/start-steps/200517-build-and-test-iocom-examples-on-target-hardware.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
