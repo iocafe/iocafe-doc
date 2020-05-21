@@ -1,8 +1,9 @@
 Streaming data
 ==============
-sketching notes 8.1.2020/pekka
+The IOCOM uses flat memory blocks as basic abstraction, not streams. Still, configuration data, flash program updloads and video from camera are logically
+stream type transfers. Ring buffer setup using IOCOM signals is used to transfer streamed data.
 
-THIS PAGE NEEDS IS OUTDATED
+THIS PAGE IS OUTDATED, REVIEW!
 
 Signals for camera stream transfer from IO device (<- IO device)
 ::

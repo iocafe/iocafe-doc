@@ -1,0 +1,179 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>IOCOM scope &#8212; iocafe 0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="From simple comm to secure IoT" href="190527-scalability.html" />
+    <link rel="prev" title="General" href="general.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="iocom-scope">
+<h1>IOCOM scope<a class="headerlink" href="#iocom-scope" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="intended-audience-and-use">
+<h2>Intended audience and use<a class="headerlink" href="#intended-audience-and-use" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Small scale automation</li>
+<li>For developers skilled in C/C++, microcontrollers and embedded platforms.</li>
+<li>A module for developer to add secure communication to IoT devices, IO boards, etc.</li>
+<li>Cloud enabled distributed applications which also work stand alone</li>
+</ul>
+</div>
+<div class="section" id="what-iocom-is">
+<h2>What IOCOM is?<a class="headerlink" href="#what-iocom-is" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Communication library written in C</li>
+<li>MIT license</li>
+<li>Primary transports TCP/Ethernet and serial communication</li>
+<li>TLS and device/server authentication</li>
+<li>Link between IoT/IO devices and application running on controller or server</li>
+<li>Optimized for transferring “real time” IO signals for automation.</li>
+<li>Plain C. No strong dependency on any specific hardware, platform or operating system.</li>
+<li>Hardware/platform dependent code is isolated behind abstraction layer.</li>
+</ul>
+</div>
+<div class="section" id="what-iocom-is-not">
+<h2>What IOCOM is not?<a class="headerlink" href="#what-iocom-is-not" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Application or user interface.</li>
+<li>General purpose communication protocol.</li>
+<li>Structured object oriented model suitable for passing complex data</li>
+<li>Not optimized for high latency or intermitten connections.</li>
+<li>High abstraction level communication. Scope of the library is limited, and will not be expanded beyound needs to automation.</li>
+<li>Hardware/platform abstraction doesn’t cover everything, implementing plaform interface layer may be needed to run on sepcific hardware.</li>
+</ul>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>EOSAL library is the operating system/platform/hardware abstraction layer. It presents the device and environment to application code
+trough uniform interface, and allows us to run same IO device application on different micro-controllers, embedded systems or on Linux/Windows.</li>
+<li>PINS library is an optional add on, which can be used to abstract IO PIN addressess and underlying IO. This approach may be
+useful if there is need to write portable IO board code to support future HW versions of the board.</li>
+<li>Python API: Python API is useful for quick conceptual testing and implementing features which are not performance or resource
+use critical (like IO device flash programmer/configurator over network or blue toots, IO device testers, etc).</li>
+<li>The server and IO device use the same IOCOM library to communicate. These may be very different environments: IO microcontroller could
+have 100kB or RAM run on plain metal. Server side could have full fledged linux. The library is scaled to target platform by set of
+compiler defines, which enable or disable use of features like multi threading, dynamic memory allocation, device authentication, etc.</li>
+<li>Real time multiplayer games: Communication between player and game service ovr internet is very similar to one needed for connecting
+IoT/IO devices. There are many game oriented GUI libraries for Python, like Panda3D, Pyglet, Kivy. I have written simple games this way
+to test communcation, just for fun.</li>
+</ul>
+<p>200101, updated 20.5.2020/pekka</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">iocafe</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">Introduction</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="general.html">General</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started/get-started.html">Get started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-reference/api-reference.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../implementation/implementation.html">Library implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../platform-abstraction/platform-abstraction.html">Platform abstraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hw-io-abstraction/hw-io-abstraction.html">Hardware IO abstraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/extensions.html">Extension libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev-tools/dev-tools.html">Development tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../micro-controllers/micro-controllers.html">Micro-controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/examples.html">Example projects</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../introduction.html">Introduction</a><ul>
+  <li><a href="general.html">General</a><ul>
+      <li>Previous: <a href="general.html" title="previous chapter">General</a></li>
+      <li>Next: <a href="190527-scalability.html" title="next chapter">From simple comm to secure IoT</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Pekka Lehtikoski, Markku Nissinen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/introduction/general/200101-iocom-scope.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

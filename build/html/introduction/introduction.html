@@ -16,7 +16,7 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Get started" href="../get-started/get-started.html" />
+    <link rel="next" title="General" href="general/general.html" />
     <link rel="prev" title="IOCOM library" href="../index.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -36,7 +36,23 @@
             
   <div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>X</p>
+<p>The IOCOM library implements communication between a control computer and IO devices over TCP network or full duplex serial communication wire. The library supports scalable range of functionality. Minimum configuration supports only serial communication on plain metal, while some applications may require multi-threading and secured communication over Internet.</p>
+<p>Micro-controllers can be used as plain metal, use Arduino derived or device manufacturer’s own libraries, FreeRTOS, LWIP/W5500 for networking, and TLS library. The IOCOM is not bound tightly to any underlying system, so it can be ported basically to any environment with sufficient resources for the task. Still, using configuration which has been implemented and tested makes things much easier.</p>
+<p>The same code as in microcontroller runs on Windows and Linux. Linux on should cover Raspberry PI and similar devices. We are considering MAC and Android testing as well.</p>
+<p>Security is becoming paramount in IoT and manufacturing environments. Thus TLS integration, strong encryption and device identification are essential part of the project.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="general/general.html">General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general/200101-iocom-scope.html">IOCOM scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/190527-scalability.html">From simple comm to secure IoT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/180812-design-goals.html">Design goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/191122-use-scenarios.html">IOCOM library use scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/190625-license.html">MIT license</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 
 
@@ -58,16 +74,21 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general/general.html">General</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../get-started/get-started.html">Get started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-reference/api-reference.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../implementation/implementation.html">Library implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../platform-abstraction/platform-abstraction.html">Platform abstraction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hw-io-abstraction/hw-io-abstraction.html">Hardware IO abstraction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extensions/extensions.html">Extension libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dev-tools/dev-tools.html">Development tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../micro-controllers/micro-controllers.html">Micro-controllers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demos/demos.html">Demo and example projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Example projects</a></li>
 </ul>
 
 <div class="relations">
@@ -75,7 +96,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
       <li>Previous: <a href="../index.html" title="previous chapter">IOCOM library</a></li>
-      <li>Next: <a href="../get-started/get-started.html" title="next chapter">Get started</a></li>
+      <li>Next: <a href="general/general.html" title="next chapter">General</a></li>
   </ul></li>
 </ul>
 </div>
