@@ -1,4 +1,0 @@
-Hardware IO abstraction
-================================
-
-X
