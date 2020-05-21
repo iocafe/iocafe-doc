@@ -23,7 +23,7 @@ Usually we need to add some more complexity. For example we have one control com
    multiple IO devices connected to one controller.
 
 
-Here the memory blocks are also created before establising the connections between the control PC and the IO devices. Difference is that here we use also device name. To transfer data between two memory blocks, both memory block name and device name must match. There can also be multiple IO device networks, thus matching network name is also needed even not drawn here.
+Here the memory blocks are also created before establising the connections between the control PC and the IO devices. Difference is that here we use also device name. To transfer data between two memory blocks, both memory block name and device name must match. There can also be multiple IO device networks, thus matching network name is also needed.
 
 Device name and number
 **********************
