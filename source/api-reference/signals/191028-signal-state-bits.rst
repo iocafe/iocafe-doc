@@ -7,6 +7,7 @@ Along the temperature value, let’s say 30 degrees Celsius, we need to pass inf
 Bits in signal state byte
 *************************
 Signal byte contains signal state bits as “----YOCX”.
+
 * bit Y, OSAL_STATE_YELLOW = 8
 * bit O, OSAL_STATE_ORANGE = 4
 * bit C, OSAL_STATE_CONNECTED = 2
@@ -25,10 +26,13 @@ To summarize, every signal except boolean values start with state byte followed 
 
 Elaborating what IO device should do when it doesn’t receive control
 ********************************************************************
-When a signal controlling to IO board has no OSAL_STATE_CONNECTED bit, what should IO board do. There is no one right answer. 
-    • Let’s assume that signal controls chain saw spinning speed. If no speed control is received, IO board should gradually (quickly, but not so suddenly that the saw spins our of control) power down the motor. 
-    • If the signal controls toilet tank fill valve, the output should be turned off to avoid flooding.
-    • If the signal controls pneumatic cylinder to position a mechanical arm, the arm might be left at position it is. We do not want loss of connection to cause sudden unexpected movements, these could be a safety hazard.
+When a signal controlling to IO board has no OSAL_STATE_CONNECTED bit, what should IO board do? 
+
+* Let’s assume that signal controls chain saw spinning speed. If no speed control is received, IO board should gradually (quickly, but not so suddenly that the saw spins our of control) power down the motor. 
+* If the signal controls toilet tank fill valve, the output should be turned off to avoid flooding.
+* If the signal controls pneumatic cylinder to position a mechanical arm, the arm might be left at position
+  it is. We do not want loss of connection to cause sudden unexpected movements, these could be a safety hazard.
+
 Same goes also for controller. What it should do if it doesn’t receive input signal from an IO device.
 
 Applicability
