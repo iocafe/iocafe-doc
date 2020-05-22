@@ -7,3 +7,5 @@ API reference
 
    api-overviews/api-overviews
    json-configuration/json-configuration
+   signals/signals
+

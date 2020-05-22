@@ -4,7 +4,8 @@
    contain the root `toctree` directive.
 
 IOCOM library
-==================================
+=============
+IoT/IO device networks over TCP/IP or serial port.
 
 .. toctree::
    :maxdepth: 2
@@ -15,7 +16,6 @@ IOCOM library
    tutorials/tutorials
    api-reference/api-reference
    security/security
-   implementation/implementation
    platform-abstraction/platform-abstraction
    hw-io-abstraction/hw-io-abstraction
    extensions/extensions

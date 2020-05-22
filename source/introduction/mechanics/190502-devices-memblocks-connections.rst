@@ -27,7 +27,7 @@ Here the memory blocks are also created before establising the connections betwe
 
 Device name and number
 **********************
-Device name and device number make an device identifier which is unique within a control system. Device name describes IO board functionality, so two devices with name “gina”, etc are assumed identical. The device name must be a short string with only upper case characters ‘A’ - ‘Z’. Since one control system may have multiple same kind of IO deviced, these are separated by device number. Usually 1 if first device… The device name is typically hard coded in device software and device number (if needed) either set by jumpers or stored in EEPROM. The devices can be also automatically enumerated, if specific device number is not needed.
+Device name and device number make an device identifier which is unique within a control system. Device name describes IO board functionality, so two devices with name “gina”, etc are assumed identical. The device name must be a short string with only upper case characters ‘A’ - ‘Z’. Since one control system may have multiple same kind of IO devices, these are separated by device number. Usually 1 if first device… The device name is typically hard coded in device software and device number (if needed) either set by jumpers or stored in persistent memory. The devices can be also automatically enumerated, for example user interface modules or game clients do not need a specific device number.
 
 Who connects and who listens for connections?
 *********************************************
