@@ -1,8 +1,8 @@
 Signals
-=======
+========
 
 What is signal ?
-****************
+*****************
 Imagine a IO board with temperature sensor. 
 
 * If we wish to pass temperature though communication as celsius degrees, with 0.01 degree preciosion, we might use
@@ -25,10 +25,10 @@ connects to IO board can find out that there is signal "my_temperature" at addre
 first one byte for status bits and then four bytes for float value.
 
 Get or set signal in C code
-***************************
+****************************
 
 IO device networks
-******************
+*******************
 
 If we have one confrol computer with bund of IO boards, we do not need concept of IO device network. 
 It comes to play when we have server which needs to handle multiple systems. Cloud server is the most obvous example.
@@ -41,7 +41,7 @@ devices are in separate IO device networks "pekkanet" and "markkunet", each with
 
 
 ﻿IO path to signal
-*****************
+*******************
 How do I turn on the lights on in my garage from an application running in cloud server?
 
 * I call my application “homerapp” and my home network “pekkanet”.

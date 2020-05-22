@@ -12,4 +12,5 @@ Security
    :caption: Contents:
 
    security-overviews/security-overviews
+   authentication/authentication
 

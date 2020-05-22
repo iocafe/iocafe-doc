@@ -28,7 +28,6 @@ Electronics
 An LM6144 operational amplifier (U1 and U2) is used to high pass and to digitize the signal of LXD/GB3-A1ELS photo transistor (Q1).
 
 .. figure:: pics/200318-gazerbeam-electronics-schema-partsim.png
-   :width: 660
 
    electronics schema
 
@@ -48,7 +47,6 @@ The U2 is comparator, which compares if input voltage is less or greater than 1.
    photo transistor
 
 .. figure:: pics/200316-scope-signal-image.png
-   :width: 660
 
    scope view
 

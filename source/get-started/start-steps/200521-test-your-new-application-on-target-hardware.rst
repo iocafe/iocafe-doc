@@ -24,6 +24,7 @@ microcontroller. Use putty to see that you that you have correct serial or socke
 TLS and security
 ****************
 This is where it gets quite complicated, just to get main idea:
+
 * Test first with unencrypted sockets, and move on to TLS only when that is working. 
 * Server side is identified by client from server certificate. 
   Client must have accepted certificate bundle loaded.

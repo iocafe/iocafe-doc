@@ -1,13 +1,12 @@
 ﻿Pins example “jane”
 =======================
-The “jane” is name for “pins” library example IO device application. “Carol” is name for a specific IO board, here MELIFE ESP32 development board which has specific uses for it’s pin. 
+The “jane” is name for “pins” library example IO device application. “Carol” is name for a specific IO board, here MELIFE ESP32 development board which has specific uses for it’s pin.
 
 Carol hardware
 *******************
-It is useful to give name to a IO board so it can be called. My breadboard MELIFE ESP32 test is called “carol”, so the name “carol” means ESP32 with Arduino libraries. This combination can be developed by either Visual Studio Code + Platform IO or Arduino IDE. 
+It is useful to give name to a IO board so it can be called. My breadboard MELIFE ESP32 test is called “carol”, so the name “carol” means ESP32 with Arduino libraries. This combination can be developed by either Visual Studio Code + Platform IO or Arduino IDE.
 
 .. figure:: pics/jane-test.jpeg.jpg
-   :width: 660
 
    “Carol” is a bit of a mess, it needs to survive for a day of testing.
 
@@ -58,11 +57,11 @@ The IO pin name is name what Jane application uses for specific functionality, l
 
 JSON configuration and generated C code
 ****************************************
-The Jane example was used for this pins library and JSON configuration and generated C code can be found earlier in this document. 
+The Jane example was used for this pins library and JSON configuration and generated C code can be found earlier in this document.
 
 The jane application
 ****************************************
-The jane-example.c is simple single thread example IO device application. It demonstrates how to use IO trough “pins” interface. 
+The jane-example.c is simple single thread example IO device application. It demonstrates how to use IO trough “pins” interface.
 
 * The pins_setup() initialize the IO pins.
 * pin_set() set IO pin state

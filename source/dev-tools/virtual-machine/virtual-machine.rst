@@ -2,7 +2,6 @@ Virtual machines
 ==================================
 
 .. figure:: pics/200517-deepin-vm.jpeg
-   :width: 660
 
    "Ubuntu 20.04 DDE remix" virtual machine for ESP32 development.
 

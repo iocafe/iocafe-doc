@@ -1,11 +1,10 @@
-﻿Memory blocks 
+﻿Memory blocks
 =============
 Communication is based on memory blocks. Device A stores data to be transferred into memory block. Communication maintains identical copy of the memory block in device B. Separate memory blocks are necessary to implement two directional communication.
 
 A memory block is byte array which is copied from a device to another. Under the hood his is quite a bit more complex, since only changes are transferred over communication, there is compression and synchronization, but user of this library should not need to care about this. There can be multiple recipients of one memory block.  There are IOCOM API functions for allocating, accessing memory block parameters and content, for data transfer synchronization, and callbacks.
 
 .. figure:: pics/090727-memory-blocks.png
-   :width: 660
 
    logically flat memory copy.
 
