@@ -48,69 +48,68 @@ A JSON pin setup would look something like ESP32 example below:
 .. code-block:: json
 
     {
-      "io": [{
-        "name": "jane",
-        "title": "IO pin setup for 'jane' application on 'carol' hardware",
-        "groups": [
-          {
-            "name": "inputs",
-            "pins": [
-              {"name": "gazerbeam", "addr": 39, "interrupt": 1},
-              {"name": "dip_switch_3", "addr": 34, "pull-up": 1},
-              {"name": "dip_switch_4", "addr": 35},
-              {"name": "touch_sensor", "addr": 36, "touch": 1}
-            ]
-          },
-          {
-            "name": "outputs",
-            "pins": [
-              {"name": "led_builtin", "addr": 33}
-            ]
-          },
-          {
-            "name": "analog_inputs",
-            "pins": [
-              {"name": "potentiometer", "addr": 26, "max": 4095}
-            ]
-          },
-          {
-            "name": "pwm",
-            "pins": [
-              {"name": "servo", "bank": 0, "addr": 22, "frequency": 50, "resolution": 12, "init": 2048, "max": 4095},
-              {"name": "dimmer_led", "bank": 1, "addr": 27, "frequency": 5000, "resolution": 12, "init": 0, "max": 4095}
-            ]
-          },
-          {
-            "name": "uart",
-            "pins": [
-              {"name": "U2_TXD", "addr": 17},
-              {"name": "U2_RXD", "addr": 16}
-            ]
-          },
-          {
-            "name": "debugger",
-            "pins": [
-                {"name": "AD1_TDI", "addr": 12},
-                {"name": "AD0_TCK", "addr": 13},
-                {"name": "AD3_TMS", "addr": 14},
-                {"name": "AD2_TDO", "addr": 15},
-                {"name": "U0_TXD", "addr": 1},
-                {"name": "U0_RXD", "addr": 3}
-              ]
-          },
-          {
-            "name": "devboard",
-            "pins": [
-                {"name": "DEV_SCK", "addr": 6},
-                {"name": "DEV_SDO", "addr": 7},
-                {"name": "DEV_SDI", "addr": 8},
-                {"name": "DEV_SHD", "addr": 9},
-                {"name": "DEV_SWP", "addr": 10},
-                {"name": "DEV_CSC", "addr": 11}
-              ]
-          }
-        ]
-      }]
+      "io": [{
+        "name": "jane",
+        "title": "IO pin setup for 'jane' application on 'carol' hardware",
+        "groups": [
+          {
+            "name": "inputs",
+            "pins": [
+              {"name": "gazerbeam", "addr": 39, "interrupt": 1},
+              {"name": "dip_switch_3", "addr": 34, "pull-up": 1},
+              {"name": "dip_switch_4", "addr": 35},
+              {"name": "touch_sensor", "addr": 36, "touch": 1}
+            ]
+          },
+          {
+            "name": "outputs",
+            "pins": [
+              {"name": "led_builtin", "addr": 2}
+            ]
+          },
+          {
+            "name": "analog_inputs",
+            "pins": [
+              {"name": "potentiometer", "addr": 26, "speed": 3, "max": 4095}
+            ]
+          },
+          {
+            "name": "pwm",
+            "pins": [
+              {"name": "servo", "bank": 0, "addr": 22, "frequency": 50, "resolution": 12, "init": 2048, "max": 4095},
+              {"name": "dimmer_led", "bank": 1, "addr": 27, "frequency": 5000, "resolution": 12, "init": 0, "max": 4095}
+            ]
+          },
+          {
+            "name": "uart",
+            "pins": [
+              {"name": "uart2", "addr": 2, "rx": 16, "tx": 17, "speed": 96}
+            ]
+          },
+          {
+            "name": "debugger",
+            "pins": [
+                {"name": "AD1_TDI", "addr": 12},
+                {"name": "AD0_TCK", "addr": 13},
+                {"name": "AD3_TMS", "addr": 14},
+                {"name": "AD2_TDO", "addr": 15},
+                {"name": "U0_TXD", "addr": 1},
+                {"name": "U0_RXD", "addr": 3}
+              ]
+          },
+          {
+            "name": "devboard",
+            "pins": [
+                {"name": "DEV_SCK", "addr": 6},
+                {"name": "DEV_SDO", "addr": 7},
+                {"name": "DEV_SDI", "addr": 8},
+                {"name": "DEV_SHD", "addr": 9},
+                {"name": "DEV_SWP", "addr": 10},
+                {"name": "DEV_CSC", "addr": 11}
+              ]
+          }
+        ]
+      }]
     }
 
 
