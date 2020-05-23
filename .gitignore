@@ -1,3 +1,6 @@
 docs/build/html
 docs/build/doctrees
+_build
+_static
+_templates
 *#
