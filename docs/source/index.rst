@@ -22,6 +22,7 @@ IoT/IO device networks over TCP/IP or serial port.
    dev-tools/dev-tools
    micro-controllers/micro-controllers
    examples/examples
+   appendix/appendix
 
 Search
 ==================
