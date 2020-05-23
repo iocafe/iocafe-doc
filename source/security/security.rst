@@ -11,6 +11,8 @@ Security
    :maxdepth: 2
    :caption: Contents:
 
-   security-overviews/security-overviews
-   authentication/authentication
+   authentication/200114-device-identification-at-connect
+   authentication/200127-pairing-io-device-and-control-computer
+   authentication/191024-security-vunerabilities
+   network-topology/190919-iocom-network-topology
 
