@@ -106,4 +106,69 @@ os_boolean ioc_is_my_address(
     int start_addr,
     int end_addr);
 
+
+Low level access to memory block content
+190622, updated 23.6.2019/pekka
+Memory block content is the actual data to be transferred. It is accessed using functions, which change the content and cause changes to be propagated. 
+Writing data to be transferred
+The ioc_write is the generic function to set data to be transferred. 
+
+void ioc_write(
+    iocMemoryBlock *mblk,
+    int addr,
+    os_uchar *buf,
+    int n);
+
+
+Clearing range in memory block
+The ioc_clear() function sets range of bytes starting from address given as argument to zero. This is preferred way to clear memory block data.
+
+void ioc_clear(
+    iocMemoryBlock *mblk,
+    int addr,
+    int n);
+Propagating writes to transfers
+Propagating changes is done by ioc_send() function. This function is called automatically if IOC_AUTO_SEND flag was given when the memory block was initialized. Similarly received data is propagated by ioc_receive() function, and flag to call it automatically is  IOC_AUTO_RECEIVE.
+Reading received data
+Similarly to writing to outgoing memory block, we can read incoming memory block. Data can also be read from outgoing memory block, but never write to incoming memory block. Generic read function is as:
+
+void ioc_read(
+    iocMemoryBlock *mblk,
+    int addr,
+    os_uchar *buf,
+    int n);
+
+Detecting received data using callback function
+Using callback function to react to received data is usually much more efficient than polling for changes. Application implemened callback function could be something like:
+
+static void iocontroller_callback(
+    struct iocMemoryBlock *mblk,
+    int start_addr,
+    int end_addr,
+    os_ushort flags,
+    void *context)
+{
+    /* Echo 2 bytes at address 2 back to IO board address 11. This happens 
+        practically immediately.
+     */
+    if (end_addr >= 2 && start_addr < 2 + 2)
+    {
+        os_int command_echo = ioc_get16(mblk, 2);
+        ioc_set16(c->outputs, 11, command_echo);
+    }
+}
+
+Use ioc_add_callback to set the callback function:
+
+ioc_add_callback(mblk, iocontroller_callback, OS_NULL);
+
+There are few things to be aware of when using callbacks:
+
+* Callback must return almost immediately, it cannot have long processing and even debug prints slow down communication significantly. If callback needs to initiate loger process, trigger an event or set a flag from the callback function.
+* In multithread operation, the callback function can is called by other thread than which runs the sequence. Typically thread running the communication. 
+
+About thread safety
+If multithreading support is enabled for eosal and iocom when compiling, memory block access is thread safe. These functions can be called from multiple threads.
+
+
 200111, updated 19.5.2020/pekka
