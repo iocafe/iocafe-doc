@@ -22,9 +22,5 @@ Loading program to flash
 * Before loading software connect GPIO pin 0 to GND
 * Press reset button. Now board should be ready to receive program. After loading you need to disconnect GPIO 0 from ground and press reboot.
 
-Files and folders
-
-* platformio.ini - Settings for Visual Studio Code + Platform IO.
-
 
 notes 22.5.2020/pekka
