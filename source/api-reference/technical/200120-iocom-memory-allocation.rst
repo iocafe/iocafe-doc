@@ -1,4 +1,4 @@
-IOCOM mMemory allocation
+IOCOM memory allocation
 ==========================
 Heap based dynamic memory allocation is used by default in systems that support it. Anyhow using heap based memory allocation is not recommended for micro controllers or other systems with limited memory resources, even if it was supported. I recommend to set up dedicated memory pool in micro controller environments. It can be set up also for linux/windows, which is useful when developing code to run in micro controllers in PC environment.
 
