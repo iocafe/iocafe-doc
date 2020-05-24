@@ -6,7 +6,7 @@
 IOCOM library
 =============
 IoT/IO device networks over TCP/IP or serial port.
-SOFIE WAS HERE
+
 
 .. toctree::
    :maxdepth: 2
