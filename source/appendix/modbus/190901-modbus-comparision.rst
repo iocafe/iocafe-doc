@@ -1,7 +1,7 @@
 ﻿MODBUS comparison
 ====================
-The library is an alternative to MODBUS protocol for point to point communication. Since the MODBUS
-is well known, it is easy to get the general idea by listing the main differences between the protocols:
+Since the MODBUS is well known, it is easy to get the general idea by listing the main differences 
+between the protocols:
 
 * The IOCOM is event based, while MODBUS uses polling. This means that data is transferred when it 
   changes, not when it is queried.
@@ -15,9 +15,7 @@ is well known, it is easy to get the general idea by listing the main difference
   It cannot do “one master – multiple slaves” serial communication, every device needs it’s own serial
   wire. If those features are important, then use MODBUS. It was designed specifically for that scenario
   and does it well.
-* When needed, IOCOM handles secure TLS connections natively. MODBUS is channeled trough SSH to provide
-  secure connection. SSH is typically too heavy for micro controllers, while many more powerful ones
-  can use TLS. 
+* IOCOM handles secure TLS connections natively.
 
 
 190901, updated 22.5.2020/pekka
