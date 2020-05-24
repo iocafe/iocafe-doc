@@ -12,8 +12,8 @@ and be ported to new systems.
    :maxdepth: 2
    :caption: Contents:
 
+   serialization/191026-serialization-and-streams
    serialization/191026-integer-serialization
    serialization/191026-float-serialization
    serialization/191026-json-serialization
-   serialization/191026-serialization-and-streams
 
