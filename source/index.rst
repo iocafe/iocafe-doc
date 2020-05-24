@@ -16,9 +16,9 @@ IoT/IO device networks over TCP/IP or serial port.
    get-started/get-started
    security/security
    api-reference/api-reference
+   extensions/extensions
    platform-abstraction/platform-abstraction
    hw-io-abstraction/hw-io-abstraction
-   extensions/extensions
    dev-tools/dev-tools
    micro-controllers/micro-controllers
    examples/examples
