@@ -8,6 +8,9 @@ all platforms: Purpose of the operating system abstraction is to separate platfo
 the library. Thus the IOCOM library can run on multiple platforms, like Windows, Linux and several micro-controllers, 
 and be ported to new systems.
 
+Core functionality
+*******************
+
 * platform configuration defines
 * initialization
 * threads
@@ -21,6 +24,10 @@ and be ported to new systems.
 * resource monitor
 * error handling
 * memory allocation
+
+Extensions
+*******************
+Optional eosal features are implemented as extensions, which can be turned on or off by complier defines. This provides the scalability: If we are to run serial communications on Arduino UNO board, we need to turn almost all extensions off to save resources. Then in some other environment we may need security, handle network topology, etc, thus need these features.
 
 * network initialization 
 * transport, security and streams
