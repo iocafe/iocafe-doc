@@ -5,6 +5,11 @@ Extension libraries
    :maxdepth: 2
    :caption: Contents:
 
-   flashcode/flashcode
+   nodeconf/nodeconf
+   lighthouse/lighthouse
+   ioserver/ioserver
+   devicedir/devicedir
    gazerbeam/gazerbeam
+   flashcode/flashcode
+   python-api/python-api
 
