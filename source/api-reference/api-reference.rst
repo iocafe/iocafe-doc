@@ -9,4 +9,5 @@ API reference
    classes/classes
    json-configuration/json-configuration
    signals/signals
+   technical/technical
 
