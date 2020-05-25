@@ -46,4 +46,5 @@ Optional eosal features are implemented as extensions, which can be turned on or
    serialization/191026-integer-serialization
    serialization/191026-float-serialization
    serialization/191026-json-serialization
+   persistent-data-and-flash-programming/200202-persistent-parameters
 
