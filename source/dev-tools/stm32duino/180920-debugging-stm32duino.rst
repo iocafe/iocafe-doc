@@ -1,4 +1,5 @@
 Debugging video clip
+=====================
 hobby project notes 20.9.2018/pekka
 
 https://hackaday.com/2017/03/30/the-2-32-bit-arduino-with-debugging/
@@ -27,7 +28,8 @@ n
 bt
 
 GOT LOCKED UP?
-- Download ST link utility on windows,
-- I've run the ST-LINK Utility (on windows) and I went to Target > Option Bytes... > Disable Read Out Protection (combo box). Done, issue solved.
+
+* Download ST link utility on windows,
+* I've run the ST-LINK Utility (on windows) and I went to Target > Option Bytes... > Disable Read Out Protection (combo box). Done, issue solved.
 
 

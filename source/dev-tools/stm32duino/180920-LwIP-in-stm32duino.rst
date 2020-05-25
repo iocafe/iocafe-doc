@@ -1,6 +1,5 @@
 Using STM32 on-chip integrated Ethernet is easy!
-hobby project notes 20.9.2018/pekka
-
+=================================================
 I tested using LwIP (lightweight IP library) on the STM32 Nucleo F429ZI development board. This board has ARM chip with integrated Ethernet, and the Nucleo board has PHY layer.
 
 -------------- Requirements
@@ -22,3 +21,5 @@ Open and run sketch [File][Examples][STM32duino STM32Ethernet] and select "Web S
 
 -------------- PHY
 http://andybrown.me.uk/2012/09/01/ethernet-phy-stm32f107/
+
+hobby project notes 20.9.2018/pekka

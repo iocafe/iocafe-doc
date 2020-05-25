@@ -13,5 +13,6 @@ But if you want the build the house, use a good hammer. And this is the best I h
    :maxdepth: 2
    :caption: Contents:
 
+   200314-debugging-esp32-visual-studio-code-platform-io
    200517-linux-usb-device-not-working
 
