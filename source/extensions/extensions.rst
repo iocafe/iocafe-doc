@@ -12,4 +12,5 @@ Extension libraries
    gazerbeam/gazerbeam
    flashcode/flashcode
    python-api/python-api
+   iocloud/iocloud
 
