@@ -13,7 +13,7 @@ Install ubuntu components
     sudo apt install nginx
 
 
-Setup and commands for nginx/ufw firewall
+Setup and commands for nginx and ufw
 * The nginx is web server, like Apace. It listens socket ports 80 and 443 (secure) and
   processes HTTP requests from web browser. 
 * Ufw is firewall, which is needed for security. The ufw is used to select which programs
@@ -21,7 +21,7 @@ Setup and commands for nginx/ufw firewall
 * Enable and disable effect wether nginx is started at boot
 
 ::
-s
+
     /coderoot/iocom/scripts/ufw-cloud-firewall
     sudo ufw allow 'Nginx HTTP'
     sudo ufw allow 'Nginx HTTPS'
@@ -55,10 +55,27 @@ Setup virtual environment for running flask
     pip install wheel
     pip install gunicorn flask
 
+Create file icloud.service to 
 
-pip install wheel
+::
 
-https://www.anaconda.com/products/individual#linux
+    sudo nano /etc/systemd/system/iocloud.service
+
+With contents:
+* You may need to change user name
+
+::
+
+    [Unit]
+    Description=Gunicorn instance to serve iocloud
+    After=network.target
+
+    [Service]
+    User=john
+    Group=www-data
+
+
+    
 
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
 
