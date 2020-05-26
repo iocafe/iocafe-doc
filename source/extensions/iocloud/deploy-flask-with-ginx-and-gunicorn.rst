@@ -1,4 +1,4 @@
-Setting up flask for production
+Flask setup for production
 ================================
 
 Install ubuntu components
