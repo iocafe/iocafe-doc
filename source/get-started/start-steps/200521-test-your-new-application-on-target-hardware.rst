@@ -3,13 +3,13 @@ Test your new application on the target hardware
 
 Building
 ********
-Before compiling, run script to convert JSON configuratio to C code and to binary compressed JSON data. 
+Before compiling, run script to convert JSON configuration to C code and to binary compressed JSON data. 
 Refer to development tool documentation for build instructions, extra notes will be in "development tools" 
 section of this document. 
 
 Uploading
 *********
-See notes in "﻿Set up and test development tools". 
+See notes in "Set up and test development tools". 
 
 Testing & debugging
 ********************
