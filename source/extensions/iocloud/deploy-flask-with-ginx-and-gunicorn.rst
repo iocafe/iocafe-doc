@@ -4,6 +4,7 @@ Setting up flask for production
 Install ubuntu components
 
 ::
+
     sudo apt update
     sudo apt install python3-pip python3-dev build-essential conda
     sudo apt install libssl-dev libffi-dev python3-setuptools 
@@ -19,6 +20,8 @@ Setup and commands for nginx/ufw firewall
   (TCP/UDP ports) can be accessed from network. 
 * Enable and disable effect wether nginx is started at boot
 
+::
+s
     /coderoot/iocom/scripts/ufw-cloud-firewall
     sudo ufw allow 'Nginx HTTP'
     sudo ufw allow 'Nginx HTTPS'
@@ -32,6 +35,7 @@ Setup and commands for nginx/ufw firewall
 
 Install anaconda
 ** Anaconda is tool for managing virtual Python environments.
+
 ::
 
     https://www.anaconda.com/products/individual#linux
@@ -51,8 +55,6 @@ Setup virtual environment for running flask
     pip install wheel
     pip install gunicorn flask
 
-    
-::
 
 pip install wheel
 
