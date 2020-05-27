@@ -139,10 +139,15 @@ Testing without domain name (skip on real web server)
 
 ::
    
-    (flask) john@iocafe:/etc/nginx/sites-enabled$ cd /etc/nginx/sites-enabled
-    (flask) john@iocafe:/etc/nginx/sites-enabled$ sudo rm default
-    (flask) john@iocafe:/etc/nginx/sites-enabled$ sudo systemctl restart nginx
+    cd /etc/nginx/sites-enabled
+    sudo rm default
+    sudo systemctl restart nginx
    
+To get "default" back:   
+   
+::
+
+    sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled
    
 Serve Certificate
 
