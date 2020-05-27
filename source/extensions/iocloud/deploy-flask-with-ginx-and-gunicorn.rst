@@ -40,6 +40,7 @@ Setup and commands for nginx and ufw
 Install anaconda
 * Anaconda is tool for managing virtual Python environments.
 * You may need to change version number, see https://www.anaconda.com/products/individual#linux for the latest.
+* I needed to restart bash to get path set
 
 ::
 
@@ -87,14 +88,12 @@ With contents:
     WantedBy=multi-user.target
 
 
-Setup available nginx site and enable it
-* Enable = Link the file to the sites-enabled directory to enable this:
+Setup available nginx site 
 
 ::
 
     sudo nano /etc/nginx/sites-enabled/iocloud
     
-    sudo ln -s /etc/nginx/sites-available/iocloud /etc/nginx/sites-enabled
     
 Content for /etc/nginx/sites-enabled/iocloud
 
@@ -109,6 +108,13 @@ Content for /etc/nginx/sites-enabled/iocloud
 	    proxy_pass http://unix:/coderoot/iocom/extensions/iocloud/myproject.sock;
 	}
     }
+
+Enable it
+* Enable = Link the file to the sites-enabled directory to enable this:
+
+::
+
+    sudo ln -s /etc/nginx/sites-available/iocloud /etc/nginx/sites-enabled
     
 Starting and stopping
     
