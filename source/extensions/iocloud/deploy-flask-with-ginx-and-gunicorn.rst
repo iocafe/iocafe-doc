@@ -63,6 +63,7 @@ Create file icloud.service to
 
 With contents:
 * You may need to change user name
+* Notice that myproject.sock is created automatically, no action needed to create it
 
 ::
 
@@ -73,9 +74,65 @@ With contents:
     [Service]
     User=john
     Group=www-data
+    WorkingDirectory=/coderoot/iocom/extensions/iocloud
+    Environment="PATH=/home/john/anaconda3/envs/flask/bin"
+    ExecStart=/home/john/anaconda3/envs/flask/bin/gunicorn --workers 3 --bind unix:myproject.sock -m 007 wsgi:app
+
+    [Install]
+    WantedBy=multi-user.target
 
 
+Setup available nginx site and enable it
+* Enable = Link the file to the sites-enabled directory to enable this:
+
+::
+
+    sudo nano /etc/nginx/sites-enabled/iocloud
     
+    sudo ln -s /etc/nginx/sites-available/iocloud /etc/nginx/sites-enabled
+    
+Content for /etc/nginx/sites-enabled/iocloud
+
+::
+
+    server {
+	listen 80;
+	server_name _;
+	    
+	location / {
+	    include proxy_params;
+	    proxy_pass http://unix:/coderoot/iocom/extensions/iocloud/myproject.sock;
+	}
+    }
+    
+Starting and stopping
+    
+::
+    
+    sudo systemctl start iocloud
+    sudo systemctl stop iocloud
+    sudo systemctl status iocloud
+   
+Configuring nginx proxy reqs    
+    
+::    
+
+   sudo nano /etc/nginx/sites-available/iocloud
+   
+
+I needed to disable default nginx site to use always flask regardless of URL
+* Without this gninx complains: Job for nginx.service failed because the control process exited 
+  with error code. See "systemctl status nginx.service" and "journalctl -xe" for details.
+
+::
+   
+    (flask) john@iocafe:/etc/nginx/sites-enabled$ cd /etc/nginx/sites-enabled
+    (flask) john@iocafe:/etc/nginx/sites-enabled$ sudo rm default
+    (flask) john@iocafe:/etc/nginx/sites-enabled$ sudo systemctl restart nginx
+   
+   
+   
+   
 
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
 
