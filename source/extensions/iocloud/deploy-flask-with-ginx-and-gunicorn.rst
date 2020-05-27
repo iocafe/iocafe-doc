@@ -38,12 +38,13 @@ Setup and commands for nginx and ufw
 
 
 Install anaconda
-** Anaconda is tool for managing virtual Python environments.
+* Anaconda is tool for managing virtual Python environments.
+* You may need to change version number, see https://www.anaconda.com/products/individual#linux for the latest.
 
 ::
 
-    https://www.anaconda.com/products/individual#linux
-    bash ~/Downloads/Anaconda3-202X.XX-Linux-x86_64.sh
+    wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -O ~/anaconda.sh
+    bash ~/anaconda.sh
     conda update conda
 
 Setup virtual environment for running flask
