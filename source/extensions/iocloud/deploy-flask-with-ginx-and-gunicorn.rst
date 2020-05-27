@@ -17,6 +17,7 @@ Install ubuntu components
 
 
 Setup and commands for nginx and ufw
+
 * The nginx is web server, like Apace. It listens socket ports 80 and 443 (secure) and
   processes HTTP requests from web browser. 
 * Ufw is firewall, which is needed for security. The ufw is used to select which programs
@@ -38,6 +39,7 @@ Setup and commands for nginx and ufw
 
 
 Install anaconda
+
 * Anaconda is tool for managing virtual Python environments.
 * You may need to change version number, see https://www.anaconda.com/products/individual#linux for the latest.
 * I needed to restart bash to get path set
@@ -49,6 +51,7 @@ Install anaconda
     conda update conda
 
 Setup virtual environment for running flask
+
 * Notice that current virtual environment is displayed in terminal 
   like flask in "(flask) john@iocafe:/coderoot/iocom/extensions/iocloud$"
 * conda deactivate deactivates the virtual machine, but leave it activated
@@ -68,6 +71,7 @@ Create file icloud.service to
     sudo nano /etc/systemd/system/iocloud.service
 
 With contents:
+
 * You may need to change user name
 * Notice that myproject.sock is created automatically, no action needed to create it
 
@@ -110,6 +114,7 @@ Content for /etc/nginx/sites-available/iocloud
     }
 
 Enable it
+
 * Enable = Link the file to the sites-enabled directory to enable this:
 
 ::
@@ -127,6 +132,7 @@ Starting and stopping
   
 
 Testing without domain name (skip on real web server)
+
 * I needed to disable default nginx site to use always flask regardless of URL
 * Without this gninx complains: Job for nginx.service failed because the control process exited 
   with error code. See "systemctl status nginx.service" and "journalctl -xe" for details.
@@ -139,6 +145,7 @@ Testing without domain name (skip on real web server)
    
    
 Serve Certificate
+
 * HTTPS server heeds a certificate (a file) from a CA (certificate authority). https://letsencrypt.org
   is a free CA. We get certificate from let's encrypt by running Certbot ACME software on our web server.
   This proves that we are in control of the web site.
