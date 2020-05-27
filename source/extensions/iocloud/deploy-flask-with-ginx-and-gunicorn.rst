@@ -151,8 +151,8 @@ Starting and stopping
     sudo systemctl start iocloud
     sudo systemctl stop iocloud
     sudo systemctl status iocloud
-   
-  
+    sudo systemctl enable iocloud
+    sudo systemctl disable iocloud
 
 Testing without domain name (skip on real web server)
 
