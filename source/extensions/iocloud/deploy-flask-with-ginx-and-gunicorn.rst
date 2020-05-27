@@ -25,7 +25,7 @@ Setup and commands for nginx and ufw
 
 ::
 
-    /coderoot/iocom/scripts/ufw-cloud-firewall
+    /coderoot/iocom/scripts/ufw-cloud-firewall.sh
     sudo ufw allow 'Nginx HTTP'
     sudo ufw allow 'Nginx HTTPS'
     sudo ufw status
