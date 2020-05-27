@@ -9,7 +9,7 @@ Install ubuntu components
 ::
 
     sudo apt update
-    sudo apt install python3-pip python3-dev build-essential conda
+    sudo apt install python3-pip python3-dev build-essential
     sudo apt install libssl-dev libffi-dev python3-setuptools 
     sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1
     sudo apt install libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
