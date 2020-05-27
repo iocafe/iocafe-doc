@@ -92,10 +92,10 @@ Setup available nginx site
 
 ::
 
-    sudo nano /etc/nginx/sites-enabled/iocloud
+    sudo nano /etc/nginx/sites-available/iocloud
     
     
-Content for /etc/nginx/sites-enabled/iocloud
+Content for /etc/nginx/sites-available/iocloud
 
 ::
 
