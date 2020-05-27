@@ -126,7 +126,8 @@ Starting and stopping
    
   
 
-I needed to disable default nginx site to use always flask regardless of URL
+Testing without domain name (skip on real web server)
+* I needed to disable default nginx site to use always flask regardless of URL
 * Without this gninx complains: Job for nginx.service failed because the control process exited 
   with error code. See "systemctl status nginx.service" and "journalctl -xe" for details.
 
@@ -157,13 +158,15 @@ Add Certbot PPA
 Configure nginx
 
 * Have Certbot edit your Nginx configuration automatically to serve it, turning on HTTPS access in a single step. 
+* This needs real Web server with domain name, with HTTP. See certbot instructions.
 
 ::
 
     sudo certbot --nginx
 
 Links   
-* https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
-* https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx
+
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx
 
 24.5.2020/pekka
