@@ -1,5 +1,8 @@
 Flask setup for production
 ================================
+I use here domain name iocafecloud.com, replace it with your domain name. In practise, you
+need domain name, numeric IP alone will not work. The domain name needs to be registered
+with someone (godaddy, etc) and set to point numeric IP address of your cloud server.
 
 Install ubuntu components
 
@@ -27,6 +30,7 @@ Setup and commands for nginx and ufw
     sudo ufw allow 'Nginx HTTPS'
     sudo ufw status
     sudo systemctl start nginx
+    sudo systemctl restart nginx
     sudo systemctl stop nginx
     systemctl status nginx
     sudo systemctl enable nginx
@@ -131,9 +135,33 @@ I needed to disable default nginx site to use always flask regardless of URL
     (flask) john@iocafe:/etc/nginx/sites-enabled$ sudo systemctl restart nginx
    
    
-   
-   
+Serve Certificate
+* HTTPS server heeds a certificate (a file) from a CA (certificate authority). https://letsencrypt.org
+  is a free CA. We get certificate from let's encrypt by running Certbot ACME software on our web server.
+  This proves that we are in control of the web site.
 
-https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+
+Add Certbot PPA
+
+::
+
+    sudo apt-get update
+    sudo apt-get install software-properties-common
+    sudo add-apt-repository universe
+    sudo add-apt-repository ppa:certbot/certbot
+    sudo apt-get update
+    sudo apt-get install certbot python3-certbot-nginx
+
+Configure nginx
+
+* Have Certbot edit your Nginx configuration automatically to serve it, turning on HTTPS access in a single step. 
+
+::
+
+    sudo certbot --nginx
+
+Links   
+* https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+* https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx
 
 24.5.2020/pekka
