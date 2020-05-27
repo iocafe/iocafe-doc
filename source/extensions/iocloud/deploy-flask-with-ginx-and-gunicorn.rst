@@ -99,7 +99,7 @@ Setup available nginx site
     sudo nano /etc/nginx/sites-available/iocloud
     
     
-Content for /etc/nginx/sites-available/iocloud
+Content for /etc/nginx/sites-available/iocloud for testing in own virtual machine
 
 ::
 
@@ -112,6 +112,29 @@ Content for /etc/nginx/sites-available/iocloud
 	    proxy_pass http://unix:/coderoot/iocom/extensions/iocloud/myproject.sock;
 	}
     }
+
+Content for /etc/nginx/sites-available/iocloud which actually worked in web server. 
+443/sll rows were automatically added by Certbot configuration.
+
+::
+    
+    server {
+        listen 80;
+        server_name iocafecloud.com www.iocafecloud.com;
+        root /coderoot/iocom/extensions/iocloud;
+
+        location / {
+            include proxy_params;
+            proxy_pass http://unix:/coderoot/iocom/extensions/iocloud/myproject.sock;
+        }
+
+        listen 443 ssl; # managed by Certbot
+        ssl_certificate /etc/letsencrypt/live/iocafecloud.com/fullchain.pem; # managed by Certbot
+        ssl_certificate_key /etc/letsencrypt/live/iocafecloud.com/privkey.pem; # managed by Certbot
+        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    }
+    
 
 Enable it
 
