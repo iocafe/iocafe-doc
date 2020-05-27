@@ -124,12 +124,7 @@ Starting and stopping
     sudo systemctl stop iocloud
     sudo systemctl status iocloud
    
-Configuring nginx proxy reqs    
-    
-::    
-
-   sudo nano /etc/nginx/sites-available/iocloud
-   
+  
 
 I needed to disable default nginx site to use always flask regardless of URL
 * Without this gninx complains: Job for nginx.service failed because the control process exited 
