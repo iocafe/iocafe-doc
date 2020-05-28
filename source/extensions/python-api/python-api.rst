@@ -7,3 +7,4 @@ The iocompython library is Python module to provide Python call API to IOCOM lib
    :caption: Contents:
 
    191202-asteroid-game
+   embed-python/200529-iocpython-build-with-embedded-python
