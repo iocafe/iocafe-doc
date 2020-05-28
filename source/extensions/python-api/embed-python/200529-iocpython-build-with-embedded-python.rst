@@ -13,6 +13,22 @@ Directories
 Install dependencies
 *********************
 
+::
+
+   sudo apt-get update
+   sudo apt-get install build-essential 
+   sudo apt-get build-dep python3.8
+
+Alternatively, or in addition (you can these also if uncertain)
+
+::
+   
+   sudo apt-get update \
+      && sudo apt-get install -y build-essential git libexpat1-dev libssl-dev zlib1g-dev \
+     libncurses5-dev libbz2-dev liblzma-dev \
+     libsqlite3-dev libffi-dev tcl-dev linux-headers-generic libgdbm-dev \
+     libreadline-dev tk tk-dev   
+  
 
 Clone python sources from Github
 *********************************
