@@ -83,7 +83,8 @@ Test that it works
 
 Debug Python with QT creator 
 ******************************
-QT creator needs to be started with script which sets LD_LIBRARY_PATH and PYTHONPATH do that debugging works
+QT creator needs to be started with script which sets LD_LIBRARY_PATH and PYTHONPATH do that debugging works.
+Select run in terminal if opening from file explorer.
 
 ::
     
