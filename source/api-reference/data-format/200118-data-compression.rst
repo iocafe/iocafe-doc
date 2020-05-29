@@ -17,29 +17,22 @@ are zeroes, since in most cases much of data does not change. So we use zero-run
 7. Write number of zero bytes.
 8. Go back to step two.
 
+The ioc_compress() function compresses data from source buffer into destination buffer.
+Source data is from start_address
+
+* srcbuf Source buffer pointer.
+* start_addr At entry, index of the first byte in source buffer to compress. At exit index
+  of first byte which was left uncompressed. If whole source buffer was compressed,
+  this is end_addr + 1.
+* end_addr Index of last byte in source buffer to compress.
+* dst Pointer to destination buffer.
+* dst_sz Maximum number of bytes to store in destination buffer. The compression
+  is interrupted when up to this many bytes have been stored in destination buffer.
+* The function returns number of bytes in destination buffer or -1 if is not 
+  compressed (longer than original)
+
 .. code-block:: c
 
-    /**
-    ****************************************************************************************************
-
-    @brief Compress data.
-    @anchor ioc_compress
-
-    The ioc_compress() function compresses data from source buffer into destination buffer.
-    Source data is from start_address
-
-    @param  srcbuf Source buffer pointer.
-    @param  start_addr At entry, index of the first byte in source buffer to compress. At exit index
-            of first byte which was left uncompressed. If whole source buffer was compressed,
-            this is end_addr + 1.
-    @param  end_addr Index of last byte in source buffer to compress.
-    @param  dst Pointer to destination buffer.
-    @param  dst_sz Maximum number of bytes to store in destination buffer. The compression
-            is interrupted when up to this many bytes have been stored in destination buffer.
-    @return Number of bytes in destination buffer or -1 if is not compressed (longer than original)
-
-    ****************************************************************************************************
-    */
     os_int ioc_compress(
         os_char *srcbuf,
         os_int *start_addr,
@@ -124,7 +117,7 @@ are zeroes, since in most cases much of data does not change. So we use zero-run
 The outgoing message will contain “delta encoding” and “zero run compression” bits in header. 
 If compression result would be as long or longer than data in uncompressed format, compression is not done.
 The delta encoding is not done at least for the first snapshot to send. Data received should use these bits
- to detect if data is delta encoded or compressed to read it.
+to detect if data is delta encoded or compressed to read it.
 
 Data decompression is simpler to implement than compression:
 
@@ -144,37 +137,21 @@ data[i] = data[i] + delta[i]
 
 This is again done just with 8 bit integers, overflow ignored. 
 
+The ioc_uncompress() function uncompresses data from source buffer into destination buffer.
+Delta encoding is taken care of if set in flags.
+
+* src Source buffer pointer.
+* bytes Number of source bytes.
+* end_addr Index of last byte in source buffer to compress.
+* dst Pointer to destination buffer.
+* dst_sz Maximum number of bytes to store in destination buffer.
+* The function returns number of destination bytes if uncompression was successful. -1 indicates failed
+  decompression (source data is corrupted)
+
+
 .. code-block:: c
 
-    /**
-    ****************************************************************************************************
-
-    @brief Uncompress data.
-    @anchor ioc_compress
-
-    The ioc_uncompress() function uncompresses data from source buffer into destination buffer.
-    Delta encoding is taken care of if set in flags.
-
-    1. Start from first source byte to process.
-    2. Quit if we have processed all source data.
-    3. Get next source byte in n. It is count of real data bytes.
-    4. Move n data bytes from source to destination.
-    5. Quit if we have processed all source data.
-    6. Get next source byte in n. It is count of zero bytes.
-    7. Write n zero bytes to destination
-    8. Back to step 2.
-
-    @param   src Source buffer pointer.
-    @param   bytes Number of source bytes.
-    @param   end_addr Index of last byte in source buffer to compress.
-    @param   dst Pointer to destination buffer.
-    @param   dst_sz Maximum number of bytes to store in destination buffer.
-    @return  Number of destination bytes if uncompression was successful. -1 indicates failed
-             decompression (source data is corrupted)
-
-    ****************************************************************************************************
-    */
-    os_int ioc_uncompress(
+  os_int ioc_uncompress(
         os_char *src,
         os_int src_bytes,
         os_char *dst,
@@ -216,7 +193,6 @@ This is again done just with 8 bit integers, overflow ignored.
 
             return (os_int)(dst - dst_start);
         }
-
 
         while (src < src_end && dst < dst_end)
         {
