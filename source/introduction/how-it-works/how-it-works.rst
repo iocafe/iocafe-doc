@@ -1,4 +1,4 @@
-Mechanics
+How it works ?
 ==================================
 
 .. toctree::

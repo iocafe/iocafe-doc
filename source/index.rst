@@ -15,7 +15,7 @@ IoT/IO device networks over TCP/IP or serial port.
    introduction/introduction
    get-started/get-started
    security/security
-   api-reference/api-reference
+   iocom-reference/iocom-reference
    extensions/extensions
    platform-abstraction/platform-abstraction
    hw-io-abstraction/hw-io-abstraction

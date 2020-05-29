@@ -1,5 +1,5 @@
-API reference
-=============
+IOCOM reference
+================
 
 .. toctree::
    :maxdepth: 2

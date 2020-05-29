@@ -1,5 +1,5 @@
 Two directional memory blocks
-===========================
+==============================
 
 * supporting bidirectional transfers on low level IO devices takes considerable amount of resources and is mostly 
   unnecessary. It also slows down the communication.

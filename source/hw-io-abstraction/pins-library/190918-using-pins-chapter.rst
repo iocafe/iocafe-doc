@@ -168,6 +168,7 @@ Configuring analog outputs
 Analog outputs are configured within “analog_outputs” group. 
 
 The attributes for analog outputs
+
 * max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 
   1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
 

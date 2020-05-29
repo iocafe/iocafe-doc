@@ -22,5 +22,5 @@ encryption and device identification are essential part of the project.
    :caption: Contents:
 
    general/general
-   mechanics/mechanics
+   how-it-works/how-it-works
 

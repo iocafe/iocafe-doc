@@ -1,5 +1,6 @@
 ﻿Publish static IO device information
-=======================================
+==========================================
+
 There are scenarios, where hard coding memory block map in both ends is not the best thing. 
 For example if we wish user interface to display the state of any unknown IO board, or to use 
 names for inputs/outputs, etc, instead of addresses within memory block. This map for example 
@@ -15,7 +16,7 @@ information is.
 
 To set up a static memory block, we allocate space for it statically. For micro-controllers 
 it is beneficial to use “const static” C declaration, so that no RAM copy of the static information
- is needed, it can be used directly from flash. Publish device information using ioboard.c API
+is needed, it can be used directly from flash. Publish device information using ioboard.c API
 
 If the we use ioboard.c API to set up the, we store device information pointer and size in parameter
 structure before calling ioboard_start_communication:
