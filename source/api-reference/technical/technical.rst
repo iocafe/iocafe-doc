@@ -6,7 +6,7 @@ Technical
    :caption: Contents:
 
    190502-keep-connection-alive
-   190502-reciving-data
+   190502-receiving-data
    190502-sending-data
    190529-communication-status
    191206-streaming-data-trough-iocom

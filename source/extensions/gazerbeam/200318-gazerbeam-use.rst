@@ -16,14 +16,16 @@ The library source code
 
 Building the library
 ********************
-How to build the library depends on target platform and tools used. Cmake builds are quite straight forward, there is CMakeLists.txt in root folder, which can be opened for example in QT creator.
+How to build the library depends on target platform and tools used. Cmake builds are quite straight 
+forward, there is CMakeLists.txt in root folder, which can be opened for example in QT creator.
 
-* Cmake: Either build project separately or include it as subproject within in your project
+* Cmake: Either build project separately or include it as sub-project within in your project
 * ESP32/Arduino/Platform IO. Copy files. Configure platformio.ini.
 * TODO: Add here link to build instructions for different platforms.
 
 Include headers and link library with your project
-The path iocom/extensions/gazerbeam should be added to your project build. This allows including the library headers by “#include “gazerbeam.h”.
+The path iocom/extensions/gazerbeam should be added to your project build. This allows including 
+the library headers by “#include “gazerbeam.h”.
 
 
 Dependencies

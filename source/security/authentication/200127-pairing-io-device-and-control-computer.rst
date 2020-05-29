@@ -4,7 +4,7 @@ Whe IO device connects the first time, it generates it a random secret. From thi
 generated secret will be used to identify this particular IO device.
 The first time an IO device connects to server (controller) for the very first time, a valid
 certificate bundle is copied to IO device. Thus an IO device cannot be paired again to another
-server unless it is "reseted" to forget all security related information.
+server unless it is "reset" to forget all security related information.
 
 On control computer UI, a "New IO device" appears. It shows what kind of board.
 If user with admin right clicks "accept it" button -> The new IO device will be added to

@@ -1,8 +1,8 @@
 lighthouse library
 ====================
-Discover services in network using UDP multicasts 
+Discover services in network using UDP multicasts: 
 
-* Server sends UDP multicasts periodically (once per 4 seconds or so). 
+* Server sends UDP multicast periodically (once per 4 seconds or so). 
 * Clients listens for these - server's address is IP from which the multicast was received.
 
 Multicast content:

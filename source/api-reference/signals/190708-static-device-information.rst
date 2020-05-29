@@ -1,14 +1,24 @@
 ﻿Publish static IO device information
 =======================================
-There are scenarios, where hard coding memory block map in both ends is not the best thing. For example if we wish user interface to display the state of any unknown IO board, or to use names for inputs/outputs, etc, instead of addresses within memory block. This map for example state that “HEATER_POWER” is a 4 byte floating point number at address 121 within memory block “OUT”. 
+There are scenarios, where hard coding memory block map in both ends is not the best thing. 
+For example if we wish user interface to display the state of any unknown IO board, or to use 
+names for inputs/outputs, etc, instead of addresses within memory block. This map for example 
+state that “HEATER_POWER” is a 4 byte floating point number at address 121 within memory block “OUT”. 
 
-Here, we work at low abstraction level, thus we do not yet define what this information is nor how it is formatted. For now it is enough that this is “const static char mydevice_info[] = x…. ”, basically statically allocated block of memory  whose contents do not change, or at least changes are not synchronized. 
-Recommendation is that device information would start with the name of the device information format as ‘\n’ terminated string. This could be used by controller to check what format the device information is.
+Here, we work at low abstraction level, thus we do not yet define what this information is nor 
+how it is formatted. For now it is enough that this is “const static char mydevice_info[] = x…. ”, 
+basically statically allocated block of memory  whose contents do not change, or at least changes
+are not synchronized. 
+Recommendation is that device information would start with the name of the device information 
+format as ‘\n’ terminated string. This could be used by controller to check what format the device
+information is.
 
-To set up a static memory block, we allocate space for it statically. For micro-controllers it is beneficial to use “const static” C declaration, so that no RAM copy of the static information is needed, it can be used directly from flash.
-Publish device information using ioboard.c API
+To set up a static memory block, we allocate space for it statically. For micro-controllers 
+it is beneficial to use “const static” C declaration, so that no RAM copy of the static information
+ is needed, it can be used directly from flash. Publish device information using ioboard.c API
 
-If the we use ioboard.c API to set up the, we store device information pointer and size in parameter structure before calling ioboard_start_communication:
+If the we use ioboard.c API to set up the, we store device information pointer and size in parameter
+structure before calling ioboard_start_communication:
 
 ::
 
@@ -23,9 +33,13 @@ If the we use ioboard.c API to set up the, we store device information pointer a
     prm.device_info = mydevice_info;
     prm.device_info_sz = sizeof(mydevice_info);
 
-Here is some very basic device information as text example. Since plain text takes kind of a lot of space, this is not optimal way to present device information. It is beneficial to compress device information as much as possible, since it is usually transferred every time when a connection is established.
+Here is some very basic device information as text example. Since plain text takes kind of a lot
+of space, this is not optimal way to present device information. It is beneficial to compress device 
+information as much as possible, since it is usually transferred every time when a connection is established.
 
-The static memory pool needs to be slightly larger, by sizeof(iocMemoryBlock) + IOBOARD_MAX_CONNECTIONS * sizeof(iocSourceBuffer) bytes. We need space for memory block structure and source buffer structure for each connection.  We do not need to allocate memory for memory block data nor for source buffer content, since this will be IOC_STATIC memory block. 
+The static memory pool needs to be slightly larger, by sizeof(iocMemoryBlock) + IOBOARD_MAX_CONNECTIONS * sizeof(iocSourceBuffer) bytes.
+We need space for memory block structure and source buffer structure for each connection.  We do not need 
+to allocate memory for memory block data nor for source buffer content, since this will be IOC_STATIC memory block. 
 
 ::
 
@@ -38,7 +52,8 @@ The static memory pool needs to be slightly larger, by sizeof(iocMemoryBlock) + 
 
 Or call basic IOCOM functions to set up
 
-When a device information memory block is allocated, it needs pointer to and size of static data.  Flag IOC_STATIC will tell that the buffer is static and source synchronization buffering is not needed.
+When a device information memory block is allocated, it needs pointer to and size of static data.
+Flag IOC_STATIC will tell that the buffer is static and source synchronization buffering is not needed.
 
 ::
 
@@ -51,7 +66,8 @@ When a device information memory block is allocated, it needs pointer to and siz
     ioc_initialize_memory_block(OS_NULL, &ioboard_communication, &blockprm);
 
 Dynamic access to device information in control computer
-This is code in control computer’s end. A “root callback” function can be set at startup. It gets called when a new memory block is created (among other things). 
+This is code in control computer’s end. A “root callback” function can be set at startup. 
+It gets called when a new memory block is created (among other things). 
 
 ::
     osal_socket_initialize();
@@ -67,7 +83,8 @@ Creating dynamic memory blocks is be enabled by IOC_DYNAMIC_MBLKS flag in either
     epprm.flags = IOC_SOCKET|IOC_CREATE_THREAD|IOC_DYNAMIC_MBLKS;
     ioc_listen(ep, &epprm);
 
-Thus application’s root_callback() function gets called with IOC_NEW_DYNAMIC_MBLK event, once connection is establised and memory block information is received from the IO device.
+Thus application’s root_callback() function gets called with IOC_NEW_DYNAMIC_MBLK event, once 
+connection is established and memory block information is received from the IO device.
 
 ::
 
@@ -99,7 +116,9 @@ Thus application’s root_callback() function gets called with IOC_NEW_DYNAMIC_M
         }
     }
 
-This function again checks if this is device information memory block “INFO”. If so it adds info_callback for the memory block and enables IOC_AUTO_RECEIVE to read data instead of explicit ioc_receive() call. Info callback will be called when device information data has been transferred. This example just prints the device information (string assumed).
+This function again checks if this is device information memory block “INFO”. 
+Info callback will be called when device information data has been transferred. 
+This example just prints the device information (string assumed).
 
 ::
 

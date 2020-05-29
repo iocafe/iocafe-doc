@@ -1,7 +1,7 @@
 Issue: Platform IO cannot use USB device
 ========================================
 
-Symphtoms
+Symptoms
 *********
 ESP-prog or other USB connected device cannot be used from linux trough USB
 

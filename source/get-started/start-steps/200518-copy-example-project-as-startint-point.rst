@@ -2,7 +2,7 @@ Alternative 1, copy example project
 =================================================
 
 Most example code comes with optional libraries to make iocom appear more like framework than library.
-Reason for this is simple, we need to be able to run the examples on many different microcontrollers and development 
+Reason for this is simple, we need to be able to run the examples on many different micro-controllers and development 
 tools and they need to contain necessary supporting code.
 
 We assume that more often iocom is used as plain communication library within an application, see "alternative 2"
@@ -20,7 +20,7 @@ Copy example project
 ********************
 * Copy example project to start from.
 * In this text I "copy" gina example in /coderoot/iocom/examples/gina directory to /coderoot/myproject/myapp directory.
-* I could as well /coderoot/myapp directory, using /coderoot/myproject/myapp gives extra layer in directoryy tree.
+* I could as well /coderoot/myapp directory, using /coderoot/myproject/myapp gives extra layer in directory tree.
   This is useful if something else project includes other things besides one IO device application.
 * Delete temporary and other unnecessary files and folders from /coderoot/myproject/myapp. 
 
@@ -49,7 +49,7 @@ Run script to convert JSON to C code and to compressed format from terminal.
 Name your IO board and modify IO pin configuration 
 **************************************************
 If you will be using pins library for IO device, the IO pins are configured in pins-io.json file.
-Amongh other files, this file is further converted to C code by config_to_c_code script.
+Among other files, this file is further converted to C code by config_to_c_code script.
 This file is located in /coderoot/iocom/examples/gina/config/pins/<yourdevicename>/pins-io.json
 
 Your hardware (physical IO device) needs a name. This allows building same application on different boards.
@@ -63,6 +63,6 @@ Setup signal configuration
 **************************
 Similarly to pins, signals passed trough IOCOM communication are defined in JSON file signals.json
 (/coderoot/iocom/examples/gina/config/signals/signals.json). The file merge.json is used to include
-typically device configuration signals or orther common signal collections.
+typically device configuration signals or other common signal collections.
 
 200518, updated 19.5.2020/pekka

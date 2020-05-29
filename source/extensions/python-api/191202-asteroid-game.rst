@@ -15,7 +15,7 @@ To run the Asteroid game server, use  in “iocompython/examples/asteroid-servic
 
 On client side.
 *********************
-The “/coderoot/iocom/extensions/iocompython” C code needs to be comiled for client environment, this makes the Python module. Asteroid game’s client side Python code is in “iocompython/examples/asteroid-client-pyglet”.  
+The “/coderoot/iocom/extensions/iocompython” C code needs to be compiled for client environment, this makes the Python module. Asteroid game’s client side Python code is in “iocompython/examples/asteroid-client-pyglet”.  
 
 Linux notes:
 *********************
@@ -44,15 +44,15 @@ Note 4: Start asteroid test service
 Note 5: Start asteroid test client
     • open new terminal
     • cd /coderoot/iocom/extensions/iocompython/examples/asteroid-client-pyglet
-    • gedit asteroid.py
+    • nano asteroid.py
     • modify line connection = Connection(root, "127.0.0.1", "tls,up") to have numeric IP address of computer running the asteroid service. 127.0.0.1 is in same computer. Save the file and close gedit.
     • ./asteroid.sh
 
 Note 6: General 
     • Line  "import pyglet" or "import kivy" in .py file causes python to load Pyglet, or Kivy, if the library is installed.
     • Python starts with command python3 Python.
-    • Ofter several different Python 3 versions are installed in same computer, so simetimes we use "/usr/bin/python3" and sometimes just “python3” to start Python.
+    • Ofter several different Python 3 versions are installed in same computer, so sometimes we use "/usr/bin/python3" and sometimes just “python3” to start Python.
     • Python needs to find /coderoot/bin/linux/iocompython.so. To make this happen environment variable "export PYTHONPATH=/coderoot/bin/linux" is set. 
-    • Startup script ending with “.sh” sets PYLONPATH and starts asteroid test application "/usr/bin/python3 asteroid.py"
+    • Startup script ending with “.sh” sets PYTHONPATH and starts asteroid test application "/usr/bin/python3 asteroid.py"
 
 191202, updated 24.5.2020/pekka

@@ -27,7 +27,10 @@ Core functionality
 
 Extensions
 *******************
-Optional eosal features are implemented as extensions, which can be turned on or off by complier defines. This provides the scalability: If we are to run serial communications on Arduino UNO board, we need to turn almost all extensions off to save resources. Then in some other environment we may need security, handle network topology, etc, thus need these features.
+Optional eosal features are implemented as extensions, which can be turned on or off by complier defines. 
+This provides the scalability: If we are to run serial communications on Arduino UNO board, we need to turn
+almost all extensions off to save resources. Then in some other environment we may need security, handle 
+network topology, etc, thus need these features.
 
 * network initialization 
 * transport, security and streams
@@ -35,7 +38,7 @@ Optional eosal features are implemented as extensions, which can be turned on or
 * persistent data
 * file system
 * date and time
-* iocom as framerowrk
+* iocom as framework
 * helper functions (math, checksum, etc)
 
 .. toctree::

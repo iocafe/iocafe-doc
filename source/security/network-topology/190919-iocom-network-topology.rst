@@ -4,7 +4,7 @@ This is IoT related. If your goal is simply to connect IO devices to a computer 
 serial communication, skip this topic. 
 
 The network topology is an application-level feature supported by IOCOM. The ioserver extension library
-can be used as is, or as a starting point to provice user accounts, etc.
+can be used as is, or as a starting point to provide user accounts, etc.
 
 The network topology of distributed system is closely related to security: 
 
@@ -18,7 +18,7 @@ The network topology of distributed system is closely related to security:
 
    Cloud server can provide access to multiple IO device networks.
 
-* An Pekka's devices connect upwards to Pekka's IO device network controller. Either staight or trough an 
+* An Pekka's devices connect upwards to Pekka's IO device network controller. Either straight or trough an 
   intermediate, like the cloud server. Similarly Markku's devices connect to his IO device network controller.
 * Arrows in connection mark direction of TCP/IP socket connection, from client to server. Direction is 
   important for security/authentication. 

@@ -28,7 +28,7 @@ least these have not annoyed me lately.
   a sound, so Microsoft solved the problem by nailing whole door shut. Workaround to debug two executables is
   to use 64 bit build for other and 32 bit build for the other. 
 * Debugging doesn’t always work if network connection is not up to Microsoft “specs” (what ever those are).
-  In practice this means that all works when at home, but when traveling I often need to turn off Wifi 
+  In practice this means that all works when at home, but when traveling I often need to turn off WiFi 
   networking. Otherwise debugging doesn’t start, but Visual studio just locks up.
 
 

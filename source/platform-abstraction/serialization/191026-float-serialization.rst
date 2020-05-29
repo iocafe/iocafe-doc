@@ -11,7 +11,8 @@ Required defines:
 
 Splitting float or double into mantissa and exponent
 *****************************************************
-To make serialization indepent on computer’s floating point presentation, we break a C floating point type into two integers, mantissa and exponent. Then we serialize those. 
+To make serialization independent on computer’s floating point presentation, we break a C floating 
+point type into two integers, mantissa and exponent. Then we serialize those. 
 
 ::
 

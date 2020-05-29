@@ -3,7 +3,7 @@ Build and test IOCOM example on target hardware
 
 Build gina project for target hardware
 **************************************
-Gina is good startint point for testing IO device.
+Gina is good starting point for testing IO device.
 
 
 Run frank and ispy in PC to test communication

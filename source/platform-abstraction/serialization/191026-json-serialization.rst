@@ -1,6 +1,7 @@
 ﻿JSON serialization
 ======================
-The JSON is used as hierarchical and extensible presentation of data. JSON plain text is routinely compressed as packed binary JSON. 
+The JSON is used as hierarchical and extensible presentation of data. JSON plain text
+is routinely compressed as packed binary JSON. 
 
 Convert JSON as packed binary
 *****************************************************

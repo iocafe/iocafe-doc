@@ -5,13 +5,13 @@ What is signal ?
 *****************
 Imagine a IO board with temperature sensor. 
 
-* If we wish to pass temperature though communication as celsius degrees, with 0.01 degree preciosion, we might use
+* If we wish to pass temperature though communication as celsius degrees, with 0.01 degree precision, we might use
   a 4 byte floating point number for these. We need to map these 4 bytes to our memory block.
-* The IO board or may not be connected, or it might be broken. We use a status byte to indicate if temperature signal is connected state if it errornous.
-  One byte is used for this. 
-* We want to name out signal and in code refer to it with name instead of pin address. This allows us to move sensor to other pin, to newer 
-  version of IO board. We call this signal simply "my_temperature"
-* Bith IO board and the control computer need to know in which memory block address this signal is and how it is stored.
+* The IO board or may not be connected, or it might be broken. We use a status byte to indicate if temperature signal
+  is connected state if it erroneous. One byte is used for this. 
+* We want to name out signal and in code refer to it with name instead of pin address. This allows us to move sensor 
+  to other pin, to newer version of IO board. We call this signal simply "my_temperature"
+* Both IO board and the control computer need to know in which memory block address this signal is and how it is stored.
 
 Signal setup in JSON
 ********************
@@ -30,8 +30,8 @@ Get or set signal in C code
 IO device networks
 *******************
 
-If we have one confrol computer with bund of IO boards, we do not need concept of IO device network. 
-It comes to play when we have server which needs to handle multiple systems. Cloud server is the most obvous example.
+If we have one control computer with bund of IO boards, we do not need concept of IO device network. 
+It comes to play when we have server which needs to handle multiple systems. Cloud server is the most obvious example.
 
 Two people, Pekka and Markku both have their own home automation network. Within house both these these have local server
 so that the houses are operational without internet connection. Cloud server is used to give remote address to both
@@ -59,7 +59,8 @@ How do I turn on the lights on in my garage from an application running in cloud
   are not unique within the IO network. Here I assume that I have only one, so I can drop it.
 * Consequently the command to turn on “garagelight” can be set “garagelight.*.*.*” to 1. Now there is no need 
   to write the wildcards, these are assumed. So final command would be set “garagelight” to one. 
-* If signal names are not unique within the network, we need also the device name, and set command would be set “garagelight.*.garagectrl1” to one.
+* If signal names are not unique within the network, we need also the device name, and set command would be
+  set “garagelight.*.garagectrl1” to one.
 
 So full IO path is written as 
 * to signal: signal_name.mblk_name.device_name.network_name

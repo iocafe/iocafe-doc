@@ -3,13 +3,13 @@
 
 IO device configuration includes:
 
-* Wifi configuration. Wifi network name and password. Gazerbeam, serial port for development testing, PC computers use OS Wifi setup.
+* WiFi configuration. WiFi network name and password. Gazerbeam, serial port for development testing, PC computers use OS WiFi setup.
   If there can be multiple WiFi networks, these for each network.
 
-* NIC configuration. Either DDCP or static. If static, the IP, subnet, gateway and DNS of the NIC. 
+* NIC configuration. Either DHCP or static. If static, the IP, subnet, gateway and DNS of the NIC. 
   If there are multiple network adapters, then these for each adapter. 
 
-* Device name. Typicaly hard coded.
+* Device name. Typically hard coded.
 
 * Device number. There can be several same kind of devices in the IO device network and it is necessary
   to identify these. is nice to enumerate, lets say my house thermostats,

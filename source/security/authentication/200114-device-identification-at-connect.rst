@@ -6,10 +6,10 @@ before we send any data,is a the challenge. Default authentication used by IOCOM
 Pairing is popular way how an IO device gets the list of accepted server certificates and how user
 account on server can be created for a new IO device.
 
-Client verifies server ceriticate to know that that the server is legimate
+Client verifies server certificate to know that that the server is legitimate
 
 * server presents a valid certificate (and proves it holds matching private key).
-* client knows it can connecto to the server if server certificate matches to list of accepted certificates stored in client.
+* client knows it can connect to a server if server certificate matches to list of accepted certificates stored in client.
 
 Server identifies client by user name (device name + number) and password
 

@@ -2,17 +2,23 @@
 ======================
 THIS TEXT IS OBSOLETED -> REWRITE NEEDED
 
-Communication status refers to general communication information and settings. For example number of connections (sockets, etc) connected to a memory block. In future this could indicate which input data is selected in redundant communication, etc. Communication status may include also settings.
+Communication status refers to general communication information and settings. For example number
+of connections (sockets, etc) connected to a memory block. In future this could indicate which input
+data is selected in redundant communication, etc. Communication status may include also settings.
 
-From application's view communication status appears the same as data memory and is accessed using the same ioc_read(), ioc_get16(), ioc_write(), ioc_set16(), etc. functions. For data memory, the address is positive or zero, status memory addresses are negative.
+From application's view communication status appears the same as data memory and is accessed using 
+the same ioc_read(), ioc_get16(), ioc_write(), ioc_set16(), etc. functions. For data memory, 
+the address is positive or zero, status memory addresses are negative.
 
 Number of connected streams at this moment. 
 How many times socket connection has been dropped.
 
-For example IOC_NRO_CONNECTED_STREAMS is defined as address -2 and has two bytes, thus less significant byte is is in address -2 and more significant byte in address -1.
+For example IOC_NRO_CONNECTED_STREAMS is defined as address -2 and has two bytes, thus less significant 
+byte is is in address -2 and more significant byte in address -1.
 
 Example, print communication status without callbacks
-The example function below: Every time a socket connects or disconnects to this "IO board", this function prints number of connected sockets and how many times a socket has been dropped (global count).
+The example function below: Every time a socket connects or disconnects to this "IO board", this function
+prints number of connected sockets and how many times a socket has been dropped (global count).
 
 ::
 

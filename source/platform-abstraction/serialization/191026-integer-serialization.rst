@@ -1,6 +1,7 @@
 ﻿Integer serialization
 =========================
-Serialization format is packed  by integer value. Packed format is type and architecture independent , number of  bytes generated depends only on value. Maximum integer size is 64 bits.
+Serialization format is packed  by integer value. Packed format is type and architecture 
+independent, number of  bytes generated depends only on value. Maximum integer size is 64 bits.
 
 Bits in first byte byte NNNNSxxx:
     • NNNN number of follower bytes.
@@ -16,7 +17,8 @@ Required defines:
 
 Serializing an integer 
 *****************************************************
-The osal_intser_writer() function packs C integer x into buffer using serialization format. The function returns number of bytes written to the buffer.
+The osal_intser_writer() function packs C integer x into buffer using serialization format.
+The function returns number of bytes written to the buffer.
 
 ::
 

@@ -28,7 +28,7 @@ Additional benefits
   a specific purpose, this would have great value for those getting started. It could be used as-is or as a reference how to make things work.
 * In a commercial setting, products often need to be supported for ten years after initial product development. Virtual machines with disabled updates
   can be used to "freeze a project for specific HW device version" and burn it into long term storage. So that new people, perhaps after years, can modify 
-  the application code and build the binary for microcontroller. 
+  the application code and build the binary for micro-controller. 
 
 200116, updated 20.5.2020/pekka
 

@@ -6,5 +6,5 @@ JSON configuration
    :caption: Contents:
 
    200519-applications-json-configuration-files
-   200520-scripts-for-processng-json-configuration
+   200520-scripts-for-processing-json-configuration
 

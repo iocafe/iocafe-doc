@@ -9,9 +9,9 @@ Initialize
 
 Loop
 ****
-* Run communication (signle threaded)
-* Syncronized receive
+* Run communication (single threaded)
+* Synchronized receive
 * Operation logic: Set/get signal values
-* Syncronized send
+* Synchronized send
 
 200510, updated 20.5.2020/pekka

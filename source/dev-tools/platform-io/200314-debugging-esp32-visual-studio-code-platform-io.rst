@@ -11,7 +11,7 @@ External USB/JTAG debugger: ESP-Prog (from Grid Connect).
    ESP32 development board and ESP-Prog on background
 
 It is a bit of effort to find correct pins to connect. Initially, I powered the ESP32 trough Esp-Prog. 
-This didn’t provide enough current, causing “brownouts” at ESP when Wifi started up. 
+This didn’t provide enough current, causing “brownouts” at ESP when WiFi started up. 
 
 ESP-idf – the ESP32 support and development
 ********************************************

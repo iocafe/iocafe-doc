@@ -115,14 +115,17 @@ A JSON pin setup would look something like ESP32 example below:
 
 Configuring inputs 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-Inputs are configured within “inputs” group. Pin name is can be up to 15 characters + terminating ‘\0’. Use only ‘a’ - ‘z’, ‘A’ - ‘Z’, ‘0’ - ‘1’ and underscore ‘_’ characters. The pin name will be used in C code as written. Address “addr” is GPIO pin address. 
+Inputs are configured within “inputs” group. Pin name is can be up to 15 characters + terminating ‘\0’.
+Use only ‘a’ - ‘z’, ‘A’ - ‘Z’, ‘0’ - ‘1’ and underscore ‘_’ characters. The pin name will be used in 
+C code as written. Address “addr” is GPIO pin address. 
 
 The attributes for inputs  
 
-    • pull-up: Set 1 to enable pull-up resistor on input.
-    • pull-down: Set 1 to enable pull-down resistor on input.
-    • touch: Set 1 to define this input as touch sensor (this is set up here, even signal may be analog): 
-    • interrupt: Set 1 to trigger HW interrupt when pin state changes, either falling edge, rising edge or both. Edge on which to trigger is in C code.
+• pull-up: Set 1 to enable pull-up resistor on input.
+• pull-down: Set 1 to enable pull-down resistor on input.
+• touch: Set 1 to define this input as touch sensor (this is set up here, even signal may be analog): 
+• interrupt: Set 1 to trigger HW interrupt when pin state changes, either falling edge, 
+  rising edge or both. Edge on which to trigger is in C code.
 
 ::
 
@@ -133,9 +136,10 @@ Configuring outputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Configuring outputs under “outputs” group is similar to configuring inputs.
 
-The attributes for inputs  
-    • pull-up: Set 1 to enable pull-up resistor on output.
-    • pull-down: Set 1 to enable pull-down resistor on output.
+The attributes for inputs:
+
+• pull-up: Set 1 to enable pull-up resistor on output.
+• pull-down: Set 1 to enable pull-down resistor on output.
 
 ::
 
@@ -146,9 +150,13 @@ Configuring analog inputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Analog inputs are configured within “analog_inputs” group. 
 
-The attributes for analog inputs  
-    • addr: GPIO pin address.
-    • max: Set maximum value for analog input. Typically set by number AD conversion resolution, 1023 for 10-bit ADC and 4095 for 12 bit ADC, etc. Application and IOCOM link can use this setting to scale value to known units, which is useful if for example newer version of the hardware has higher ADC resolution.
+The attributes for analog inputs
+
+• addr: GPIO pin address.
+• max: Set maximum value for analog input. Typically set by number AD conversion resolution, 
+  1023 for 10-bit ADC and 4095 for 12 bit ADC, etc. Application and IOCOM link can use this 
+  setting to scale value to known units, which is useful if for example newer version of 
+  the hardware has higher ADC resolution.
 
 ::
 
@@ -160,7 +168,8 @@ Configuring analog outputs
 Analog outputs are configured within “analog_outputs” group. 
 
 The attributes for analog outputs
-* max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
+* max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 
+  1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
 
 ::
 
@@ -180,7 +189,8 @@ The attributes for PWM pin:
 * hpoint: Counter value where the duty cycle 0 - 2^resolution, shifts pulse position in time. 
 * resolution: Number of bits to set PWM duty. If set to 12, values range from 0 to 4095.
   For example 2048 would mean that pin is on 50 % of time (50 % duty cycle). If generating clock pulse, set 1 bit.
-* max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
+* max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 
+  1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
 * init: Set initial value. for example 1024 with 12 bit resolution would mean 25% duty cycle.
 
 ::
@@ -203,7 +213,8 @@ SPI buses are configured within “spi” group.
 The attributes for SPI bus
 
 * addr: SPI bus number to configure.
-* max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
+* max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 
+  1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
 * miso: Sets GPIO pin address for MISO (master in, slave out) signal.
 * mosi: Sets GPIO pin address for MOSI (master out, slave in)signal.
 * sclk: Sets GPIO pin address for SCLK (clock) signal.
@@ -259,7 +270,8 @@ automatic JSON configuration to document converter written.
 
 Generating C source and header files from JSON
 *************************************************
-The hardware specific IO configuration, like jane-io.json, is converted to C files by pins-to-c.py script. This will generate jane-io.c and jane-io.h file, which can be compiled into the application.
+The hardware specific IO configuration, like jane-io.json, is converted to C files by pins-to-c.py script. 
+This will generate jane-io.c and jane-io.h file, which can be compiled into the application.
 
 jane-io.h
 
@@ -306,7 +318,7 @@ And in C file
 
 .. code-block:: c
 
-    /* This file is gerated by pins-to-c.py script, do not modify. */
+    /* This file is generated by pins-to-c.py script, do not modify. */
     #include "pins.h"
     static os_short pins_inputs_dip_switch_3_prm[]= {PIN_PULL_UP, 1};
     static os_short pins_inputs_touch_sensor_prm[]= {PIN_TOUCH, 1};
@@ -343,7 +355,10 @@ And in C file
 
 Pins library types in C
 ***********************
-In C code, an IO pin, a SPI bus, timer or UART is referred by static “Pin” structure. Static structure for each “pin” is initialized in C code generated by script from JSON configuration. The “Pin” structure is the same, regardless what this “pin” actually is, “pinType type” member of the structure has the pin type:
+In C code, an IO pin, a SPI bus, timer or UART is referred by static “Pin” structure. 
+Static structure for each “pin” is initialized in C code generated by script from JSON configuration.
+The “Pin” structure is the same, regardless what this “pin” actually is, “pinType type” member of 
+the structure has the pin type:
 
 Pins library main header file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -367,7 +382,8 @@ Enumeration of pin types
 
 Enumeration of pin attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Each “pin” has specific set of attributes, see JSON configuration notes to which attributes can be applied for a specific pin type.  Notice that numeric enumeration values can change.
+Each “pin” has specific set of attributes, see JSON configuration notes to which attributes can
+be applied for a specific pin type.  Notice that numeric enumeration values can change.
 
 .. code-block:: c
 
@@ -395,7 +411,8 @@ Each “pin” has specific set of attributes, see JSON configuration notes to w
 
 Pin definition structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Structure that holds static information about one IO pin. Pin structure for each IO “pin” is initialized in C code generated from JSON configuration.
+Structure that holds static information about one IO pin. Pin structure for each IO “pin” 
+is initialized in C code generated from JSON configuration.
 
 .. code-block:: c
 
@@ -434,11 +451,14 @@ Structure that holds static information about one IO pin. Pin structure for each
     }
     Pin;
 
-There is group_next and board_next. Often is handy to loop trough all pins, like when making memory map for IO com. Or reading group of inputs with one command. To facilitate this we can group pins together. Pins with same PIN_GROUP number set go generate linked list and all pins of IO board a second linked list.
+There is group_next and board_next. Often is handy to loop trough all pins, like when making 
+memory map for IO com. Or reading group of inputs with one command. To facilitate this we can
+group pins together. Pins with same PIN_GROUP number set go generate linked list and all pins
+of IO board a second linked list.
 
-All pins of a device can be referred using “extern const IoPinsHdr pins_hdr” in script generated pins-io.h. We use pins_setup(&pins_hdr, 0) this to set up all the IO pins, or “pins_read_all(&pins_hdr, PINS_DEFAULT)” in main loop to read all pins.
-
-
+All pins of a device can be referred using “extern const IoPinsHdr pins_hdr” in script generated 
+pins-io.h. We use pins_setup(&pins_hdr, 0) this to set up all the IO pins, or 
+“pins_read_all(&pins_hdr, PINS_DEFAULT)” in main loop to read all pins.
 
 
 Pins library functions

@@ -1,6 +1,6 @@
-iocpython - Python build
+iocpython - python build
 ===================================
-Used for debugging Python C extensions.
+Used for debugging python C extensions.
 
 Directories
 ************
@@ -38,9 +38,9 @@ Clone python sources from Github
     cd /coderoot
     git clone https://github.com/python/cpython.git
 
-Select Python release
+Select python release
 **********************
-Compile stable branch, I select Python version 3.9. 
+Compile stable branch, I select python version 3.9. 
 
 ::
 

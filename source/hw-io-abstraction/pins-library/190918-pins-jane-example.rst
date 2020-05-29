@@ -124,7 +124,7 @@ The jane-example.c is simple single thread example IO device application. It dem
 
       @param   app_context Void pointer, reserved to pass context structure, etc.
       @return  The function returns OSAL_SUCCESS to continue running. Other return values are
-               to be interprened as reboot on micro-controller or quit the program on PC computer.
+               to be interprented as reboot on micro-controller or quit the program on PC computer.
 
     ****************************************************************************************************
     */

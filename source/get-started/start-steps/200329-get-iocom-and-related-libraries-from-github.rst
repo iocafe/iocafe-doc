@@ -34,7 +34,7 @@ On windows create directory c:\\coderoot
 Get Git
 ************************************************
 You need Git, if you have not it already. Git is a distributed version control system which allows many people 
-to share and work on the same souce code. On Debian based Linux distros:
+to share and work on the same source code. On Debian based Linux distributions:
 
 .. code-block:: shell
 
@@ -54,7 +54,7 @@ to your computer do:
    git clone https://github.com/iocafe/eosal.git
    git clone https://github.com/iocafe/pins.git
 
-You should get someting like tree below under /coderoot directory:
+You should get something like tree below under /coderoot directory:
 
 .. code-block:: text
 

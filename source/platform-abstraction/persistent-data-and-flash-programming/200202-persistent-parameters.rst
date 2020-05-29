@@ -22,7 +22,7 @@ Load parameter structure identified by block number from persistent storage. Loa
         os_uchar *block,
         os_memsz block_sz);
 
-Save parameter structure to persistent storage and identigy it by block number.
+Save parameter structure to persistent storage and identify it by block number.
 
 ::
 
@@ -91,7 +91,8 @@ functionality can rarely be used. On Arduino there is valuable effort to make th
 but even with Arduino we cannot necessarily use the portable code: To be specific we cannot use
 Arduino EEPROM emulation relying on flash with secure flash program updates over TLS. 
 
-On raw metal or custom SPI connected EEPROMS we always end up with micro-controller or board specific code.
+On raw metal, or when using custom SPI connected EEPROM, we always end up with micro-controller 
+or board specific code.
 
 On Windows or Linux this is usually simple, we can just save board configuration in file system.
  Except if we have read only file system on Linux. 

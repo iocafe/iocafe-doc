@@ -31,13 +31,14 @@ Maintaining transfer list:
 Special transfer list for cloud specific account data memory blocks:
 
 * current_cloud_mblk, works much the same as current_mblk, but downwards and only for specific memory blocks.
-* connections downwnwards transfer list is kept trough transfer buffers, so two heads (separate ones 
+* connections downwards transfer list is kept trough transfer buffers, so two heads (separate ones 
   for source and target buffers). Heads are con->sbuf.mbinfo_down and con->tbuf.mbinfo_down .
   links are sbuf->clink.next and tbuf->clink.next.
 
 Clarifications
 
-* "connection points upwards flag IOC_CONNECT_UP means that node behind the connection is higher in IO network hierarchy than this one.
+* "connection points upwards flag IOC_CONNECT_UP means that node behind the connection is higher
+  in IO network hierarchy than this one.
 * "memory block flag IOC_MBLK_UP means that data in this memory block flows up in IO network hierarchy.
 
 200218, updated 23.5.2020/pekka

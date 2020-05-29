@@ -1,7 +1,8 @@
 Streaming data
 ==============
-The IOCOM uses flat memory blocks as basic abstraction, not streams. Still, configuration data, flash program updloads and video from camera are logically
-stream type transfers. Ring buffer setup using IOCOM signals is used to transfer streamed data.
+The IOCOM uses flat memory blocks as basic abstraction, not streams. Still, configuration data,
+flash program updloads and video from camera are logically stream type transfers. Ring buffer
+setup using IOCOM signals is used to transfer streamed data.
 
 THIS PAGE IS OUTDATED, REVIEW!
 
@@ -62,11 +63,11 @@ Controller can be in IOC_STREAM_IDLE or IOC_STREAM_RUNNING command (in "cmd")
 
     If "cmd" is IOSTREAM_IDLE:
         If state is IOSTREAM_RUNNING, do nothing. We are waiting for IO device to finish.
-        Otherwise if controller wants to start the transfer, set "select" to ? (app spefific), "tail" = 0 and "cmd" = IOSTREAM_RUNNING
+        Otherwise if controller wants to start the transfer, set "select" to ? (app specific), "tail" = 0 and "cmd" = IOSTREAM_RUNNING
 
     if "cmd" is IOSTREAM_RUNNING:
         if "state" is IOC_STREAM_RUNNING or IOSTREAM_COMPLETED: Read all available data and move "tail".
-        If "state" is IOSTREAM_COMPLETED, the transfer has succesfully finished. Set "cmd" = IOSTREAM_IDLE.
+        If "state" is IOSTREAM_COMPLETED, the transfer has successfully finished. Set "cmd" = IOSTREAM_IDLE.
         If controller wants to interrupt the transfer, set "cmd" = IOSTREAM_IDLE.
 
 IO device: 
@@ -94,7 +95,7 @@ Controller can be in IOC_STREAM_IDLE, IOC_STREAM_RUNNING or IOC_STREAM_COMPLETED
 
     If "cmd" is IOC_STREAM_IDLE:
         If "state" is not IOC_STREAM_IDLE, do nothing. We are waiting for IO device to finish.
-        Otherwise if controller wants to start the transfer, set "select" to ? (app spefific), "head" = 0 and "cmd" = IOSTREAM_RUNNING
+        Otherwise if controller wants to start the transfer, set "select" to ? (app specific), "head" = 0 and "cmd" = IOSTREAM_RUNNING
 
     if "cmd" is IOC_STREAM_RUNNING:
         if "state" is IOC_STREAM_RUNNING: Write as much data to buffer as available and fits between tail and head and move head.
@@ -118,7 +119,7 @@ Stream transfer has two states, IOC_STREAM_IDLE and IOC_STREAM_RUNNING. This is 
         if "cmd" is IOC_STREAM_COMPLETED, set "state" = IOC_STREAM_IDLE.
 
 ** Error handling note
-This strem transfer doesn't include any error handling, like if writing to flash fails. Use separate signals for error handling or
+This stream transfer doesn't include any error handling, like if writing to flash fails. Use separate signals for error handling or
 embed error information into stream. This is to keep stream transfer as simple as possible.
 
 "state"

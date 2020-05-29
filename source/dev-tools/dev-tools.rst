@@ -13,6 +13,7 @@ Development tools
    arduino/200303-arduino-board-build-notes
    linux/200111-linux-cmake-build-notes
    linux/200427-linux-serial-port-emulation
+   linux/200528-testo-linux-serial-ports-with-socat
    truestudio/200111-true-studio-build-notes
    truestudio/190830-metal-code-repository-setup
    windows/200202-windows-build-notes
