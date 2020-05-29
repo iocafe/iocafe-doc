@@ -43,6 +43,7 @@ Install anaconda
 * Anaconda is tool for managing virtual Python environments.
 * You may need to change version number, see https://www.anaconda.com/products/individual#linux for the latest.
 * I needed to restart bash to get path set
+* If you are using iocafe virtual machine, it should anaconda should be readily installed.
 
 ::
 
@@ -53,9 +54,10 @@ Install anaconda
 Setup virtual environment for running flask
 
 * Notice that current virtual environment is displayed in terminal 
-  like flask in "(flask) john@iocafe:/coderoot/iocom/extensions/iocloud$"
-* conda deactivate deactivates the virtual machine, but leave it activated
-  now to proceeed with installation from "pip install wheel" on.s
+  like flask in "(flask) john@iocafe:/coderoot/iocom/extensions/iocloud$".
+  "(base)" indicates when you are in computers base conda connection.
+* "conda deactivate" is to deactivates the virtual machine, If you have
+  a virtual machine activated, something else than (base) deactivate it first. 
 
 ::
 

@@ -72,3 +72,26 @@ Compiled Python will be installed in /coderoot/python
 	cd /coderoot/cpython
 	make install
 
+Test that it works
+*******************
+
+::
+
+    cd /coderoot/python/bin
+    export LD_LIBRARY_PATH=/coderoot/python/lib
+    ./python3.9
+
+Debug Python with QT creator 
+******************************
+QT creator needs to be started with script which sets LD_LIBRARY_PATH and PYTHONPATH do that debugging works
+
+::
+    
+    /coderoot/iocom/extensions/iocompython/scripts/start-qtcreator-for-python-debug.sh
+
+Select [Debug][Start Debugging][Start and Debug External Application].
+Set Python program to debug as command line argument.
+
+.. figure:: pics/start-debugging-python.png
+
+   debug python as external application.
