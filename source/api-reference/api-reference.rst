@@ -9,6 +9,7 @@ API reference
    classes/classes
    json-configuration/json-configuration
    signals/signals
+   data-format/data-format
    technical/technical
    transport/transport
 
