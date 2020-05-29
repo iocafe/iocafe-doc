@@ -6,7 +6,7 @@ maintained for a memory block.
 
 |
 
-.. list-table:: Socket frame
+.. list-table:: information about a memory block
   :widths: 14 14 14 14 14 15 15
   :header-rows: 1
 
