@@ -4,21 +4,28 @@ Each memory block must inform all connected devices about it’s existence. This
 blocks in different devices can be bound, resized or dynamically created. Following information is 
 maintained for a memory block.
 
+|
 
-   * - device name
-     - device number
-     - memory block number
-     - Memory block id
-     - Memory block name
-     - Memory block size/bytes
-     - Flags (includes direction)
-   * - gina
-     - 1
-     - 1
-     - 1
-     - exp
-     - 128
-     - 0
+.. list-table:: Socket frame
+  :widths: 14 14 14 14 14 15 15
+  :header-rows: 1
+
+  * - device name
+    - device number
+    - memory block number
+    - Memory block id
+    - Memory block name
+    - Memory block size/bytes
+    - Flags (includes direction)
+  * - gina
+    - 1
+    - 1
+    - 1
+    - exp
+    - 128
+    - 0
+
+|
 
 This information is static type. Let’s say, even if memory block is automatically resized,
 the information here reflects original set values. 

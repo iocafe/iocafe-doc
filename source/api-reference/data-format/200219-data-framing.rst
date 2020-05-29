@@ -3,9 +3,11 @@
 
 DATA FORMAT HAS BEEN MODIFIED AFTER WRITING THIS, THIS NEEDS TO BE REVIEWED
 
+|
+
 .. list-table:: Serial frame
-   :widths: 25 15 15 45
-   :header-rows: 1
+  :widths: 25 15 15 45
+  :header-rows: 1
 
   * - name/address
     - bytes
@@ -46,10 +48,11 @@ DATA FORMAT HAS BEEN MODIFIED AFTER WRITING THIS, THIS NEEDS TO BE REVIEWED
     - uchar[]
     - Data. Can be delta encoded and/or compressed.
 
+|
 
 .. list-table:: Socket frame
-   :widths: 25 15 15 45
-   :header-rows: 1
+  :widths: 25 15 15 45
+  :header-rows: 1
 
   * - name/address
     - bytes
@@ -78,6 +81,8 @@ DATA FORMAT HAS BEEN MODIFIED AFTER WRITING THIS, THIS NEEDS TO BE REVIEWED
     - ?
     - uchar[]
     - Data. Can be delta encoded and/or compressed.
+
+|
 
 All numeric data is transferred in small endian form, lest significant byte first and most significant byte last.
 
