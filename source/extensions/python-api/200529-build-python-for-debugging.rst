@@ -1,6 +1,8 @@
 iocpython - python build
 ===================================
 Used for debugging python C extensions.
+Stick with Python version 3.7 for now (30.5.2020), I tried 3.9 and ended up in dead end with Kivy.
+I did not try 3.8.
 
 Directories
 ************
@@ -13,13 +15,15 @@ Directories
 Install dependencies
 *********************
 
+* Notice that we use 3.8 dependencies even we are builing for 3.7, those do not exists readily in this form. 
+
 ::
 
    sudo apt-get update
    sudo apt-get install build-essential 
    sudo apt-get build-dep python3.8
 
-Alternatively, or in addition (you can these also if uncertain)
+Just to make it doubly sure that we got all, run
 
 ::
    
@@ -45,7 +49,7 @@ Compile stable branch, I select python version 3.9.
 ::
 
     cd /coderoot/cpython
-    git checkout 3.9
+    git checkout 3.7
 
 
 Build
@@ -79,7 +83,7 @@ Test that it works so far
 
     cd /coderoot/python/bin
     export LD_LIBRARY_PATH=/coderoot/python/lib
-    ./python3.9
+    ./python3.7
 
 Make python environment to work (virtual environment)
 ******************************************************
@@ -88,7 +92,7 @@ Make python environment to work (virtual environment)
 
    cd /coderoot/python/bin
    export LD_LIBRARY_PATH=/coderoot/python/lib
-   ./python3.9 -m venv debugpython 
+   ./python3.7 -m venv debugpython 
    ... stuff happens ...
 
    cd /coderoot/python/bin
@@ -146,5 +150,7 @@ Set Python program to debug as command line argument.
 
 
 
-
+sudo update-alternatives  --set python /coderoot/python/bin/python3.9d
    sudo update-alternatives  --set python /coderoot/python/bin/python3.9d
+
+   udo update-alternatives --install /usr/bin/python python /coderoot/python/bin/python3.9d 2
