@@ -75,8 +75,11 @@ Build
       --enable-optimizations \
       --with-system-expat \
       --with-system-ffi \
-      --enable-ipv6 --with-threads --with-pydebug --disable-rpath \
-      && make 
+      --enable-ipv6 --with-pydebug 
+      
+s::
+      
+      make 
 
 Install
 ********
