@@ -77,7 +77,7 @@ Build
       --with-system-ffi \
       --enable-ipv6 --with-pydebug 
       
-s::
+::
       
       make 
 
@@ -116,6 +116,7 @@ Make python environment to work (virtual environment)
 Simply type deactivate if you need to deactivate
 
 ::
+
     deactivate
 
 When running in pythondebug virtual environment, terminal prompt should show something like 
@@ -130,8 +131,10 @@ Kivy from "master" branch must be used, older did not work with Python 3.9, etc 
 I needed to run install also with sudo to make installation complete "sudo pip install kivy[base]..." ? 
 
 ::
+
     sudo apt-get install -y ffmpeg libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev 
     sudo apt-get install -y libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev
+    sudo apt-get install libjpeg-dev
     
     pip install kivy[base] kivy_examples --pre --extra-index-url https://kivy.org/downloads/simple/
 
@@ -141,6 +144,7 @@ QT creator needs to be started with script which sets LD_LIBRARY_PATH and PYTHON
 
 * Select run in terminal if opening from file explorer.
 * Remember to build DEBUG version of iocompython.
+* Here debuging with Python code /coderoot/iocom/extensions/iocompython/examples/ispy/ispy.py
 
 ::
     
@@ -154,8 +158,3 @@ Set Python program to debug as command line argument.
    debug python as external application.
 
 
-
-sudo update-alternatives  --set python /coderoot/python/bin/python3.9d
-   sudo update-alternatives  --set python /coderoot/python/bin/python3.9d
-
-   udo update-alternatives --install /usr/bin/python python /coderoot/python/bin/python3.9d 2
