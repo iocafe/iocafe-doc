@@ -1,16 +1,16 @@
-Python build from source for debugging C extensions within Python.
-===================================
-Used for debugging python C extensions can get a bit complicated. If you have an easy way, please
-email me. It must exists. I ended up building python 3.7 debug from sources and then starting
-GDB from QT creator to debug it as external application. It loads debug build of iocompython library 
-and it is possible to debug both Python C code and own C. 
+Python build from source for debugging C extensions within Python
+===================================================================
+Debugging python C extensions can get a bit complicated. The notes how I ended up building 
+python 3.7 debug from sources and then starting GDB from QT creator to debug it as external
+application. It loads debug build of iocompython library and it is possible to debug both 
+own extension code and Python interprenter's C code. 
 
 * Stick with Python version 3.7 for now (30.5.2020), I tried 3.9 and ended up in dead end with Kivy.
   I did not try 3.8.
-* Easier way than this: It might be possible to get working Python debug configuration simply by 
-  installing "python3.8-dbg" package. If this would work with Kivy, etc, packages, whole Python 
-  build from sources may be  unnecessary. I anyhow document here how I got Python C extension 
-  debugging working.
+* Easier way than this must exist, if you know it, please email me. It might be possible to get 
+  working Python debug configuration simply by installing "python3.8-dbg" package. If this would 
+  work with Kivy, etc, packages, whole Python build from sources may be  unnecessary. 
+  I anyhow document here how I got Python C extension debugging working.
 
 Directories
 ************
