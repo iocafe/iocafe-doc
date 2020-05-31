@@ -1,8 +1,16 @@
-iocpython - python build
+Python build from source for debugging C extensions within Python.
 ===================================
-Used for debugging python C extensions.
-Stick with Python version 3.7 for now (30.5.2020), I tried 3.9 and ended up in dead end with Kivy.
-I did not try 3.8.
+Used for debugging python C extensions can get a bit complicated. If you have an easy way, please
+email me. It must exists. I ended up building python 3.7 debug from sources and then starting
+GDB from QT creator to debug it as external application. It loads debug build of iocompython library 
+and it is possible to debug both Python C code and own C. 
+
+* Stick with Python version 3.7 for now (30.5.2020), I tried 3.9 and ended up in dead end with Kivy.
+  I did not try 3.8.
+* Easier way than this: It might be possible to get working Python debug configuration simply by 
+  installing "python3.8-dbg" package. If this would work with Kivy, etc, packages, whole Python 
+  build from sources may be  unnecessary. I anyhow document here how I got Python C extension 
+  debugging working.
 
 Directories
 ************
@@ -44,7 +52,10 @@ Clone python sources from Github
 
 Select python release
 **********************
-Compile stable branch, I select python version 3.9. 
+Compile stable branch, I select python version 3.7. 
+If your build gets messed up, like you want to change Python version to build, 
+just delete whole /coderoot/cpython directory and start over. Figuring out
+how to repair corrupted build when "make clean" doesn't help is time consuming.
 
 ::
 
@@ -92,7 +103,7 @@ Make python environment to work (virtual environment)
 
    cd /coderoot/python/bin
    export LD_LIBRARY_PATH=/coderoot/python/lib
-   ./python3.7 -m venv debugpython 
+   ./python3.7dm -m venv debugpython 
    ... stuff happens ...
 
    cd /coderoot/python/bin
@@ -104,7 +115,7 @@ Simply type deactivate if you need to deactivate
 ::
     deactivate
 
-When running in pythondebuf virtual environment, terminal prompt should show something like 
+When running in pythondebug virtual environment, terminal prompt should show something like 
 "(debugpython) (base) john@iocafe:/coderoot/python/bin$". The (base) means that we have
 no anaconda virtual environment activated. 
 This is a bit confusing: We have two kinds of Python virtual environments, those with
@@ -116,17 +127,8 @@ Kivy from "master" branch must be used, older did not work with Python 3.9, etc 
 I needed to run install also with sudo to make installation complete "sudo pip install kivy[base]..." ? 
 
 ::
-    sudo apt-get install -y \
-        ffmpeg \
-        libsdl2-dev \
-        libsdl2-image-dev \
-        libsdl2-mixer-dev \
-        libsdl2-ttf-dev \
-        libportmidi-dev \
-        libswscale-dev \
-        libavformat-dev \
-        libavcodec-dev \
-        zlib1g-dev
+    sudo apt-get install -y ffmpeg libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev 
+    sudo apt-get install -y libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev
     
     pip install kivy[base] kivy_examples --pre --extra-index-url https://kivy.org/downloads/simple/
 
