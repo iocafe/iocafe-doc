@@ -14,7 +14,7 @@ Install PostgreSQL
    sudo apt-get install pgadmin3 pgadmin3-data postgresql postgresql-12 postgresql-client
    sudo apt-get install postgresql-client-12 postgresql-client-common postgresql-common
    sudo apt-get install postgresql-doc postgresql-doc-12 sysstat
-
+   sudo apt-get install postgresql-contrib
 
 Starting with flask login tutorial
 ***********************************
