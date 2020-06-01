@@ -51,8 +51,8 @@ Set default "postgres" user password to "smith333"
    postgres=# ALTER USER postgres PASSWORD 'smith333';
    postgres=# create database iocafecloud
 
-Setting up flask to use alchemy/postgreSQL
-*******************************************
+Starting it up
+***************
 Modify start.sh test script to use our postgres database.
 
 ::
@@ -72,3 +72,4 @@ Modify start.sh test script to use our postgres database.
    conda activate flask
    ./start.sh
    
+Open web browser at http://127.0.0.1:5000   
