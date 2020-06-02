@@ -201,6 +201,15 @@ Configure nginx
 
     sudo certbot --nginx
 
+Select virtual environment in VS Code
+
+.. figure:: pics/conda-activate-in-visual-studio-code.png
+
+   type "conda activate flask", etc. in VS code terminal.
+
+
+
+
 Links   
 
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04

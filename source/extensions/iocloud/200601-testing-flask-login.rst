@@ -16,6 +16,16 @@ Install PostgreSQL
    sudo apt-get install postgresql-doc postgresql-doc-12 sysstat
    sudo apt-get install postgresql-contrib
 
+Postgre daemon can be started and stopped. Enabling daemon means that it is started
+automatically at boot. 
+   
+::   
+
+   sudo systemctl postgresql start
+   sudo systemctl postgresql stop
+   sudo systemctl postgresql enable
+   sudo systemctl postgresql disable
+
 Starting with flask login tutorial
 ***********************************
 Running flask login tutorial
@@ -24,6 +34,9 @@ Running flask login tutorial
 
    https://hackersandslackers.com/flask-login-user-authentication/
    https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/
+
+Here we assume that we have anaconda virtual environment set up, see "flask setup 
+for production".
 
 ::
 
