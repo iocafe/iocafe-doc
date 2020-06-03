@@ -1,26 +1,18 @@
-﻿Memory blocks
-=============
-Communication is based on memory blocks. Device A stores data to be transferred into memory block. 
-Communication maintains identical copy of the memory block in device B. Separate memory blocks are 
-necessary to implement two directional communication.
+﻿Design changes 3.6.2020
+========================
 
-A memory block is byte array which is copied from a device to another. Under the hood his is quite 
-a bit more complex, since only changes are transferred over communication, there is compression 
-and synchronization, but user of this library should not need to care about this. There can be multiple 
-recipients of one memory block.  There are IOCOM API functions for allocating, accessing memory block
-parameters and content, for data transfer synchronization, and callbacks.
+* Bidirectional data transfer will be used for general purpose UI connection. 
+  This allows multiple UIs to connect simultaneously and enables "parameter setting" which 
+  can be displayed and changed. Application specific UI:s can be coded in device or server.
+* Video stream will use flat memory buffer instead of ring buffer to allow multiple recipients. 
+  JPEG compression can be selected to fit image to buffer. 
+* Cloud: Cloudia type of forwarding using IOCOM protocol in cloud server is replaced by 
+  TSL -> TLS byte stream forwarding.
+* Pushing signal "connected" state downwards will not be implemnted (at least for now):
+  Too complex and rarely, if ever, useful feature. 
 
-.. figure:: pics/090727-memory-blocks.png
+.. figure:: pics/200603-drafting-ui-etc-design-changed.png
 
-   logically flat memory copy.
+   changes in IO device network.
 
-
-A memory block in device A is copied to identical memory block in device B. If the memory blocks 
-have different size, the extra data is ignored.
-
-Communication between two devices typically involves several memory blocks: Typical IO board has “exp” 
-block for signals exported trough communication, “imp” for imported signals,  “conf_imp” / ”conf_exp” 
-memory blocks for configuring the IO device, and static "info" memory block for exporting memory block 
-and signal configuration metadata.
-
-180727, updated 20.5.2020/pekka
+200603, updated 3.6.2020/pekka
