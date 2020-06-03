@@ -24,10 +24,10 @@ automatically at boot.
    
 ::   
 
-   sudo systemctl postgresql start
-   sudo systemctl postgresql stop
-   sudo systemctl postgresql enable
-   sudo systemctl postgresql disable
+   sudo systemctl start postgresql
+   sudo systemctl stop postgresql
+   sudo systemctl enable postgresql
+   sudo systemctl disable postgresql
 
 Starting with flask login tutorial
 ***********************************
