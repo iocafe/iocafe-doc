@@ -1,6 +1,10 @@
 Flask login with PostgreSQL
 ============================
 
+DEPENDENCY LISTS HERE DO HAVE UNNECESSARY PACKAGES AND PACKAGES WHICH DO NOT EXIST.
+It should be good enough to get this working (irnore warnings about missing packages),
+but the dependencies in this text should be corrected.
+
 ::
 
    https://itnext.io/sqlalchemy-orm-connecting-to-postgresql-from-scratch-create-fetch-update-and-delete-a86bc81333dc
@@ -28,6 +32,22 @@ automatically at boot.
    sudo systemctl stop postgresql
    sudo systemctl enable postgresql
    sudo systemctl disable postgresql
+
+
+Set postgreSQL password
+*******************************************
+When postgre has been installed fron ubuntu distro log:
+
+::
+
+   sudo -u postgres psql 
+
+Set default "postgres" user password to "smith333"
+   
+::   
+
+   postgres=# ALTER USER postgres PASSWORD 'smith333';
+   postgres=# create database iocafecloud;
 
 Starting with flask login tutorial
 ***********************************
@@ -62,20 +82,6 @@ requirements.txt file opened (I do not think these all are needed, inherited fro
    python -m pip install webassets, Werkzeug, WTForms
 
 
-Setting up flask to use alchemy/postgreSQL
-*******************************************
-When postgre has been installed fron ubuntu distro log:
-
-::
-
-   sudo -u postgres psql 
-
-Set default "postgres" user password to "smith333"
-   
-::   
-
-   postgres=# ALTER USER postgres PASSWORD 'smith333';
-   postgres=# create database iocafecloud;
 
 Starting it up
 ***************
