@@ -11,10 +11,13 @@ Install PostgreSQL
 ::
 
    sudo apt-get install libllvm10 libpq-dev libpq5 libwxbase3.0-0v5 libwxgtk3.0-gtk3-0v5
-   sudo apt-get install pgadmin3 pgadmin3-data postgresql postgresql-12 postgresql-client
+   sudo apt-get install postgresql postgresql-12 postgresql-client
    sudo apt-get install postgresql-client-12 postgresql-client-common postgresql-common
    sudo apt-get install postgresql-doc postgresql-doc-12 sysstat
    sudo apt-get install postgresql-contrib
+   
+   Note: pgadmin 3 has been obsoleted, use pgdmin 4. Run script "sudo apt.postgresql.org.sh"
+   to add repository, then "sudo apt-get install pgadmin4".
 
 Postgre daemon can be started and stopped. Enabling daemon means that it is started
 automatically at boot. 
