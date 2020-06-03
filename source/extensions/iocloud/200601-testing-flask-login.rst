@@ -47,9 +47,19 @@ for production".
    git clone https://github.com/toddbirchard/flasklogin-tutorial.git
    conda activate flask
    python -m pip install -r requirements.txt
-   sudo python -m pip install flask flask-login flask-sqlalchemy flask-wtf
-   pip install psycopg2-binary
-   pip install psycopg2
+   python -m pip install flask flask-login flask-sqlalchemy flask-wtf
+   sudo python -m pip install psycopg2-binary
+   sudo python -m pip install psycopg2
+
+requirements.txt file opened (I do not think these all are needed, inherited from example)
+
+::
+
+   python -m pip install click dnspython email-validator 
+   python -m pip install Flask Flask-Assets Flask-SQLAlchemy Flask-WTF
+   python -m pip install idna, itsdangerous, Jinja2
+   python -m pip install PyMySQL python-dotenv SQLAlchemy
+   python -m pip install webassets, Werkzeug, WTForms
 
 
 Setting up flask to use alchemy/postgreSQL
