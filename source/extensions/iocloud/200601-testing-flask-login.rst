@@ -75,7 +75,7 @@ Set default "postgres" user password to "smith333"
 ::   
 
    postgres=# ALTER USER postgres PASSWORD 'smith333';
-   postgres=# create database iocafecloud
+   postgres=# create database iocafecloud;
 
 Starting it up
 ***************
