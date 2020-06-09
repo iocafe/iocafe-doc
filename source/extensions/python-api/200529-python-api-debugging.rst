@@ -4,8 +4,6 @@ Debuggin Python API C extension (iocompython)
 Install dependencies
 *********************
 
-* Notice that we use 3.8 dependencies even we are builing for 3.7, those do not exists readily in this form. 
-
 ::
 
    sudo apt-get update
@@ -26,7 +24,7 @@ Just to make it doubly sure that we got all, run
 
 Installing Kivy
 ****************
-Kivy from "master" branch must be used, older did not work with Python 3.9, etc new stuff (30.5.2020). 
+Kivy from "master" branch must be used, older did not work with Python 3.8, etc new stuff (30.5.2020). 
 I needed to run install also with sudo to make installation complete "sudo pip install kivy[base]..." ? 
 
 ::
