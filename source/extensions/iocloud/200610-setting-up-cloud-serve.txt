@@ -3,6 +3,6 @@ Ubuntu 18.04 droplet
 
 adduser
 su oikeudet
-loggaa sisaan uutena kayttajana
 enable ssh
+log in as new user
 

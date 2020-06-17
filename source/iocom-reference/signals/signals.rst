@@ -9,3 +9,4 @@ Signals
    200218-memory-block-info-send-logic
    190624-memory-block-info
    190708-static-device-information
+   200615-handling-signal-changes-in-callback
