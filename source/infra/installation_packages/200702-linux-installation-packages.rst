@@ -2,7 +2,7 @@ Linux installation packages
 ============================
 
 Linux installation packages are .deb files. When a program in linux based device receives a .deb file
-trough IOCOM, it quietly installs it. The installation is done as user to which account device program runs.
+trough IOCOM, it quietly installs it. The installation is done as root user
 
 
 Creating a debian package
@@ -11,6 +11,13 @@ Creating a debian package
 This text refers to candy (camera) application in /coderoot/iocom/examples/candy directory. All we want
 is to install to target computer is one file, application binary /coderoot/bin/linux/candy. Build candy 
 project as release to create the binary.
+
+File permissions, owner and group. All files in installation package are owned by root.
+If binary needs to update software, set setuid bit for it needs to be set so it will
+run as root. All files which are not to be modified by user should have 0755 permissions,
+except 04755 for binary files capable of software updates. Data files which can be modified
+by user should have 0664 or 0666. Using 0664 allows extra protection by user group, but
+this requires some extra configuration.
 
 First create the debian package structure directories. All files to create the debian package
 will be here:
@@ -120,3 +127,5 @@ To do/consider
 * We need to take GPG signing and verification as practise as soon as time allows. Installation packages may be emailed
   and copied, and malicious tampering is a possibility.
   https://blog.packagecloud.io/eng/2014/10/28/howto-gpg-sign-verify-deb-packages-apt-repositories/
+  
+200702, updated 3.7.2020/pekka
