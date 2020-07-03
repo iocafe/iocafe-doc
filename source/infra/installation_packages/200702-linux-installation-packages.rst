@@ -5,8 +5,8 @@ Linux installation packages are .deb files. When a program in linux based device
 trough IOCOM, it quietly installs it. The installation is done as user to which account device program runs.
 
 
-Creating a Debian package, basics 
-**********************************
+Creating a Debian package
+**************************
 
 This text refers to candy (camera) application in /coderoot/iocom/examples/candy directory. All we want
 is to install to target computer is one file, application binary /coderoot/bin/linux/candy. Build candy 
@@ -84,8 +84,8 @@ There is good tool "lintian" to verify that generating .deb package matches to D
    lintian /coderoot/packages/linux/iocafe-candy-200703-0915-amd64.deb
 
 
-To do or to consider
-*********************
+To do/consider
+***************
 
 * Now installation target is always /coderoot/production. Should we follow common linux conventions to set installation target?
   We need to consider read only disk partitions (stable Raspberry setup), and how operating system, application code, settings
@@ -101,4 +101,5 @@ To do or to consider
   boots, or after software upgrade. To allow multiple applications to run in same linux computer, we might write common daemon
   which starts applications for specific device numbers. Notice that in theory it same application can be started multiple
   times with different serial numbers, or for example raspberry can act as both IO device and controller.
-* Making installation package can be automated as Python or shell script, which could be called when release build is sctipo  
+* Making installation package can be automated as Python or shell script, which could be called from cmake when a release
+  build is completed.
