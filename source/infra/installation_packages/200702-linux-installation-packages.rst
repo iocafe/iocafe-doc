@@ -103,3 +103,6 @@ To do/consider
   times with different serial numbers, or for example raspberry can act as both IO device and controller.
 * Making installation package can be automated as Python or shell script, which could be called from cmake when a release
   build is completed.
+* We need to take GPG signing and verification as practise as soon as time allows. Installation packages may be emailed
+  and copied, and malicious tampering is a possibility.
+  https://blog.packagecloud.io/eng/2014/10/28/howto-gpg-sign-verify-deb-packages-apt-repositories/
