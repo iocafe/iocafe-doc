@@ -5,7 +5,7 @@ Linux installation packages are .deb files. When a program in linux based device
 trough IOCOM, it quietly installs it. The installation is done as user to which account device program runs.
 
 
-Creating a Debian package
+Creating a debian package
 **************************
 
 This text refers to candy (camera) application in /coderoot/iocom/examples/candy directory. All we want
