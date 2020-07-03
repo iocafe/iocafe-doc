@@ -49,10 +49,24 @@ and copy the executable into it:
 :: 
 
    cd /coderoot/iocom/examples/candy/pack/linux
-   mkdir -p "coderoot/production/bin/linux"
+   sudo mkdir -p "coderoot/production/bin/linux"
    cd /coderoot/iocom/examples/candy/pack/linux/coderoot/production/bin/linux
-   cp /coderoot/bin/linux/candy .
+   sudo cp /coderoot/bin/linux/candy .
 
+Set owner, groups and permissions.
+04755 for binaries: The file owned by root and we need to give run time root permission user, 
+we add '4' to set setuid bit. Running as root allows application to install debian packages
+for software updates, but is a security concern: App infrastructure needs to be set up so
+that malicious packages cannot be received trough IOCOM, and application cannow spawn malicious
+executable code with root rights.
+If we would have data files, we may want to use other permissions than 0755 for those. 
+:: 
+
+   cd /coderoot/iocom/examples/candy/pack/linux
+   sudo chown --recursive root *
+   sudo chgrp --recursive root *
+   sudo chmod --recursive 0755 * 
+   sudo chmod --recursive 04755 coderoot/production/bin/linux
 
 Create a debian package 
 To do that we use the dpkg-deb tool. 
