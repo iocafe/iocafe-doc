@@ -65,13 +65,23 @@ To do that we use the dpkg-deb tool.
 
 This creates package linux.deb, which needs to be renamed so that the file name includes the IO 
 application name, program version and the package architecture. Convention used by us is to
-keep all installation packages in /coderoot/packages directory.
+keep all installation packages in /coderoot/packages directory. I make version numbers simply
+by YYMMDD-HHMM. This allows sorting versions to time order and selecting newest one. 
+Convention of naming debian packages as organization-application-versiondate-versiontime-architecture.deb
+enables meaningfull searches. For example to find newest available package for application "candy" 
+running on "amd64" architecture.
 
 ::
 
    mkdir -p "/coderoot/packages/linux"
    cd /coderoot/iocom/examples/candy/pack
-   mv linux.deb /coderoot/packages/linux/iocafe-candy-1.0-amd64.deb
+   mv linux.deb /coderoot/packages/linux/iocafe-candy-200703-0915-amd64.deb
+
+There is good tool "lintian" to verify that generating .deb package matches to Debian guidelines.
+
+::
+
+   lintian /coderoot/packages/linux/iocafe-candy-200703-0915-amd64.deb
 
 
 To do or to consider
@@ -91,3 +101,4 @@ To do or to consider
   boots, or after software upgrade. To allow multiple applications to run in same linux computer, we might write common daemon
   which starts applications for specific device numbers. Notice that in theory it same application can be started multiple
   times with different serial numbers, or for example raspberry can act as both IO device and controller.
+* Making installation package can be automated as Python or shell script, which could be called when release build is sctipo  
