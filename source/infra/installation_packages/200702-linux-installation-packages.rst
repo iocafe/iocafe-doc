@@ -125,9 +125,18 @@ To do/consider
 * Currently examples contain fixed rpath values to find .so libraries. It is necessary to get rid of these dependencies.
 * Making installation package can be automated as Python or shell script, which could be called from cmake when a release
   build is completed.
-* We need to take GPG signing and verification as practise as soon as time allows. Installation packages may be emailed
+* We need to take GPG signing and verification as practice as soon as time allows. Installation packages may be emailed
   and copied, and malicious tampering is a possibility.
   https://blog.packagecloud.io/eng/2014/10/28/howto-gpg-sign-verify-deb-packages-apt-repositories/
-  
+* now osal_create_process() in linux modifies real user and group to start dpkg with root permissions. Functions
+  getuid(), getgid(), setuid(), setgid() are used for this. It would be nicer to elevate effective user with 
+  geteuid(), getegid(), seteuid(), and setegid() functions. These for some reason did not work.
+
+
+Hints
+******
+* If you get "insufficient user privileges" message, then most likely "setuid bit" in binary file permissions is not
+  set. See "Set owner, groups and permissions" in this paper.
+
 200702, updated 3.7.2020/pekka
 
