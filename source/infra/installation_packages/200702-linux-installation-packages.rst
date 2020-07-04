@@ -115,13 +115,14 @@ To do/consider
   copy of the latest install directory to todays directory, and install new package on top of it. Newest install is 
   directory is always used at boot. This would enable very straight forward rollback, just delete the newest install 
   directory and newest of the remaining ones will be used. 
-* Notes here for creating .deb packages are good enough to get started. For real we should set owner and permissions for 
-  files to back into .deb by debian guidelines. This has not been done. Also we should incorporate license information in the
-  debian package. 
+* Notes here for creating .deb packages are good enough to get started. We should set/check owner and permissions for 
+  files in .deb more precisely by debian guidelines. Also license information (copyright file) and change log need to be 
+  included in the debian packages. 
 * Now this is plain installation. It is necessary to plan how the installed packages are started when the linux computer
   boots, or after software upgrade. To allow multiple applications to run in same linux computer, we might write common daemon
   which starts applications for specific device numbers. Notice that in theory it same application can be started multiple
   times with different serial numbers, or for example raspberry can act as both IO device and controller.
+* Currently examples contain fixed rpath values to find .so libraries. It is necessary to get rid of these dependencies.
 * Making installation package can be automated as Python or shell script, which could be called from cmake when a release
   build is completed.
 * We need to take GPG signing and verification as practise as soon as time allows. Installation packages may be emailed
@@ -129,3 +130,4 @@ To do/consider
   https://blog.packagecloud.io/eng/2014/10/28/howto-gpg-sign-verify-deb-packages-apt-repositories/
   
 200702, updated 3.7.2020/pekka
+
