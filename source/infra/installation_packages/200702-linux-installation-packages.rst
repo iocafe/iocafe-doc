@@ -2,7 +2,10 @@ Linux installation packages
 ============================
 
 Linux installation packages are .deb files. When a program in linux based device receives a .deb file
-trough IOCOM, it quietly installs it. The installation is done as root user
+trough IOCOM, it quietly installs it. The installation is done as root user.
+
+Important note: When running in development environment, debian package installation cannot be
+started. Reason is that .deb installation needs root permissions.
 
 
 Creating a debian package
@@ -111,10 +114,7 @@ To do/consider
 * Now installation target is always /coderoot/production. Should we follow common linux conventions to set installation target?
   We need to consider read only disk partitions (stable Raspberry setup), and how operating system, application code, settings
   and data are placed on disk separate disc partitions.
-* The "production" directory name could be replaced with install date. When new software is installed, we would first make
-  copy of the latest install directory to todays directory, and install new package on top of it. Newest install is 
-  directory is always used at boot. This would enable very straight forward rollback, just delete the newest install 
-  directory and newest of the remaining ones will be used. 
+* The "/coderoot/production" directory name could be moved to match linux conventions. 
 * Notes here for creating .deb packages are good enough to get started. We should set/check owner and permissions for 
   files in .deb more precisely by debian guidelines. Also license information (copyright file) and change log need to be 
   included in the debian packages. 
