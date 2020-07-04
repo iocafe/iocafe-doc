@@ -36,7 +36,7 @@ This will open editor with empty file:
 :: 
 
    cd /coderoot/iocom/examples/candy/pack/linux/DEBIAN
-   gedit control
+   sudo gedit control
 
 Copy paste lines below into the control file and modify at least package name, maintainer and description.
 Save the file.
@@ -44,7 +44,7 @@ Save the file.
 :: 
 
    Package: iocafe-candy
-   Version: 1.0
+   Version: 200703-0915
    Section: custom
    Priority: optional
    Architecture: amd64
