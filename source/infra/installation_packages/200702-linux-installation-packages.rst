@@ -91,21 +91,21 @@ This creates package linux.deb, which needs to be renamed so that the file name 
 application name, program version and the target architecture. Convention used by us is to
 keep all installation packages in /coderoot/packages directory. I make version numbers simply
 by YYMMDD-HHMM. This allows sorting versions to time order and selecting newest one. 
-Convention of naming debian packages as organization-application-versiondate-versiontime-architecture.deb
-enables meaningfull searches. For example to find newest available package for application "candy" 
+Convention of naming debian packages as organization-application-versiondate-versiontime-osname-architecture.deb
+enables meaningful searches. For example to find newest available package for application "candy" 
 running on "amd64" architecture.
 
 ::
 
    mkdir -p "/coderoot/packages/linux"
    cd /coderoot/iocom/examples/candy/pack
-   mv linux.deb /coderoot/packages/linux/iocafe-candy-200703-0915-amd64.deb
+   mv linux.deb /coderoot/packages/linux/iocafe-candy-200703-0915-linux-amd64.deb
 
 There is good tool "lintian" to verify that generating .deb package matches to Debian guidelines.
 
 ::
 
-   lintian /coderoot/packages/linux/iocafe-candy-200703-0915-amd64.deb
+   lintian /coderoot/packages/linux/iocafe-candy-200703-0915-linux-amd64.deb
 
 
 To do/consider

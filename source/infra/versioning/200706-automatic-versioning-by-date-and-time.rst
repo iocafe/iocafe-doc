@@ -43,6 +43,16 @@ The /coderoot/eosal/eosal_version.txt contains only OSAL_BUILD_DATETIME string w
 
     200707-0953
 
+Script for copying and renaming installation packages
+******************************************************
+
+Script /coderoot/eosal/scripts/copy_package.py can be used to copy the installation package
+into /coderoot/packages directory and rename it. It reads the eosal_version.txt to get version (build date+time)
+and incorporates it into package name.
+
+:: 
+
+    python3 /coderoot/eosal/scripts/copy_package.py /tmp/.../firmware.bin -a candy -s esp32 -h espcam -o iocafe
 
 Library version defines 
 ************************

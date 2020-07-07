@@ -8,10 +8,10 @@ Conventions, iocafe
 *********************
 The firmware.bin which needs to be renamed so that the file name includes the IO 
 application name, program version and the target architecture. Convention used by us is to
-keep all installation packages in subdirecroties under /coderoot/packages directory. 
+keep all installation packages in subdirectories under /coderoot/packages directory. 
 I make version numbers simply by YYMMDD-HHMM. This allows sorting versions to time order 
 and selecting newest one. Convention of naming debian packages as 
-organization-application-versiondate-versiontime-architecture.deb enables meaningfull 
+organization-application-versiondate-versiontime-osname-architecture.deb enables meaningful 
 searches. For example to find newest available package for application "candy" 
 running on "esp32" architecture.
 
@@ -20,6 +20,12 @@ Creating a ESP32 installation package
 
 * Version number files generated at build time.
 * Firmware.bin is moved to /coderoot/packages and renamed.
+
+Script for copying and renaming firmware.bin
+*********************************************
+
+Script /coderoot/eosal/scripts/copy_package.py can be used to copy the firmware.bin
+into /coderoot/packages directory and rename it. See "Automatic version numbers by date and time".
 
 To do/consider
 ***************
