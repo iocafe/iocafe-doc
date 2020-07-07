@@ -44,5 +44,19 @@ The /coderoot/eosal/eosal_version.txt contains only OSAL_BUILD_DATETIME string w
     200707-0953
 
 
+Library version defines 
+************************
+Main library headers include version number define. At the time of writing these are:
+These can be used as to indicate which versions have been used to build a package.
+
+* #define EOSAL_VERSION "0.3"
+* #define IOCOM_VERSION "0.3"
+* #define PINS_VERSION "0.3"
+
+Warning: These version number defines are are not updated daily with work flow, so this
+version number doesn't explicitly specify the library code used. We plan to change these
+only with new major release of the library.
+
+
 200706, updated 6.7.2020/pekka
 
