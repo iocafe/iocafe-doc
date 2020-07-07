@@ -88,7 +88,7 @@ To do that we use the dpkg-deb tool.
 
 
 This creates package linux.deb, which needs to be renamed so that the file name includes the IO 
-application name, program version and the package architecture. Convention used by us is to
+application name, program version and the target architecture. Convention used by us is to
 keep all installation packages in /coderoot/packages directory. I make version numbers simply
 by YYMMDD-HHMM. This allows sorting versions to time order and selecting newest one. 
 Convention of naming debian packages as organization-application-versiondate-versiontime-architecture.deb

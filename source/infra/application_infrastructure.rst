@@ -14,6 +14,7 @@ This text documents how I manage this topic.
    :maxdepth: 2
    :caption: Contents:
 
+   versioning/200706-automatic-versioning-by-date-and-time
    installation_packages/200702-linux-installation-packages
-
+   installation_packages/200706-esp32-installation-packages
 
