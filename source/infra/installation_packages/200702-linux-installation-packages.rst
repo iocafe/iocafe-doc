@@ -11,8 +11,8 @@ Creating a debian package
 **************************
 
 This text refers to candy (camera) application in /coderoot/iocom/examples/candy directory. All we want
-is to install to target computer is one file, application binary /coderoot/bin/linux/candy. Build candy 
-project as release to create the binary.
+is to install to target computer is one file, application binary /coderoot/bin/linux/candy as 
+/opt/organization/bin/linux/candy. Build candy project as release to create the binary.
 
 File permissions, owner and group. All files in installation package are owned by root.
 If binary needs to update software, set setuid bit for it needs to be set so it will
@@ -53,13 +53,13 @@ Save the file.
    Description: Camera IO device software
 
 Create directory tree which represents the path where our program will be installed in the target computer, 
-and copy the executable into it:
+and copy the executable into it. Replace "organization" with your name of choice:
 
 :: 
 
    cd /coderoot/iocom/examples/candy/pack/linux
-   sudo mkdir -p "coderoot/organization/bin/linux"
-   cd /coderoot/iocom/examples/candy/pack/linux/coderoot/organization/bin/linux
+   sudo mkdir -p "opt/organization/bin/linux"
+   cd /coderoot/iocom/examples/candy/pack/linux/opt/organization/bin/linux
    sudo cp /coderoot/bin/linux/candy .
 
 Set owner, groups and permissions.
@@ -75,7 +75,7 @@ If we would have data files, we may want to use other permissions than 0755 for 
    sudo chown --recursive root *
    sudo chgrp --recursive root *
    sudo chmod --recursive 0755 * 
-   sudo chmod --recursive 04755 coderoot/organization/bin/linux
+   sudo chmod --recursive 04755 opt/organization/bin/linux
 
 Create a debian package 
 To do that we use the dpkg-deb tool. 
@@ -124,16 +124,19 @@ for 64 bit linux:
    /coderoot/iocom/examples/candy/scripts/make_linux_amd64_package.py
 
 
-Packages are installed in /coderoot/iocafe folder, where "iocafe" is default name of organization. 
+Packages are installed in /opt/organization directory, where "organization" is name of organization, 
+"iocafe" by default. 
+
+The script doesn't use "pack" directory under product to prepare debian package, but creates
+temporary directory under "/tmp" directory.
 
 
 To do/consider
 ***************
 
-* Now installation target is always /coderoot/organization. Should we follow common linux conventions to set installation target?
+* Now installation target is always /opt/organization. We really cannot follow common linux conventions to set installation target?
   We need to consider read only disk partitions (stable Raspberry setup), and how operating system, application code, settings
   and data are placed on disk separate disc partitions.
-* The "/coderoot/organization" directory name could be moved to match linux conventions. 
   /usr/local/bin is for normal user programs not managed by the distribution package 
   manager, e.g. locally compiled packages. You should not install them into /usr/bin 
   because future distribution upgrades may modify or delete them without warning.
@@ -152,6 +155,8 @@ To do/consider
   getuid(), getgid(), setuid(), setgid() are used for this. It would be nicer to elevate effective user with 
   geteuid(), getegid(), seteuid(), and setegid() functions. These for some reason did not work.
 * List which packages from linux distribution are needed to make this work, at least binutils, lintian.
+* Cosmetic: If extra time, set up override disable lintian warning "dir-or-file-in-opt". We need to install
+  application binaries in directory which can be mapped to specific partition, so /usr/local/bin will not do.
 
 Hints
 ******

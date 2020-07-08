@@ -54,6 +54,12 @@ and incorporates it into package name.
 
     python3 /coderoot/eosal/scripts/copy_package.py /tmp/.../firmware.bin -a candy -s esp32 -h espcam -o iocafe
 
+
+Script to create debian packages
+*********************************
+See text "Linux installation packages".
+
+
 Library version defines 
 ************************
 Main library headers include version number define. At the time of writing these are:
