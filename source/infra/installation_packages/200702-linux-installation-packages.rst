@@ -44,10 +44,9 @@ Save the file.
 
    Package: iocafe-candy
    Version: 200703-0915
-   Section: custom
+   Section: embedded
    Priority: optional
    Architecture: amd64
-   Essential: no
    Installed-Size: 1024
    Maintainer: iocafe.org
    Description: Camera IO device software
