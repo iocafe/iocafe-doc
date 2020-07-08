@@ -4,9 +4,8 @@ Linux installation packages
 Linux installation packages are .deb files. When a program in linux based device receives a .deb file
 trough IOCOM, it quietly installs it. The installation is done as root user.
 
-Important note: When running in development environment, debian package installation cannot be
-started. Reason is that .deb installation needs root permissions.
-
+Note: Release build is needed for installation package. This is easy to miss when using QT creator
+as IDE.
 
 Creating a debian package
 **************************
@@ -152,12 +151,12 @@ To do/consider
 * now osal_create_process() in linux modifies real user and group to start dpkg with root permissions. Functions
   getuid(), getgid(), setuid(), setgid() are used for this. It would be nicer to elevate effective user with 
   geteuid(), getegid(), seteuid(), and setegid() functions. These for some reason did not work.
-
+* List which packages from linux distribution are needed to make this work, at least binutils, lintian.
 
 Hints
 ******
 * If you get "insufficient user privileges" message, then most likely "setuid bit" in binary file permissions is not
   set. See "Set owner, groups and permissions" in this paper.
 
-200702, updated 3.7.2020/pekka
+200702, updated 8.7.2020/pekka
 
