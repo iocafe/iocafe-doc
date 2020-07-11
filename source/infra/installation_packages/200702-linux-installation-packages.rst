@@ -159,9 +159,9 @@ To do/consider
 
 Hints
 ******
-* If you get "insufficient user privileges" message at device and while trying to update the program over IOCOM,
-  then most likely "setuid bit" in binary file permissions is not set in currently installed binary.
-  See "Set owner, groups and permissions" in this paper.
+* If you get "no access rights", "insufficient user privileges", etc. message at device and while trying to update 
+  the program over IOCOM, then most likely "setuid bit" in binary file permissions is not set in currently installed 
+  binary. See "Set owner, groups and permissions" in this paper.
 
 200702, updated 8.7.2020/pekka
 
