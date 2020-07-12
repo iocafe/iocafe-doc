@@ -22,4 +22,4 @@ new scripts to manage your project.
    versioning/200706-automatic-versioning-by-date-and-time
    installation_packages/200702-linux-installation-packages
    installation_packages/200706-esp32-installation-packages
-
+   program-updates/200712-program-updates-using-ispy
