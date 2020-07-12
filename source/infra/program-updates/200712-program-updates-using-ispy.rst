@@ -25,7 +25,7 @@ This picture visualizes ispy connecting to frank server running in same computer
 using example security certificate, etc (not secure, only for testing). "Frank" server is assumed to be
 already running. Click connect button, default password is "pass" (also for testing only, not secure). 
 
-figure:: pics/connect-to-io-server-with-ispy.png
+.. figure:: pics/connect-to-io-server-with-ispy.png
 
    Connecting to server "frank" with "ispy".
 
@@ -37,7 +37,7 @@ Select "candy" from "devices" menu, and "program" from "window" menu. If candy i
 not visible in frank, most common two reasons are candy's wifi has not been set up or that
 candy is not authorized in frank's user accounts, see devices/accounts, window/configure.
 
-figure:: pics/uoload-program-using-ispy.png
+.. figure:: pics/uoload-program-using-ispy.png
 
    Upload program to "candy" ESP32 camera.
 
