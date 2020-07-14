@@ -49,5 +49,5 @@ network topology, etc, thus need these features.
    serialization/191026-integer-serialization
    serialization/191026-float-serialization
    serialization/191026-json-serialization
-   persistent-data-and-flash-programming/200202-persistent-parameters
-
+   persistent-data/200202-persistent-parameters
+   programming-flash/flashcode
