@@ -87,17 +87,7 @@ Call dinfo_run_resource_monitor() from main loop. This keeps the resource monito
     - How many minutes ago the software started (device booted). Useful to ensure that there are not
       unintended device reboots.
 
-          {"name": "rm_tx_tcp", "type": "long"},
-          {"name": "rm_rx_tcp", "type": "long"},
-          {"name": "rm_tx_serial", "type": "long"},
-          {"name": "rm_rx_serial", "type": "long"},
-          {"name": "rm_tx_udp", "type": "long"},
-          {"name": "rm_rx_udp", "type": "long"},
-
-
-
 |
-
 
 Build with deviceinfo library
 ********************************
