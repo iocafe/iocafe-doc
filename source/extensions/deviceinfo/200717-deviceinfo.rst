@@ -90,4 +90,6 @@ Directory /coderoot/iocom/extensions/deviceinfo need to be in included path, the
 
     #include "deviceinfo.h"
 
-Link with deviceinfo deviceinfod library, these are under /coderoot/lib.
+Link with deviceinfo or deviceinfod (debug) library. Libraries are in /coderoot/lib directory by operating system.
+
+200717, updated 17.7.2020/pekka

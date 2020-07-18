@@ -9,7 +9,7 @@ Extension libraries
    lighthouse/lighthouse
    ioserver/ioserver
    devicedir/devicedir
-   deviceinfo/deviceinfo
+   deviceinfo/200717-deviceinfo
    gazerbeam/gazerbeam
    python-api/python-api
    iocloud/iocloud
