@@ -67,10 +67,18 @@ Call dinfo_run_resource_monitor() from main loop. This keeps the resource monito
   * - rm_connects
     - Number of TCP socket connects. This number is incremented at every connection and never decremented. Listening sockets
       and UDP sockets do not affect to this. 
-  * - rm_txbytes
-    - Number of bytes sent to a connected TCP socket
-  * - rm_rxbytes
-    - Number of bytes received from a connected TCP socket
+  * - rm_tx_tcp
+    - Number of bytes sent to a connected TCP socket.
+  * - rm_rx_tcp
+    - Number of bytes received from a connected TCP socket.
+  * - rm_tx_udp
+    - Number of bytes sent through UDP socket.
+  * - rm_rx_udp
+    - Number of bytes received from UDP socket.
+  * - rm_tx_serial
+    - Number of bytes sent to a serial port or blue tooth.
+  * - rm_rx_serial
+    - Number of bytes received from a serial port or blue tooth.
   * - rm_aveloop
     - Average main loop period, ms. For example if main loop runs 1000 times per second, this is 1 ms.
   * - rm_maxloop
@@ -78,6 +86,15 @@ Call dinfo_run_resource_monitor() from main loop. This keeps the resource monito
   * - rm_boottime
     - How many minutes ago the software started (device booted). Useful to ensure that there are not
       unintended device reboots.
+
+          {"name": "rm_tx_tcp", "type": "long"},
+          {"name": "rm_rx_tcp", "type": "long"},
+          {"name": "rm_tx_serial", "type": "long"},
+          {"name": "rm_rx_serial", "type": "long"},
+          {"name": "rm_tx_udp", "type": "long"},
+          {"name": "rm_rx_udp", "type": "long"},
+
+
 
 |
 
