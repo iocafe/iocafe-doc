@@ -11,8 +11,9 @@ used operating system and hardware, and resource/performance counters.
 Resource monitor
 *****************
 
-Compile time EOSAL define OSAL_RESOURCE_MONITOR=1 enables EOSAL code to keep track of resource use.
-See osal_resource_monitor.h. 
+Compile time EOSAL define OSAL_RESOURCE_MONITOR=1 enables EOSAL library code to keep track of resource use.
+See osal_resource_monitor.h. The deviceinfo library calculates loop timing and publishes that and information
+collected by EOSAL as IO signals
 
 Merge default resource monitor signals into application's signal map. For example candy camera's
 /coderoot/iocom/examples/candy/config/signals/merge.json file includes resource_monitor.json:
@@ -89,8 +90,8 @@ Call dinfo_run_resource_monitor() from main loop. This keeps the resource monito
 
 |
 
-Build with deviceinfo library
-********************************
+Build application with deviceinfo library
+******************************************
 Directory /coderoot/iocom/extensions/deviceinfo need to be in included path, then include deviceinfo header.
 
 ::
