@@ -254,7 +254,7 @@ Call dinfo_run_resource_monitor() from main loop. This keeps the resource monito
 
 Build application with deviceinfo library
 ******************************************
-Directory /coderoot/iocom/extensions/deviceinfo need to be in included path, then include deviceinfo header.
+Directory /coderoot/iocom/extensions/deviceinfo need to be in include path, then #include "deviceinfo.h" works.
 
 ::
 
