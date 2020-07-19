@@ -5,10 +5,8 @@ Development tools
    :maxdepth: 2
    :caption: Contents:
 
-   scripts/200718-scripts
    platform-io/platform-io
    virtual-machine/virtual-machine
-
    stm32duino/180920-debugging-stm32duino
    stm32duino/180920-LwIP-in-stm32duino
    arduino/200303-arduino-board-build-notes
