@@ -218,8 +218,9 @@ Call dinfo_run_resource_monitor() from main loop. This keeps the resource monito
   * - rm_malloc
     - Operating system memory allocated by EOSAL, bytes. 
   * - rm_muse
-    - How much of memory allocated through/by EOSAL is in use. The os_malloc() adds to used memory and 
-      os_free() releases it. 
+    - How much of memory allocated through/by EOSAL is in use, or 0 if EOSAL memory manager is
+      disabled (OSAL_MEMORY_MANAGER define is 0). If EOSAL memory manager is enabled, the os_malloc()
+      adds to used memory and os_free() releases it. 
   * - rm_threads
     - Number of threads created trough EOSAL. Value 0 indicates that multi-threading support is
       disabled (OSAL_MULTITHREAD_SUPPORT is 0).
