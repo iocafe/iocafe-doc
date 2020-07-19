@@ -23,7 +23,6 @@ IoT/IO device networks over TCP/IP or serial port.
    micro-controllers/micro-controllers
    infra/application_infrastructure
    examples/examples
-   appendix/appendix
 
 Search
 ==================
