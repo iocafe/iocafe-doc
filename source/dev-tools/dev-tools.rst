@@ -6,6 +6,7 @@ Development tools
    :caption: Contents:
 
    platform-io/platform-io
+   cmake/200725-cmake
    virtual-machine/virtual-machine
    stm32duino/180920-debugging-stm32duino
    stm32duino/180920-LwIP-in-stm32duino
