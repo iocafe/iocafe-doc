@@ -22,5 +22,12 @@ Loading program to flash
 * Before loading software connect GPIO pin 0 to GND
 * Press reset button. Now board should be ready to receive program. After loading you need to disconnect GPIO 0 from ground and press reboot.
 
+More
 
-notes 22.5.2020/pekka
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   200727-candy-esp32-hw
+
+notes 27.7.2020/pekka
