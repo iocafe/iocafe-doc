@@ -2,7 +2,7 @@ Alternative 1, copy example project
 =================================================
 
 Most example code comes with optional libraries to make iocom appear more like framework than library.
-Reason for this is simple, we need to be able to run the examples on many different micro-controllers and development 
+Reason for this is simple, we need to be able to run the examples on many different micro-controllers and development
 tools and they need to contain necessary supporting code.
 
 We assume that more often iocom is used as plain communication library within an application, see "alternative 2"
@@ -13,7 +13,7 @@ Select name for the new application
 ***********************************
 * Choose a good name for your IO application, it will be extra work to change it later on.
 * Keep it short, so it can be displayed in user interface menus, etc. Maximum 15 characters.
-* Use only alphabet's characters ‘a’ -’z’ and ‘A’ - ‘Z’, no underlines, special characters or numbers. 
+* Use only alphabet's characters ‘a’ -’z’ and ‘A’ - ‘Z’, no underlines, special characters or numbers.
 
 
 Copy example project
@@ -22,7 +22,7 @@ Copy example project
 * In this text I "copy" gina example in /coderoot/iocom/examples/gina directory to /coderoot/myproject/myapp directory.
 * I could as well /coderoot/myapp directory, using /coderoot/myproject/myapp gives extra layer in directory tree.
   This is useful if something else project includes other things besides one IO device application.
-* Delete temporary and other unnecessary files and folders from /coderoot/myproject/myapp. 
+* Delete temporary and other unnecessary files and folders from /coderoot/myproject/myapp.
 
 
 Change application name in files
@@ -46,17 +46,17 @@ Run script to convert JSON to C code and to compressed format from terminal.
    python3 config_to_c_code
 
 
-Name your IO board and modify IO pin configuration 
+Name your IO board and modify IO pin configuration
 **************************************************
-If you will be using pins library for IO device, the IO pins are configured in pins-io.json file.
+If you will be using pins library for IO device, the IO pins are configured in pins_io.json file.
 Among other files, this file is further converted to C code by config_to_c_code script.
-This file is located in /coderoot/iocom/examples/gina/config/pins/<yourdevicename>/pins-io.json
+This file is located in /coderoot/iocom/examples/gina/config/pins/<yourdevicename>/pins_io.json
 
 Your hardware (physical IO device) needs a name. This allows building same application on different boards.
 Hardware name specifies underlying IO API, etc, to use and to which purpose each IO pin is used.
 
 If you are using platform's IO hardware directly or trough platform specific API, you should delete
-all pins-io.json file and all pins library related things. 
+all pins_io.json file and all pins library related things.
 
 
 Setup signal configuration

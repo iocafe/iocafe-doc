@@ -1,46 +1,46 @@
 ﻿Using “pins” library
 =====================
-IO configuration for a specific hardware is written as JSON file. This JSON file is converted to C code 
+IO configuration for a specific hardware is written as JSON file. This JSON file is converted to C code
 by script. Generated C code has static structure describing each IO pin. The application reads and writes
-IO pins trough pins library function, giving pointer to static pin structure as argument. 
-Same application code can be used with different HW by including and linking generated C filed for the hardware. 
+IO pins trough pins library function, giving pointer to static pin structure as argument.
+Same application code can be used with different HW by including and linking generated C filed for the hardware.
 
 Steps:
 
-* Create JSON file /coderoot/pins/examples/jane/config/pins/carol/pins-io.json. Replace “jane” with
+* Create JSON file /coderoot/pins/examples/jane/config/pins/carol/pins_io.json. Replace “jane” with
   name of your application and “carol” with name of your hardware (nick name of your board).
-* Generate python script /coderoot/pins/examples/jane/scripts/config-to-c-code.py which converts 
-  JSON configuration to C code. 
-* Include generated .c and .h files in your project. Set /coderoot/pins/examples/jane/config/include/carol 
-  in you compiler’s include path. 
-* Add line #include pins-io.c in applications config.c file and #include pins-io.h in 
+* Generate python script /coderoot/pins/examples/jane/scripts/config-to-c-code.py which converts
+  JSON configuration to C code.
+* Include generated .c and .h files in your project. Set /coderoot/pins/examples/jane/config/include/carol
+  in you compiler’s include path.
+* Add line #include pins_io.c in applications config.c file and #include pins_io.h in
   application’s main header file.
- 
+
 
 JSON configuration
 *******************
-The idea is to write application’s hardware configurations as JSON, and then generate matching C code and 
+The idea is to write application’s hardware configurations as JSON, and then generate matching C code and
 header files by Python script pins-to-c.py. It is possible to write directly C code, writing JSON just
-makes it easier because information needs to be written only in one place. 
+makes it easier because information needs to be written only in one place.
 
 For example I have application “jane”, which controls “led_builtin” binary output to on a LED on IO board.
 I want to test this on hardware I named “carol”, which is ESP32, Arduino libraries and the LED connected
 to pin 2. I need to bind pin address 2 and other pin attributes (like pull-up), etc to name “led_builtin”.
-I write this information a JSON file jane/config/pins/carol/jane-io.json. Then I run the pins-to-c.py 
-script to generate C code. I use same JSON file together with IOCOM signal configuration JSON to map the 
+I write this information a JSON file jane/config/pins/carol/jane-io.json. Then I run the pins-to-c.py
+script to generate C code. I use same JSON file together with IOCOM signal configuration JSON to map the
 IO pins to IOCOM communication signals.
 
-If I would need to run same “jane” application on different hardware, let’s say “alice”: Separate 
-JSON HW configuration file would written for it. 
+If I would need to run same “jane” application on different hardware, let’s say “alice”: Separate
+JSON HW configuration file would written for it.
 
-* The led_builtin output is mapped to specific IO pin by pin number, and/or bank number and. 
+* The led_builtin output is mapped to specific IO pin by pin number, and/or bank number and.
   We may also have some attributes for IO pin. For example SERVO PWM has frequency, resolution,
   initial value, etc.
-* One pin, or more generally IO item since we can include timers etc, is configured by name, 
-  address and and various parameters. 
+* One pin, or more generally IO item since we can include timers etc, is configured by name,
+  address and and various parameters.
 * Group attribute can be used to generate groups of pins.
 * Attribute values excluding group are integers.
-* Some parameters can be changed while the code runs. 
+* Some parameters can be changed while the code runs.
 * IO pins can be mapped directly to IOCOM signals.
 
 A JSON pin setup would look something like ESP32 example below:
@@ -113,24 +113,24 @@ A JSON pin setup would look something like ESP32 example below:
     }
 
 
-Configuring inputs 
+Configuring inputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Inputs are configured within “inputs” group. Pin name is can be up to 15 characters + terminating ‘\0’.
-Use only ‘a’ - ‘z’, ‘A’ - ‘Z’, ‘0’ - ‘1’ and underscore ‘_’ characters. The pin name will be used in 
-C code as written. Address “addr” is GPIO pin address. 
+Use only ‘a’ - ‘z’, ‘A’ - ‘Z’, ‘0’ - ‘1’ and underscore ‘_’ characters. The pin name will be used in
+C code as written. Address “addr” is GPIO pin address.
 
-The attributes for inputs  
+The attributes for inputs
 
 • pull-up: Set 1 to enable pull-up resistor on input.
 • pull-down: Set 1 to enable pull-down resistor on input.
-• touch: Set 1 to define this input as touch sensor (this is set up here, even signal may be analog): 
-• interrupt: Set 1 to trigger HW interrupt when pin state changes, either falling edge, 
+• touch: Set 1 to define this input as touch sensor (this is set up here, even signal may be analog):
+• interrupt: Set 1 to trigger HW interrupt when pin state changes, either falling edge,
   rising edge or both. Edge on which to trigger is in C code.
 
 ::
 
-{"name": "gazerbeam", "addr": 39, "interrupt": 1},
-{"name": "dip_switch_3", "addr": 34, "pull-up": 1}
+{"name": "gazerbeam", "addr": 39, "interrupt": 1},
+{"name": "dip_switch_3", "addr": 34, "pull-up": 1}
 
 Configuring outputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -143,78 +143,78 @@ The attributes for inputs:
 
 ::
 
-{"name": "led_builtin", "addr": 33}
+{"name": "led_builtin", "addr": 33}
 
 
 Configuring analog inputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-Analog inputs are configured within “analog_inputs” group. 
+Analog inputs are configured within “analog_inputs” group.
 
 The attributes for analog inputs
 
 • addr: GPIO pin address.
-• max: Set maximum value for analog input. Typically set by number AD conversion resolution, 
-  1023 for 10-bit ADC and 4095 for 12 bit ADC, etc. Application and IOCOM link can use this 
-  setting to scale value to known units, which is useful if for example newer version of 
+• max: Set maximum value for analog input. Typically set by number AD conversion resolution,
+  1023 for 10-bit ADC and 4095 for 12 bit ADC, etc. Application and IOCOM link can use this
+  setting to scale value to known units, which is useful if for example newer version of
   the hardware has higher ADC resolution.
 
 ::
 
-{"name": "potentiometer", "addr": 26, "max": 4095}
+{"name": "potentiometer", "addr": 26, "max": 4095}
 
 
 Configuring analog outputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-Analog outputs are configured within “analog_outputs” group. 
+Analog outputs are configured within “analog_outputs” group.
 
 The attributes for analog outputs
 
-* max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 
+* max: Set maximum value for analog output. Typically set by number D/A conversion resolution,
   1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
 
 ::
 
-{"name": "myaout", "addr": 25, "max": 4095}
+{"name": "myaout", "addr": 25, "max": 4095}
 
 Configuring PWM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-PWM pins are configured within “pwm” group. 
+PWM pins are configured within “pwm” group.
 The attributes for PWM pin:
 
 * bank: PWM channel, typically 0 - 7.
 * addr: GPIO pin address.
 * frequency: PWM frequency in Hz, max 65535.
-* frequency-kHz: PWM frequency kHz. This is used instead of “frequency” to set higher frequencies than 65kHz. 
-* timer: Which timer to use to generate the pulse 
+* frequency-kHz: PWM frequency kHz. This is used instead of “frequency” to set higher frequencies than 65kHz.
+* timer: Which timer to use to generate the pulse
 * init: Initial duty cycle 0- 2^resolution
-* hpoint: Counter value where the duty cycle 0 - 2^resolution, shifts pulse position in time. 
+* hpoint: Counter value where the duty cycle 0 - 2^resolution, shifts pulse position in time.
 * resolution: Number of bits to set PWM duty. If set to 12, values range from 0 to 4095.
   For example 2048 would mean that pin is on 50 % of time (50 % duty cycle). If generating clock pulse, set 1 bit.
-* max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 
+* max: Set maximum value for analog output. Typically set by number D/A conversion resolution,
   1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
 * init: Set initial value. for example 1024 with 12 bit resolution would mean 25% duty cycle.
 
 ::
 
-{"name": "servo", "bank": 0, "addr": 22, "frequency": 50, "resolution": 12, "init": 2048, "max": 4095}
-{"name": "ccd_clock",  "bank": 0, "addr": 22, "timer": 0, "frequency-kHz": 1000, "resolution": 1, "init": 1}
+{"name": "servo", "bank": 0, "addr": 22, "frequency": 50, "resolution": 12, "init": 2048, "max": 4095}
+{"name": "ccd_clock",  "bank": 0, "addr": 22, "timer": 0, "frequency-kHz": 1000, "resolution": 1, "init": 1}
 
 ESP32 notes
 
 * LED PWM of the ESP32 is composed of 16 independent channels (0 … 15), with configurable duty
-  cycles and wave periods. The accuracy of the duty cycle can be configured up to 16 bits of 
+  cycles and wave periods. The accuracy of the duty cycle can be configured up to 16 bits of
   resolution.  Channels 0 … 7 are high speed channels, and 8 … 15 are low speed channels.
 * ESP32: ESP32/Arduino implementation ignores “timer” attribute.
 
 
 Configuring SPI bus
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-SPI buses are configured within “spi” group. 
+SPI buses are configured within “spi” group.
 
 The attributes for SPI bus
 
 * addr: SPI bus number to configure.
-* max: Set maximum value for analog output. Typically set by number D/A conversion resolution, 
+* max: Set maximum value for analog output. Typically set by number D/A conversion resolution,
   1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
 * miso: Sets GPIO pin address for MISO (master in, slave out) signal.
 * mosi: Sets GPIO pin address for MOSI (master out, slave in)signal.
@@ -224,7 +224,7 @@ The attributes for SPI bus
 
 ::
 
-{"name": "tft_spi", "addr": 0, "miso": 19, "mosi": 23, "sclk": 18, "dc": 2}
+{"name": "tft_spi", "addr": 0, "miso": 19, "mosi": 23, "sclk": 18, "dc": 2}
 
 
 Configuring timers
@@ -235,14 +235,14 @@ Timer attributes
 
 * bank: .
 * addr:  Pin address.
-* timer: Which timer to use to generate the pulse 0 … 
-* init: 
+* timer: Which timer to use to generate the pulse 0 …
+* init:
 * frequency: PWM frequency in Hz, max 65535.
-* frequency-kHz: PWM frequency kHz. This is used instead of “frequency” to set higher frequencies than 65kHz. 
+* frequency-kHz: PWM frequency kHz. This is used instead of “frequency” to set higher frequencies than 65kHz.
 
 ::
 
-{"name": "igc_timer",  "bank": 0, "addr": 0, "timer": 0, "frequency-kHz": 250, "resolution": 1}
+{"name": "igc_timer",  "bank": 0, "addr": 0, "timer": 0, "frequency-kHz": 250, "resolution": 1}
 
 
 Configuring UARTS
@@ -259,19 +259,19 @@ UART attributes
 
 ::
 
-{"name": "uart2", "addr": 2, "rx": 16, "tx": 17, "speed": 96}
+{"name": "uart2", "addr": 2, "rx": 16, "tx": 17, "speed": 96}
 
 
 Pins reserved for debugger and development board
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 These are skipped by pins-to-c.py script and cannot be accessed from C code. Reason for these to be defined here
-is to avoid accidentally using a reserved pin, and in future to include these in IO documentation once we have 
+is to avoid accidentally using a reserved pin, and in future to include these in IO documentation once we have
 automatic JSON configuration to document converter written.
 
 
 Generating C source and header files from JSON
 *************************************************
-The hardware specific IO configuration, like jane-io.json, is converted to C files by pins-to-c.py script. 
+The hardware specific IO configuration, like jane-io.json, is converted to C files by pins-to-c.py script.
 This will generate jane-io.c and jane-io.h file, which can be compiled into the application.
 
 jane-io.h
@@ -356,14 +356,14 @@ And in C file
 
 Pins library types in C
 ***********************
-In C code, an IO pin, a SPI bus, timer or UART is referred by static “Pin” structure. 
+In C code, an IO pin, a SPI bus, timer or UART is referred by static “Pin” structure.
 Static structure for each “pin” is initialized in C code generated by script from JSON configuration.
-The “Pin” structure is the same, regardless what this “pin” actually is, “pinType type” member of 
+The “Pin” structure is the same, regardless what this “pin” actually is, “pinType type” member of
 the structure has the pin type:
 
 Pins library main header file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Use #include “pinsx.h” to include pins library headers for use with IOCOM. 
+Use #include “pinsx.h” to include pins library headers for use with IOCOM.
 Enumeration of pin types
 
 .. code-block:: c
@@ -412,7 +412,7 @@ be applied for a specific pin type.  Notice that numeric enumeration values can 
 
 Pin definition structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Structure that holds static information about one IO pin. Pin structure for each IO “pin” 
+Structure that holds static information about one IO pin. Pin structure for each IO “pin”
 is initialized in C code generated from JSON configuration.
 
 .. code-block:: c
@@ -452,13 +452,13 @@ is initialized in C code generated from JSON configuration.
     }
     Pin;
 
-There is group_next and board_next. Often is handy to loop trough all pins, like when making 
+There is group_next and board_next. Often is handy to loop trough all pins, like when making
 memory map for IO com. Or reading group of inputs with one command. To facilitate this we can
 group pins together. Pins with same PIN_GROUP number set go generate linked list and all pins
 of IO board a second linked list.
 
-All pins of a device can be referred using “extern const IoPinsHdr pins_hdr” in script generated 
-pins-io.h. We use pins_setup(&pins_hdr, 0) this to set up all the IO pins, or 
+All pins of a device can be referred using “extern const IoPinsHdr pins_hdr” in script generated
+pins_io.h. We use pins_setup(&pins_hdr, 0) this to set up all the IO pins, or
 “pins_read_all(&pins_hdr, PINS_DEFAULT)” in main loop to read all pins.
 
 
