@@ -21,12 +21,19 @@ prototyping. There is also 4 channel version of the chip MCP3204, and similar 10
 Wiring - Raspberry PI
 ######################
 
+.. figure:: pics/mcp3208-raspberry-wiring.jpeg
 
+   MCP3208 wiring to Raspberry PI
 
-.. figure:: pics/mcp3208-pins.jpeg
-
-   X...
-
+* VDD - 3.3V on Raspberry Pi
+* VREF - 3.3V on Raspberry Pi
+* AGND - GND on Raspberry Pi
+* CLK - "SPI0 SCLK" on Raspberry Pi 2 or 3
+* Dout - "SPI0 MISO" on Raspberry Pi, GPIO 11
+* Din - "SPI0 MOSI" on Raspberry Pi, GPIO 10
+* CS/SHDN - "SPI0 CS0" on Raspberry, Pi GPIO 8
+* DGND - GND on Raspberry Pi
+* CH0 - Voltage from potentiometer
 
 Pin configuration - Raspberry PI
 #################################
