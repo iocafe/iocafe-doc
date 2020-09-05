@@ -34,7 +34,7 @@ Wiring - Raspberry PI
 * CH0 - Voltage from potentiometer
 
 .. list-table:: Raspberry PI SPI related GPIO pins
-   :widths: 25 20 15 40
+   :widths: 18 12 12 12 12 12 12 
    :header-rows: 1
 
    * - SPI bus
