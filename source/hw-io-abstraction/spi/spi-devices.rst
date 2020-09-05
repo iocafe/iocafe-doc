@@ -1,4 +1,4 @@
-SPI devices
+SPI - serial peripheral interface
 ==================================
 
 .. figure:: pics/spi-bus-multiple-devices.png
@@ -14,7 +14,8 @@ Raspberry PI SPI pins
 ######################
 
 The main SPI bus with two slave selects is available on the header of all PIs. The second (aux) SPI with the option
-of up to three slave selects) is available on 40-pin versions of PIs.
+of up to three slave selects) is available on 40-pin versions of PIs. PIGPIO documentation has good information about
+using SPI devices in short, easy read, format.
 
 .. list-table:: Raspberry PI SPI related GPIO pins
    :widths: 18 12 12 12 12 12 12 
