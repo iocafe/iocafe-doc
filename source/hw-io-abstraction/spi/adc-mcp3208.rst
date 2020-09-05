@@ -4,7 +4,8 @@ ADC MCP3208
 MCP3208 is 8-Channel 12-Bit A/D converters chip created by Microchip Technology Inc, which connects
 to micro-controller trough SPI bus. This chip is nice for hobbyist, it is simple to program and is
 available as 16-PDIP (pins for trough holes) which is perfect for breadboard or home made PCB
-prototyping. There is also 4 channel version of the chip, MCP3204.
+prototyping. There is also 4 channel version of the chip MCP3204, and similar 10 bit ADCs MCP3004 and MCP3008.
+(10 bit chips versions require modification in processing of device's SPI reply)
 
 - Device are successive approximation 12-bit analog to digital (A/D) converters with on-board sample and hold circuitry. 
 - The MCP3208 is programmable to provide four pseudo-differential input pairs or eight single-ended inputs. 
@@ -12,26 +13,23 @@ prototyping. There is also 4 channel version of the chip, MCP3204.
 - 100 ksps max. sampling rate at V DD = 5V, 50 ksps max. sampling rate at V DD = 2.7V
 
 
+.. figure:: pics/mcp3208-pins.jpeg
+
+   "MCP3208 chip pins. Select PDIP package for drill trough PCB or breadboard.
 
 
-Schema
-#######
+Wiring - Raspberry PI
+######################
 
-
-Raspberry PI
-#############
-
-Wiring
-*******
 
 
 .. figure:: pics/mcp3208-pins.jpeg
 
-   "Ubuntu 20.04 DDE remix" virtual machine for ESP32 development.
+   X...
 
 
-Pin configuration
-******************
+Pin configuration - Raspberry PI
+#################################
 
 Add MCP3208 configuration to buster/config/pins/grumpy/pins_io.json. "buster" is name of my IO application and "grumpy" is name of the hardware it runs on.
 You can name analog inputs as you like, I have used here simple "sig0", "sig1" ...
