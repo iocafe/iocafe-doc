@@ -6,4 +6,5 @@ Hardware IO abstraction
    :caption: Contents:
 
    pins-library/pins-library
+   spi/spi-devices
 
