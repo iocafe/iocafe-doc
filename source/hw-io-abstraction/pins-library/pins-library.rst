@@ -1,5 +1,5 @@
-﻿Generic interface to IO hardware
-******************************************
+PINS library - Generic IO hardware interface
+**********************************************
 The “pins” library separates IO application from hardware level IO functions, so the same IO application can be 
 run on different micro-controllers or as Linux/Windows simulation. This library is optional: Any other IO library
 can be used as well. Typically IO hardware accessed tough the “pins” interface are GPIO, ADC/DAC, PWM, timers, etc. 
