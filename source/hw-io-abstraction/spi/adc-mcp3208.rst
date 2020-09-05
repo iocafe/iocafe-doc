@@ -16,8 +16,8 @@ prototyping. There is also 4 channel version of the chip MCP3204, and similar 10
 
    "MCP3208 chip pins. Select PDIP package for drill trough PCB or breadboard.
 
-Wiring - Raspberry PI
-######################
+Raspberry PI wiring and pin configuration
+##########################################
 
 .. figure:: pics/mcp3208-raspberry-wiring.jpeg
 
@@ -59,9 +59,6 @@ Wiring - Raspberry PI
      - 18
      - 17
      - 16
-
-Pin configuration - Raspberry PI
-#################################
 
 Add MCP3208 configuration to buster/config/pins/grumpy/pins_io.json. "buster" is name of my IO application and "grumpy" is name of the hardware it runs on.
 You can name analog inputs as you like, I have used here simple "sig0", "sig1"... I gave name "adc1" for the first MCP3208. If there are two chips, the second
