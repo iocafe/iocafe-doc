@@ -14,5 +14,5 @@ SPI devices
    :maxdepth: 1
    :caption: Contents:
 
-   mcp3208
+   adc-mcp3208
 
