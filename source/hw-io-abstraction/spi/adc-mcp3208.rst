@@ -33,39 +33,12 @@ Raspberry PI wiring and pin configuration
 * DGND - GND on Raspberry Pi
 * CH0 - Voltage from potentiometer
 
-
-.. list-table:: Raspberry PI SPI related GPIO pins
-   :widths: 18 12 12 12 12 12 12 
-   :header-rows: 1
-
-   * - SPI bus
-     - MISO
-     - MOSI
-     - SCLK
-     - CS0
-     - CS1
-     - CS2
-   * - Main SPI
-     - 9
-     - 10
-     - 11
-     - 8
-     - 7
-     -
-   * - Aux SPI
-     - 19
-     - 20
-     - 21
-     - 18
-     - 17
-     - 16
-
 Add MCP3208 configuration to buster/config/pins/grumpy/pins_io.json. "buster" is name of my IO application and "grumpy" is name of the hardware it runs on.
 You can name analog inputs as you like, I have used here simple "sig0", "sig1"... I gave name "adc1" for the first MCP3208. If there are two chips, the second
 one could be "adc2" and it would need at least it's own CS pin and SPI device number "addr". 
 
 * "bank": value 0 selects main SPI bus, value 1 selects aux SPI bus. Settings for miso, mosi and sclk must match this SPI bus number.
-* "addr": For spi device this sets device number within SPI bus. "cs" setting much match device number, see table above.
+* "addr": For spi device this sets device number within SPI bus. "cs" setting much match device number.
    For an analog input pin: Specifies MCP3028 input channel.
 
 ::
