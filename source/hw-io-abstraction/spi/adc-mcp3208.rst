@@ -12,11 +12,9 @@ prototyping. There is also 4 channel version of the chip MCP3204, and similar 10
 - Single supply operation: 2.7V - 5.5V
 - 100 ksps max. sampling rate at V DD = 5V, 50 ksps max. sampling rate at V DD = 2.7V
 
-
 .. figure:: pics/mcp3208-pins.jpeg
 
    "MCP3208 chip pins. Select PDIP package for drill trough PCB or breadboard.
-
 
 Wiring - Raspberry PI
 ######################
@@ -60,8 +58,6 @@ Wiring - Raspberry PI
      - 18
      - 17
      - 16
-
-
 
 Pin configuration - Raspberry PI
 #################################
@@ -138,8 +134,9 @@ Export the analog input states trough IOCOM, add signals with same names as pins
 C build
 #########
 
-When pins library is compiled, the PINS_MAX_MCP3208_ADC sets how many MCP3208 chips can be connected. Default value depends on operating system,
-for Raspberry PI this is 2. For PlatformIO define this in platformio.ini build flags:
+MCP specific code is in pins_adc_mcp3208.c file. When pins library is compiled, the PINS_MAX_MCP3208_ADC define sets how 
+many MCP3208 chips can be connected. Default value depends on operating system, for Raspberry PI this is 2. For PlatformIO
+define this in platformio.ini build flags:
 
 ::
 
