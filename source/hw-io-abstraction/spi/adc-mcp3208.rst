@@ -33,7 +33,6 @@ Wiring - Raspberry PI
 * DGND - GND on Raspberry Pi
 * CH0 - Voltage from potentiometer
 
-XX
 
 .. list-table:: Raspberry PI SPI related GPIO pins
    :widths: 18 12 12 12 12 12 12 
@@ -48,7 +47,7 @@ XX
      - CS2
    * - Main SPI
      - 9
-     - 110
+     - 10
      - 11
      - 8
      - 7
