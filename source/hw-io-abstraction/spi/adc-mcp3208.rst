@@ -41,6 +41,12 @@ one could be "adc2" and it would need at least it's own CS pin and SPI device nu
 * "addr": For spi device this sets device number within SPI bus. "cs" setting much match device number.
    For an analog input pin: Specifies MCP3028 input channel.
 
+In example below I have two analog signals connected to pins 3 and 4 of MCP3028 on Raspberry PI's SPI bus. These signals are electronics 
+voltage and motor voltage. I make group "analogs" to enable me to read both these signals with one function call in C. (group name can 
+be anything, but no special characters, spaces, etc). Then I set up scaling that my scaled values are volts: Range "min" - "max" is
+scaled to "smin" - "smax". "min" and "smin" are missing, because values are default zeroes. "smin" and "smax" can be only integer 
+values, so I first convert to integer mV, and then set "digs" to divide value by 10^3.
+ 
 ::
 
     {
@@ -50,14 +56,8 @@ one could be "adc2" and it would need at least it's own CS pin and SPI device nu
         {
             "name": "analog_inputs",
             "pins": [
-            {"name": "sig0", "device": "spi.adc1", "addr": 0, "max": 4095},
-            {"name": "sig1", "device": "spi.adc1", "addr": 1, "max": 4095},
-            {"name": "sig2", "device": "spi.adc1", "addr": 2, "max": 4095},
-            {"name": "sig3", "device": "spi.adc1", "addr": 3, "max": 4095},
-            {"name": "sig4", "device": "spi.adc1", "addr": 4, "max": 4095},
-            {"name": "sig5", "device": "spi.adc1", "addr": 5, "max": 4095},
-            {"name": "sig6", "device": "spi.adc1", "addr": 6, "max": 4095},
-            {"name": "sig7", "device": "spi.adc1", "addr": 7, "max": 4095}
+            {"name": "electrV", "device": "spi.adc1", "addr": 3, "max": 4095, "smax": 25170, "digs": 3, "group": "analogs"},
+            {"name": "motorV", "device": "spi.adc1", "addr": 4, "max": 4095, "smax": 25170, "digs": 3, "group": "analogs"}
             ]
         },
         {
@@ -74,6 +74,7 @@ Export analog inputs as IOCOM signals
 ######################################
 
 Export the analog input states trough IOCOM, add signals with same names as pins to config/signals/signals.json, etc.
+Range "min" - "max" here is only hints for user interface, in case value is displayed as graphic bar.
 
 ::
 
@@ -87,14 +88,8 @@ Export the analog input states trough IOCOM, add signals with same names as pins
         {
             "name": "state",
             "signals": [
-            {"name": "sig0", "type": "short"},
-            {"name": "sig1", "type": "short"},
-            {"name": "sig2", "type": "short"},
-            {"name": "sig3", "type": "short"},
-            {"name": "sig4", "type": "short"},
-            {"name": "sig5", "type": "short"},
-            {"name": "sig6", "type": "short"},
-            {"name": "sig7", "type": "short"}
+            {"name": "electrV", "type": "float", "min": 0, "max": 10},
+            {"name": "motorV", "type": "float", "min": 0, "max": 10}
             ]
         }
         ]
