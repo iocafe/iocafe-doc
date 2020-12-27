@@ -12,4 +12,8 @@ start QT creator and open CmakeLists.txt file from project’s root folder. QT c
 and works well. I appreciate easy debugging and it pointing out the build errors.
 
 
-200111, updated 16.7.2019/pekka
+Dependencied:
+sudo apt-get install libv4l-dev
+
+
+200111, updated 27.12.2020/pekka
