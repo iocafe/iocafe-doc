@@ -15,9 +15,8 @@ needed to build the example. To build, open the solution file .sln in Visual Stu
 
 Microsoft Visual Studio 2019 pitfalls (27.6.2019)
 **************************************************
-I have used Visual Studio 2019 for Windows development, mostly because it is new. As previous Microsoft libraries,
-it has nice debugging. 22.5.2020 note: Some of these may be fixed in new releases of Visual Studio 2019, at
-least these have not annoyed me lately.
+As previous versions, VS 2019 has nice debugging and other tools. 22.5.2020 note: Some of these may be fixed in new
+releases of Visual Studio 2019, at least these have not annoyed me lately.
 
 * By default it comes with “automatic code formatting” enabled. This will totally mess up your code readability, 
   and is unsustainable for projects with lot of code, long code life time, multiple environments or multiple 
