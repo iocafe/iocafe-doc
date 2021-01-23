@@ -37,7 +37,7 @@ notes:
 
 Start "uno" in linux PC
 ************************
-Open uno in your C development environment.
+Open uno in your C development environment in /coderoot/iocom/examples/uno.
 Make sure that serial port is "ttyS30", etc in uno.c.
 
 I see it working:
