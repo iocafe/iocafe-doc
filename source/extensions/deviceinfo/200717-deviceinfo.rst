@@ -102,7 +102,7 @@ Network configuration can be modified by user (reboot activates). There are regi
   * - set_nc_nr
     - Set IO device number. 
   * - set_nc_net
-    - Set IO device network to connect to, like "iocafenet".
+    - Set IO device network to connect to, like "cafenet".
   * - set_nc_connect
     - Set ip address (or host name) to connect to. TCP port number separated by colon ':' can be appended
       to IP address.
