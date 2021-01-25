@@ -75,7 +75,8 @@ notes:
 
 * Arduino board is seen in linux as "/dev/ttyUSB0", "/dev/ttyACM0", "/dev/ttyACM1", etc. Use "ls /dev/ttyUSB*" and "ls /dev/ttyA*" to figure out which one. You may remove/plug the USB cable to see which device name appears/disappears. If you are running linux in virtual machine, connect USB port to it and not to host.
 * PlatformIO uses same serial port to upload software. Close the Microsoft Visual Studio Code before starting iSpy to make sure serial port is not used. And Vice versa, close iSpy before trying to upload a program.
-
+* If you run out of RAM (stack overflow may happen somewhere around 85% RAM use and UNO crashes), the settings -D SERIAL_RX_BUFFER_SIZE=256 in platformio.ini can be changed to 128. This is below IOCOM spec, but seems to work in practise.
+* Pins library can be linked with the code and may work, but testing with Arduino UNO is not done (22.1.2021). 
 
 notes 23.1.2021/pekka
 
