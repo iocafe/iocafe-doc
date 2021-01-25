@@ -62,8 +62,12 @@ Test "uno" in real Arduino UNO board
 I use PlatformIO to build and upload "uno" application to real hardware. It starts immediately when downloaded.
 The UNO board has only one serial port: No change of mistake, so setting in uno.c is ignored. Then I started
 iSpy as server to listen to serial port connected trough USB cable. This port must be set in iSpy. 
-iSpy view is exactly the same as in linux PC simulation, so no screenshot here. I was happy about speed,
+iSpy view is exactly the same as in linux PC simulation. I was happy about speed,
 even UNO is 8 bit processor, communication latency seems to be in order of a few milliseconds.
+
+Install Platform IO for Visual Studio Code, and open folder /coderoot/iocom/examples/uno in the IDE:
+
+.. figure:: pics/210123-uno-platformio.png
 
 notes:
 
