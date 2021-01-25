@@ -20,9 +20,9 @@ can be run at both ends. In this context IOCOM provides fast communication for I
 with named signals and name based versioning. Or Arduino could be integrated as IO/control unit in
 larger system.
 
-Arduino UNO is not powerful enough to run Ethernet or WiFi, not use of IOCOM is limited to serial
-communication. Even this hits close to boundaries of the UNO's resources. Requirements of TLS and
-secure communications are far above capability of this board.
+Arduino UNO is not powerful enough to run Ethernet or WiFi, use of IOCOM is limited to serial
+communication. Even this hits close to boundaries of the UNO's resources. Requirements of networking,
+TLS and secure communications are far above capability of this board.
 
 Using iSpy to test testing code in linux
 *****************************************
@@ -72,7 +72,6 @@ Install Platform IO for Visual Studio Code, and open folder /coderoot/iocom/exam
 notes:
 
 * Arduino board is seen in linux as "/dev/ttyUSB0", "/dev/ttyACM0", "/dev/ttyACM1", etc. Use "ls /dev/ttyUSB*" and "ls /dev/ttyA*" to figure out which one. You may remove/plug the USB cable to see which device name appears/disappears. If you are running linux in virtual machine, connect USB port to it and not to host.
-
 * PlatformIO uses same serial port to upload software. Close the Microsoft Visual Studio Code before starting iSpy to make sure serial port is not used. And Vice versa, close iSpy before trying to upload a program.
 
 
