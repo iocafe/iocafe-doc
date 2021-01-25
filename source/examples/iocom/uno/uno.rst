@@ -78,5 +78,29 @@ notes:
 * If you run out of RAM (stack overflow may happen somewhere around 85% RAM use and UNO crashes), the settings -D SERIAL_RX_BUFFER_SIZE=256 in platformio.ini can be changed to 128. This is below IOCOM spec, but seems to work in practise.
 * Pins library can be linked with the code and may work, but testing with Arduino UNO is not done (22.1.2021). 
 
+
+Upload this test example to Arduino UNO
+*****************************************
+The prebuild example code can be loaded to Arduino UNO without installing tools.
+First make sure that avrdude is installed (in path) and change to directory containing the hext file
+
+::
+
+    sudo apt install avrdude
+    cd /coderoot/iocom/examples/uno/firmware
+
+Upload the hex file. You need propably to replace /dev/ttyACM0 with your serial port device. Could be /dev/ttyUSB0, etc.
+
+::
+
+    avrdude -patmega328p -carduino -P/dev/ttyACM0 -D -Uflash:w:210124-uno-firmware.hex:i
+
+
+You may need to specify upload baud rate:
+
+::
+
+    avrdude -patmega328p -carduino -P/dev/ttyACM0 -b57600 -D -Uflash:w:210124-uno-firmware.hex:i 
+
 notes 23.1.2021/pekka
 
