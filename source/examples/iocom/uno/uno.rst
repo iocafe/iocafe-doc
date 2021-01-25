@@ -71,12 +71,9 @@ Install Platform IO for Visual Studio Code, and open folder /coderoot/iocom/exam
 
 notes:
 
-* Arduino board is seen in linux as "/dev/ttyUSB0", "/dev/ttyACM0", "/dev/ttyACM1", etc. Use "ls /dev/ttyUSB*" 
-and "ls /dev/ttyA*" to figure out which one. You may remove/plug the USB cable to see which device name appears/disappears.
-If you are running linux in virtual machine, connect USB port to it and not to host.
+* Arduino board is seen in linux as "/dev/ttyUSB0", "/dev/ttyACM0", "/dev/ttyACM1", etc. Use "ls /dev/ttyUSB*" and "ls /dev/ttyA*" to figure out which one. You may remove/plug the USB cable to see which device name appears/disappears. If you are running linux in virtual machine, connect USB port to it and not to host.
 
-* PlatformIO uses same serial port to upload software. Close the Microsoft Visual Studio Code before starting iSpy
-to make sure serial port is not used. And Vice versa, close iSpy before trying to upload a program.
+* PlatformIO uses same serial port to upload software. Close the Microsoft Visual Studio Code before starting iSpy to make sure serial port is not used. And Vice versa, close iSpy before trying to upload a program.
 
 
 notes 23.1.2021/pekka
