@@ -6,6 +6,8 @@ and limited flash memory. I do not really recommend Uno, it's  limited resources
 and troubleshoot. Something like bluepill is generally an easier choice. In IOCOM library development 
 Arduino UNO represents base line for smallest supported hardware.
 
+.. figure:: pics/210123-uno-pins.jpg
+
 The IOCOM needs to be build with OSAL_MINIMALISTIC flag for real Uno hardware. The flag leaves only bare 
 bones serial communication.
 
