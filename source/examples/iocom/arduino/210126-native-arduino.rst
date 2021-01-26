@@ -2,16 +2,14 @@ Arduino - IOCOM example in "Arduino style"
 =============================================================
 The "arduino" is used to test and demonstrate using IOCOM library as library from typical Arduino application.
 
-.. figure:: pics/210123-uno-pins.jpg
-
-Arduino UNO is not powerful enough to run Ethernet or WiFi, use of IOCOM is limited to serial
-communication. Even this hits close to boundaries of the UNO's resources.
-IOCOM is built with OSAL_MINIMALISTIC flag, which leaves only bare 
-bones serial communication. T (This should be set automatically when building for Uno). 
+.. figure:: pics/testing-arduino.png
 
 This example uses iocom/eosal entry point and loop functions, so that same code builds on linux.
 Normal Arduino ones could be used as well. This may be more readable option, since common Arduino
 framework is more clearly visible and calls to iocom like any library calls. 
+
+IOCOM is built with OSAL_MINIMALISTIC flag, which leaves only bare 
+bones serial communication. T (This should be set automatically when building for Uno). 
 
 Code tree
 **************

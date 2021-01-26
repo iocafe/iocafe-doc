@@ -2,14 +2,12 @@ Uno - Arduino UNO with serial communication
 =============================================================
 
 Uno is used to test and demonstrate running IOCOM in very minimal hardware. Arduino UNO comes with 2kB of RAM
-and limited flash memory. I do not really recommend Uno, it's  limited resources make it tricky to program
-and troubleshoot. Something like bluepill is generally an easier choice. In IOCOM library development 
-Arduino UNO represents base line for smallest supported hardware.
+and limited flash memory. 
 
 .. figure:: pics/210123-uno-pins.jpg
 
-The IOCOM needs to be build with OSAL_MINIMALISTIC flag for real Uno hardware. The flag leaves only bare 
-bones serial communication.
+The IOCOM is build with OSAL_MINIMALISTIC flag for UNO hardware, which leaves only bare 
+bones serial communication. This build should detect UNO automatically and turn this flag on.
 
 This example uses iocom/eosal entry point and loop functions, so that same code builds on linux.
 Normal Arduino ones could be used as well. This may be more readable option, since common Arduino
