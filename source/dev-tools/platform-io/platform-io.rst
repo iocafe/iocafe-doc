@@ -31,3 +31,8 @@ But if you want the build the house, use a good hammer. And this is the best I h
    200314-debugging-esp32-visual-studio-code-platform-io
    200517-linux-usb-device-not-working
 
+
+DETAIL, NEEDS TO MOVE FROM HERE:s
+The library source code files will be in subdirectory arduino or esp32 within /coderoot/lib folder. Platform IO
+will use files directly from this location. 
+
