@@ -9,7 +9,7 @@ easy and clear API to use. Best widely accepted effort in standardization of wil
 
 Most popular two development environments for Arduino API are the original Arduino IDE and 
 Visual Studio Code + PlatformIO. PlatformIO is more advanced of the two, includes debuggings,
-etc. Arduino IDE is simpler to use. This chapter is about 
+etc. Arduino IDE is simpler to use. This chapter is mostly about the Arduino IDE.
 
 Arduino IDE notes, linux
 
@@ -17,13 +17,8 @@ Arduino IDE notes, linux
    :maxdepth: 2
    :caption: Contents:
 
-   200303-duino-boards.rst
    arduino-ide/210126-arduino-ide.rst
-
-
-The organized files will be in subdirectory arduino or esp32 within /coderoot/lib folder. Platform IO
-will use files directly from this location. Zipping individual library folders under /coderoot/lib/esp32
-or arduino will result zip libraries usable in Arduino IDE. 
+   200303-duino-boards.rst
 
 Todo
 ***********************************

@@ -1,21 +1,24 @@
 ﻿Arduino IDE 1.8.6 installation, Linux 
 ======================================
-Note: Arduino version 1.8.6 is used here because it works with teensyduino. You may want to check which new versions work with your hardware.
 
 Prequsities
 *************
-Clone /coderoot/eosal, /coderoot/iocom and /coderoot/pins git repos - These are (et least for now) needed for JSON to C scripts, etc 
-/coderoot/bin/linux/json build
+Clone /coderoot/eosal, /coderoot/iocom and /coderoot/pins git repositories. These are, at least for now, needed for JSON to C conversion scripts.
+Also JSON compression tool (C code) needs to compiled. This is in /coderoot/eosal/util/json directory.
 
-download Arduino IDE 1.8.6, extract it to /acoderoot/arduino-1.8.6. 
+Arduino IDE installation.
+**************************
+Arduino version 1.8.6 is used here because it works with teensyduino. 
+You may want to check which new versions work with your hardware.
 
-cd /coderoot/arduino-1.8.6
-tree -L 1:
-
-(base) john@iocafe:/coderoot/arduino-1.8.6$ tree -L 1
+Download Arduino IDE 1.8.6, extract it to /acoderoot/arduino-1.8.6. It should be as follows:
 
 ::
 
+   cd /coderoot/arduino-1.8.6
+   tree -L 1:
+
+   (base) john@iocafe:/coderoot/arduino-1.8.6$ tree -L 1
    .
    ├── arduino
    ├── arduino-builder
@@ -32,30 +35,49 @@ tree -L 1:
    ├── tools-builder
    └── uninstall.sh
 
-./install.sh
-./arduino-linux-setup.sh
 
+Run scripts to finalize Arduino IDE installation
 
-Setup Arduino IDE
-*******************
-Go to [File] preferenses
-Uncheck "Check for updates on startup"
-Check "Show verbose output during compilation"
-Select/setup your board from [Tools].
+::
 
-Add libraries
-***************
-The library source code files will be in subdirectory arduino or esp32 within /coderoot/lib folder. Platform IO
-will use files directly from this location. Zipping individual library folders under /coderoot/lib/esp32
-or arduino will result zip libraries usable in Arduino IDE. 
+   cd /coderoot/arduino-1.8.6
+   ./install.sh
+   ./arduino-linux-setup.sh
 
-[Sketch][Include library][Add .ZIP Library], browse to /coderoot/lib/arduino-zips (or wherever the .zip libs are) add *-eosal.zip library.
-Add *-iocom.zip and *-pins.zip libraries the same way.
+Aduino IDE setup
+******************
+Setup Arduino IDE: Go to [File] preferenses, and uncheck "Check for updates on startup". Check "Show verbose output during compilation". 
+Select Compiler warnings "More". Select/setup your board from [Tools].
 
-Add file to set serial RX buffer size ro 256 (or at least to 128)
+Setting serial RX and TX buffers for Arduino AVR (UNO) build:
+This is the tricky part with Arduino IDE. There is no easy way to set compiler defines. So far best what
+I found is to modify /coderoot/arduino-1.8.6/hardware/arduino/avr/platform.txt after Arduino IDE installation.
+Close Arduino IDE and open platform.txt in editor. Change lines "compiler.c.extra_flags=" and "compiler.cpp.extra_flags="
+to following:
 
+:: 
+   
+   compiler.c.extra_flags=-DSERIAL_RX_BUFFER_SIZE=256 -DSERIAL_TX_BUFFER_SIZE=64
+   compiler.cpp.extra_flags=-DSERIAL_RX_BUFFER_SIZE=256 -DSERIAL_TX_BUFFER_SIZE=64
 
-C code
+These settings get close to maximum RAM use on UNO. If this is problem, you may try setting RX buffer to 128.
+(Problem = Uno crashes on stack due to stack overflow and may reboot itself).
+
+Add EOSAL AND IOCOM libraries
+*******************************
+The library source code files is collected from source tree by scripts in arduino or esp32 subdirectory within /coderoot/lib folder. 
+This is done to follow Arduino source library convention. Platform IO will use files directly from this location. 
+For Arduino IDE, individual library folders under /coderoot/lib/esp32 or arduino are zipped into "zip libraries". 
+These .zip libraries can then be loaded by Arduino IDE. 
+
+If these .zip libraries are ready, load them using Arduino IDE: [Sketch][Include library][Add .ZIP Library], 
+browse to /coderoot/lib/arduino-zips (or wherever the .zip libs are) add *-eosal.zip library.
+Add *-iocom.zip and optionally *-pins.zip libraries the same way.
+
+Arduino code examples
+**********************
+See examples section of the documentation for "arduino" and "uno".
+
 
 arduino.ino
 config
