@@ -7,6 +7,7 @@ Example projects
 
    iocom/candy/candy
    iocom/uno/uno
+   iocom/arduino/210126-native-arduino
    iocom/claudia
    iocom/frank
    iocom/gina
