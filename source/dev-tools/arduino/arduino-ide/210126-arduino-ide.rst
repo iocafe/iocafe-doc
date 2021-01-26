@@ -61,7 +61,7 @@ to following:
    compiler.cpp.extra_flags=-DSERIAL_RX_BUFFER_SIZE=256 -DSERIAL_TX_BUFFER_SIZE=64
 
 These settings get close to maximum RAM use on UNO. If this is problem, you may try setting RX buffer to 128.
-(Problem = Uno crashes on stack due to stack overflow and may reboot itself).
+If UNO runs our of RAM, it crashes due to stack overflow and may reboot itself.
 
 Add EOSAL AND IOCOM libraries
 *******************************
@@ -70,18 +70,15 @@ This is done to follow Arduino source library convention. Platform IO will use f
 For Arduino IDE, individual library folders under /coderoot/lib/esp32 or arduino are zipped into "zip libraries". 
 These .zip libraries can then be loaded by Arduino IDE. 
 
-If these .zip libraries are ready, load them using Arduino IDE: [Sketch][Include library][Add .ZIP Library], 
-browse to /coderoot/lib/arduino-zips (or wherever the .zip libs are) add *-eosal.zip library.
-Add *-iocom.zip and optionally *-pins.zip libraries the same way.
+If these .zip libraries are ready, load them using Arduino IDE: 
+
+* [Sketch][Include library][Add .ZIP Library] 
+* Browse to /coderoot/lib/arduino-zips (or wherever the .zip libs are) and add *-eosal.zip library.
+* Add *-iocom.zip and optionally *-pins.zip libraries the same way.
 
 Arduino code examples
 **********************
-See examples section of the documentation for "arduino" and "uno".
-
-
-arduino.ino
-config
-scripts
+See documentation of "arduino" and "uno" examples.
 
 Use json linter https://jsonlint.com/ to verify that signals.json syntax is valid. If not, build will fail and it may be hard to see where the probelm is.
 
@@ -92,11 +89,18 @@ Creating arduino zip libraries
 If you do not have Arduino .zip libraries ready, and you have checked out /coderoot/eosal, coderoot/iocom and coderoot/pins,
 these can be created by script. Creating the .zip libraries also removes the old versions from Arduino IDE.
 
-cd /coderoot/iocom/scripts
-./make-arduino-zips.sh
+::
+
+   cd /coderoot/iocom/scripts
+   ./make-arduino-zips.sh
 
 To do
-Write JSON to C scripts so that they can be used without cloning whole git repos.
+*******
 
-
+* Write JSON to C scripts so that they can be used without cloning whole git repos.
+* *WRITE ABOUT PACKAGES NEEDED. ARDUINO IDE, STMDUINO, TEENSYDUINO VERSIONS. 
+* USING TEENSYDUINO SOCKET 
+* LIBRARY FOR STM32/WIZ5500.  
+* MODIFICATION TO SOCKET LIBRARY.
+ 
 210126, updated 26.1.2021/pekka

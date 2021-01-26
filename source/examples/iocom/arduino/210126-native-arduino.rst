@@ -89,8 +89,8 @@ in the Arduino program.
     ]
     }
 
-Script scripts/config_to_c_code.py reads the JSON and generates C code in config/include folder.
-
+* Use json linter https://jsonlint.com/ to verify that signals.json syntax is valid. If not, build will fail and it may be hard to see where the problem is.
+* Run scripts/config_to_c_code.py to covert JSON signal configuration to C code in config/include folder.
 
 The C code 
 ***********************
