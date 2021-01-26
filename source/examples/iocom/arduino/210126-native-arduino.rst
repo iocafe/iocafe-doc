@@ -9,7 +9,7 @@ Normal Arduino ones could be used as well. This may be more readable option, sin
 framework is more clearly visible and calls to iocom like any library calls. 
 
 IOCOM is built with OSAL_MINIMALISTIC flag, which leaves only bare 
-bones serial communication. T (This should be set automatically when building for Uno). 
+bones serial communication. This should be set automatically when building for UNO. 
 
 Code tree
 **************
