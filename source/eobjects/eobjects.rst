@@ -5,5 +5,6 @@ eobjects data abstraction
    :maxdepth: 2
    :caption: Contents:
 
+   egui/egui
    underthehood/underthehood
 

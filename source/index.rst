@@ -17,14 +17,13 @@ IoT/IO device networks over TCP/IP or serial port.
    security/security
    iocom-reference/iocom-reference
    extensions/extensions
+   eobjects/eobjects
    platform-abstraction/platform-abstraction
    hw-io-abstraction/hw-io-abstraction
    dev-tools/dev-tools
    micro-controllers/micro-controllers
    infra/application_infrastructure
    examples/examples
-   eobjects/eobjects
-   egui/egui
 
 Search
 ==================
