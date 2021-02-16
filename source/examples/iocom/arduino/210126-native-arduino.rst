@@ -23,21 +23,21 @@ from signals.json file.
     .
     ├── arduino.ino
     ├── config
-    │   ├── include
-    │   │   └── generic
-    │   │       ├── json_io_config.c
-    │   │       ├── json_io_config.h
-    │   │       ├── signals.c
-    │   │       ├── signals.h
-    │   │       ├── signals_info_mblk.c
-    │   │       └── signals_info_mblk.h
-    │   ├── intermediate
-    │   │   └── generic
-    │   │       ├── signals-merged.binjson
-    │   │       ├── signals-merged-check.json
-    │   │       └── signals-merged.json
-    │   └── signals
-    │       └── signals.json
+    │   ├── include
+    │   │   └── generic
+    │   │       ├── json_io_config.c
+    │   │       ├── json_io_config.h
+    │   │       ├── signals.c
+    │   │       ├── signals.h
+    │   │       ├── signals_info_mblk.c
+    │   │       └── signals_info_mblk.h
+    │   ├── intermediate
+    │   │   └── generic
+    │   │       ├── signals-merged.binjson
+    │   │       ├── signals-merged-check.json
+    │   │       └── signals-merged.json
+    │   └── signals
+    │       └── signals.json
     └── scripts
         └── config_to_c_code.py
 
@@ -98,7 +98,7 @@ The arduino.ino is the actual code example.
 
     #define IOCOM_IOBOARD
     #define IOBOARD_CTRL_CON IOBOARD_CTRL_CONNECT_SERIAL
-    #include "iocomx.h"
+    #include "iocom.h"
     #include "config/include/generic/signals.h"
     #include "config/include/generic/signals_info_mblk.h"
 
