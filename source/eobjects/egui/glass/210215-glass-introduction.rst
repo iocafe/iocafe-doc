@@ -15,5 +15,4 @@ The egui/glass look and feel, and and application user interface structure is in
    :maxdepth: 2
    :caption: Contents:
 
-   210215-glass-introduction
-
+210215, updated 16.2.2021/pekka
