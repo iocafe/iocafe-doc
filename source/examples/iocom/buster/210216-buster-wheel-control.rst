@@ -1,6 +1,6 @@
 Buster wheel control.
 =================================
-Both fron wheels are controlled independently by own servo and both back wheels by own motor.
+Both front wheels are controlled independently by own servo and both back wheels by own motor.
 We need to calculate direction for front wheels and speed for back wheels.
 
 .. figure:: pics/210216-buster-wheel-control.png
