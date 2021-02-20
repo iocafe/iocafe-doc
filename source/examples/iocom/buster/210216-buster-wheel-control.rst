@@ -40,3 +40,13 @@ This code doesn't handle numerical ambiguities:
             sr = speed * (-center_x + b_wheel_x) / (2 * b_wheel_x)
             sl = -sr * (b_wheel_x + center_x) /(b_wheel_x - center_x)
 
+
+.. figure:: pics/210219-grumpy-proto.png
+
+   Prototyping and testing. 
+
+
+.. figure:: pics/210219-view-from-buster-camera.png
+
+   Wheel control (game controller widget). 
+
