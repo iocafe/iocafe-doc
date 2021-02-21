@@ -1,6 +1,8 @@
 Security
 ================================
 
+I believe that good security is as simple as possible, so that requirements which are necessary to maintain it are understandable. The IOCOM security doesn't answer device security as whole, only to communication security. 
+
 .. figure:: pics/121619-how-security-works-simplified.jpeg
    :width: 660
 
@@ -16,3 +18,5 @@ Security
    authentication/191024-security-vunerabilities
    network-topology/190919-iocom-network-topology
    network-topology/210221-network-topology-connection-forwarding.rst
+
+updated 21.2.2021/pekka
