@@ -1,5 +1,5 @@
-﻿IOCOM secure network topology
-================================
+﻿IOCOM secure network topology - take 1
+=============================================
 This is IoT related. If your goal is simply to connect IO devices to a computer within a local net or using 
 serial communication, skip this topic. 
 
