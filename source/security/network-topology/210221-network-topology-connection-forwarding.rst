@@ -8,10 +8,10 @@ The network topology of distributed system is closely related to security:
 * Service identifies clients by device ID and secret (like "candy1.cafenet", or by user name and password.
 * We need to keep IO device networks of separate people strictly apart. Even we would use the same cloud server 
   to access data from two IO device networks, data can newer be passed from one IO device network to another. 
-* Password or secrets are never stored outside the device itself as clear text, but as cryprographic has. Altough these may be transferred over secure connection once the other end has been identified.
+* Password or secrets are never stored outside the device itself as clear text, but as cryprographic hash. Altough these are transferred over secure connection once the other end has been identified.
 
 .. figure:: pics/210221-connection-forwarding.png
 
    A switchbox process can be used to forward connections trough cloud server.
 
-210221, updated 21.2.2021/pekka
+210221, updated 22.2.2021/pekka
