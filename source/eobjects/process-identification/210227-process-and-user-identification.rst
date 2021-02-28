@@ -4,7 +4,7 @@ Process and user identification
 To have security and authentication, we need to identify processes (~ IO devices) and optionally user who has logged on.
 On top level, we have multiple IO networks, like my home network and Markku's home network, which need to be kept separate.
 
-.. figure:: pics/210227-process-and-user-identification
+.. figure:: pics/210227-process-and-user-identification.png
 
    Process and user identification
 
