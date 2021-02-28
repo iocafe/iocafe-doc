@@ -66,7 +66,7 @@ Certificate expiration
 Certificate expiration check is disabled. I do not want my IO do go down at specific date, unless I keep
 renewing server certificates. Since I do not have automatic system to renew server certificates in field
 devices (often without internet connection), the expiration is simply disabled. This means that devices
-removed from need to be wiped clean or hammered unconcious before recycling those. Otherwise attacker 
+that are no longer used, need to be wiped clean, or hammered unconscious before recycling those. Otherwise attacker 
 can simply pick up old server or IO device from junk pile and get authentication information from it. 
 
 Client certificates
