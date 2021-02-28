@@ -1,5 +1,5 @@
-Certificates
-==============
+Certificates and chain of trust
+================================
 
 This present simple yet useful chain of trust. 
 
@@ -11,7 +11,7 @@ I create a root key pair key and self signed root certificate. I use OpenSSL to 
 This results two files: 
 
 * Public root certificate file "rootca.crt", which contains the public key.
-* Private confidential key file "rootca.key"
+* Private confidential key file "rootca.key".
 
 Root public key and certificate are not secret, these can and should be shared with everyone who needs them.
 I place these files in git repository for easy sharing.
@@ -26,8 +26,7 @@ What root certificate actually is and what it does:
 
 * It is a file, I use name "rootca.crt". 
 * It represents the organization, so for iocafe it contains "O (Organization): iocafe". 
-* This file can be manually copied to client, be part of software installation, or a client IO device can obtain a copy of 
-* it the very first time it connects to server (pairing/automatic trust). 
+* This file can be manually copied to client, be part of software installation, or a client IO device can obtain a copy of it the very first time it connects to server (pairing/automatic trust). 
 * When TLS connection is established, client can verify that the certificate presented by server at that time has been
   signed by holder of root's private key file. In my case, this means it will trust all server certificates signed 
   with iocafe's private key. 
@@ -38,10 +37,8 @@ Certifying a server - root certificate and key pair
 A server is identified by server certificate. This, similar to organization's root certificate, has matching private
 key which is to be kept secret and only within the server itself. 
 
-* The person who sets up a new server, first generates key pair and certificate request with server information and sends 
-  it to holder of root certificate.
-* The root send back the signed server certificate. Theis is stored within server, and it presents this certificate 
-   at client connect.
+* The person who sets up a new server, first generates key pair and certificate request with server information and sends it to holder of root certificate.
+* The root send back the signed server certificate. Theis is stored within server, and it presents this certificate  at client connect.
 * The server's private key is stored only within server (you can have backup in safe place). 
 
 If cloud server is run by different organization?
@@ -82,15 +79,10 @@ accomplished without client certificates, these are not used. If you want to use
 possible, but requires modifying TLS wrapper code. 
 
 
-Restorable backup copies vs. security
-***************************************
+Restorable server backup copy vs. security
+**************************************************
 
-This is choice between security and usability/reliability. We gain in one, we lose in other. If we keep all files so that
-a copy of server works as a server, we can backup and restore server without a problem. But server backup in wrong hands
-will compromise security. If we incorporate some HW specific data, like MAC addressess, SSD serial numbers, etc, in encryption 
-of confidential information, the backup data is much safer to handle. But a restored backup will not start back up easily on new hardware,
-One is forced to reconfigure much of security. By default, iocom, etc, are written so that a backup can be restored and system will
-just start up, and extra code is needed to add HW bindings. 
-
+This is choice between security and usability/reliability. We gain in one, we lose in other. If we keep all files so that a copy of server works as a server, we can backup and restore server without a problem. But server backup in wrong hands will compromise security. If we incorporate some HW specific data, like MAC addressess, SSD serial numbers, etc, in encryption  of confidential information, the backup data is much safer to handle. But a restored backup will not start back up easily on new hardware,
+One is forced to reconfigure much of security. By default, iocom, etc, are written so that a backup can be restored and system will just start up, and extra code is needed to add HW bindings. 
 
 updated 27.2.2021/pekka
