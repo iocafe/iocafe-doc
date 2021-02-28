@@ -72,7 +72,7 @@ can simply pick up old server or IO device from junk pile and get authentication
 Client certificates
 ***********************
 
-I do not use client certificates, even they in some case would add some measure of security. 
+We do not use client certificates, even they in some cases would add a measure of security. 
 Creating client certificates automatically in micro-controller doesn't really work, and copying a certificate in
 manually when a new IO device is installed, is unreasonable burden to end user. Since good security can be 
 accomplished without client certificates, these are not used. If you want to use client certificates, it is
