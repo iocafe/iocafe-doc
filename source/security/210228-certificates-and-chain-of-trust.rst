@@ -37,7 +37,8 @@ A server is identified by server certificate. This, similar to organization's ro
 key which is to be kept secret and only within the server itself. 
 
 * The person who sets up a new server, first generates key pair and certificate request with server information and sends it to holder of root certificate.
-* The root send back the signed server certificate. Theis is stored within server, and it presents this certificate  at client connect.
+* The root send back the signed server certificate, which is stored within server. 
+* The server and it presents this certificate at client connect.
 * The server's private key is stored only within server (you can have backup in safe place). 
 
 If cloud server is maintained by different organization?
@@ -72,8 +73,8 @@ Client certificates
 ***********************
 
 I do not use client certificates, even they in some case would add some measure of security. 
-Creating client certificates automatically in microcontroller doesn't really work, and copying a certificate in
-manuually when a new IO device is installed, is unreasonable burden to end user. Since good security can be 
+Creating client certificates automatically in micro-controller doesn't really work, and copying a certificate in
+manually when a new IO device is installed, is unreasonable burden to end user. Since good security can be 
 accomplished without client certificates, these are not used. If you want to use client certificates, it is
 possible, but requires modifying TLS wrapper code. 
 
