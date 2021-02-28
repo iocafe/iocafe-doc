@@ -3,8 +3,8 @@ Certificates and chain of trust
 
 This present simple yet useful chain of trust. 
 
-Organization - root certificate and key pair
-*********************************************
+Organization - root certificate and private key
+************************************************
 
 We use a self signed root certificate. OpenSSL can generate this, see /coderoot/eosal/extensions/tls/keys-and-certs directory for current readme, file names and scripts.
 This results two files: 
@@ -30,8 +30,8 @@ What root certificate actually is and what it does:
   signed by holder of root's private key file. In my case, this means it will trust all server certificates signed 
   with iocafe's private key. 
 
-Certifying a server - root certificate and key pair
-****************************************************
+Certifying a server - server certificate and private key
+**********************************************************
 
 A server is identified by server certificate. This, similar to organization's root certificate, has matching private
 key which is to be kept secret and only within the server itself. 
