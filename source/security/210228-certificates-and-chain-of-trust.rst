@@ -68,6 +68,8 @@ renewing server certificates. Since I do not have automatic system to renew serv
 devices (often without internet connection), the expiration is simply disabled. This means that devices
 that are no longer used, need to be wiped clean, or hammered unconscious before recycling those. Otherwise attacker 
 can simply pick up old server or IO device from junk pile and get authentication information from it. 
+One future option would be to add support for "certificate revocation list", so devices/processes/users 
+which may be compromised could be specifically blocked.
 
 Client certificates
 ***********************
