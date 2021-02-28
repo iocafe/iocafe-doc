@@ -1,4 +1,4 @@
-﻿Pairing IO device and server
+﻿Automatic pairing IO device and server
 ========================================
 Whe IO device connects the first time, it generates it a random secret. From this point on the
 generated secret will be used to identify this particular IO device.
