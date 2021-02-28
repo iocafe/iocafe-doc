@@ -57,8 +57,8 @@ Following is needed so that my home server is able to share it's "end point" in 
 
 For client to connect to "myserver.pekkahome" trough iocafe's cloud switchbox:
 
-* it must list "iocafe" on trusted list.
-* myserver.pekkahome must have user account for the client.
+* Client must have "iocafe" on trusted list.
+* Server myserver.pekkahome must have user account for the client.
 
 Certificate expiration 
 ***********************
