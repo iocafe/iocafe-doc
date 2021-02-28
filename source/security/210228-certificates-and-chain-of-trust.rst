@@ -6,15 +6,14 @@ This present simple yet useful chain of trust.
 Organization - root certificate and key pair
 *********************************************
 
-I create a root key pair key and self signed root certificate. I use OpenSSL to do this, see 
-/coderoot/eosal/extensions/tls/keys-and-certs directory for current readme, file names and scripts.
+We use a self signed root certificate. OpenSSL can generate this, see /coderoot/eosal/extensions/tls/keys-and-certs directory for current readme, file names and scripts.
 This results two files: 
 
 * Public root certificate file "rootca.crt", which contains the public key.
 * Private confidential key file "rootca.key".
 
-Root public key and certificate are not secret, these can and should be shared with everyone who needs them.
-I place these files in git repository for easy sharing.
+Root certificate is not a secret, these can and should be shared with everyone who needs it.
+It is good idea to place this files in git repository to make it accessible to whole development team.
 
 Root's private key is a secret, and needs to be kept confidential and safe (if this is compromised, whole 
 security collapses. If this is lost, no new servers can be added).
@@ -41,8 +40,8 @@ key which is to be kept secret and only within the server itself.
 * The root send back the signed server certificate. Theis is stored within server, and it presents this certificate  at client connect.
 * The server's private key is stored only within server (you can have backup in safe place). 
 
-If cloud server is run by different organization?
-***************************************************
+If cloud server is maintained by different organization?
+************************************************************
 
 A switchbox process running on cloud server may belong to different organization than the network
 which it routes to. For example:
