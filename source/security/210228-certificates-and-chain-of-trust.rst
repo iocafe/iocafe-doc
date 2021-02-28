@@ -82,7 +82,12 @@ possible, but requires modifying TLS wrapper code.
 Restorable server backup copy vs. security
 **************************************************
 
-This is choice between security and usability/reliability. We gain in one, we lose in other. If we keep all files so that a copy of server works, we can backup and restore a server without problems. But server backup in wrong hands, security is compromised. It is possible to incorporate some HW specific data, like MAC addressess, SSD serial numbers, etc, in encryption of confidential information. This makes the backup data much safer to handle, but a restored backup will not start back up easily on new hardware,
+This is choice between security and minimizing down time on HW failure. We gain in one, we lose in other. If we keep all files so that 
+a copy of server works, we can backup and restore a server without problems. We may even have ready back up server as replacement. 
+But if server backup gets in wrong hands, security is compromised. 
+
+It is possible to incorporate some HW specific data, like MAC addressess, SSD serial numbers, etc, in encryption of confidential
+information. This makes the backup data much safer to handle, but a restored backup will not start back up easily on new hardware. 
 One is forced to reconfigure much of security. By default, iocom, etc, are written so that a backup can be restored and system will just start up. 
 
-updated 27.2.2021/pekka
+updated 28.2.2021/pekka
