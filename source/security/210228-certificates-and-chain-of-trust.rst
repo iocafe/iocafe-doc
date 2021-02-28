@@ -63,11 +63,14 @@ For client to connect to "myserver.pekkahome" trough iocafe's cloud switchbox:
 Certificate expiration 
 ***********************
 
-Certificate expiration check is disabled. I do not want my IO do go down at specific date, unless I keep
-renewing server certificates. Since I do not have automatic system to renew server certificates in field
-devices (often without internet connection), the expiration is simply disabled. This means that devices
-that are no longer used, need to be wiped clean, or hammered unconscious before recycling those. Otherwise attacker 
-can simply pick up old server or IO device from junk pile and get authentication information from it. 
+Certificate expiration check is disabled: I do not want my IO to go down at specific date, if the certificate
+renewal process is neglected. There is currently no automatic system to renew server certificates in field
+devices, often without internet connection. 
+
+This means that devices that are no longer used, need to be wiped clean, or hammered unconscious before recycling
+those. Otherwise attacker can simply pick up old server or IO device from junk pile and get authentication information 
+from it. 
+
 One future option would be to add support for "certificate revocation list", so devices/processes/users 
 which may be compromised could be specifically blocked.
 
@@ -79,7 +82,6 @@ Creating client certificates automatically in micro-controller doesn't really wo
 manually when a new IO device is installed, is unreasonable burden to end user. Since good security can be 
 accomplished without client certificates, these are not used. If you want to use client certificates, it is
 possible, but requires modifying TLS wrapper code. 
-
 
 Restorable server backup copy vs. security
 **************************************************
