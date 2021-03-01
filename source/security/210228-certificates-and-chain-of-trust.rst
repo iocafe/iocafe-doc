@@ -65,14 +65,12 @@ Certificate expiration
 
 Certificate expiration check is disabled: I do not want my IO to go down at specific date, if the certificate
 renewal process is neglected. There is currently no automatic system to renew server certificates in field
-devices, often without internet connection. 
+devices, often without internet connection. Certificate expiration check can anyhow be enabled by
+compiler time define OSAL_CHECK_SERVER_CERT_EXPIRATION=1.
 
 This means that devices that are no longer used, need to be wiped clean, or hammered unconscious before recycling
 those. Otherwise attacker can simply pick up old server or IO device from junk pile and get authentication information 
 from it. 
-
-One future option would be to add support for "certificate revocation list", so devices/processes/users 
-which may be compromised could be specifically blocked.
 
 Client certificates
 ***********************
@@ -93,5 +91,11 @@ But if server backup gets in wrong hands, security is compromised.
 It is possible to incorporate some HW specific data, like MAC addressess, SSD serial numbers, etc, in encryption of confidential
 information. This makes the backup data much safer to handle, but a restored backup will not start back up easily on new hardware. 
 One is forced to reconfigure much of security. By default, iocom, etc, are written so that a backup can be restored and system will just start up. 
+
+Future plans
+***********************
+
+It may be feasible at some point to add support for "certificate revocation list", so devices/processes/users which may 
+be compromised could be specifically blocked.
 
 updated 28.2.2021/pekka
