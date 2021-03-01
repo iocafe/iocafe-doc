@@ -65,7 +65,7 @@ Certificate expiration
 
 Certificate expiration check is disabled: I do not want my IO to go down at specific date, if the certificate
 renewal process is neglected. There is currently no automatic system to renew server certificates in field
-devices, often without internet connection. Certificate expiration check can anyhow be enabled by
+devices, often without internet connection. Certificate expiration check can be enabled by
 compiler time define OSAL_CHECK_SERVER_CERT_EXPIRATION=1.
 
 This means that devices that are no longer used, need to be wiped clean, or hammered unconscious before recycling
