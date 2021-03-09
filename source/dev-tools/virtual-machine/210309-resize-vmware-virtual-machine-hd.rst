@@ -1,5 +1,5 @@
-Resizing virtual machine hard drive
-=====================================
+Resizing vmware virtual machine hard drive
+==================================================
 It is not unusal to run out of virtual machine disc space. The virtual machine can be hd resized, but it is not exactly simple. To do list:
 
 * Use vmware virtual machine settings to expand the hard drive. This will not change linux partitions.
@@ -13,5 +13,5 @@ It is not unusal to run out of virtual machine disc space. The virtual machine c
 * Close gparted, restart virtual machine to BIOS and restore HD boot to be before CD.
 
 
-210309, updated 23.9.2020/pekka
+210309, updated 9.3.2021/pekka
 
