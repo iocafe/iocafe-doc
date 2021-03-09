@@ -1,7 +1,9 @@
-EBAZ4205 - Zynq 7020 - notes
+EBAZ4205 - Zynq 7020
 ==================================
 
-Zynq 7020 Soc: Two ARM9 cores + powerful FPGA. It is not cheap and easy, start with a lot of time and patience, be prepared to for challenges. In practise ARM9 runs linux, altough it is possible to run FreeRTOS, etc. PetaLinux is version of Yocto linux used by Xilinx. FPGA boots from ARM.
+Zynq 7020 SoC: Two ARM9 cores + powerful FPGA. It is not cheap and easy: A lot of time and patience, be prepared for challenges. 
+
+ARM9 runs usually Linux, altough it is possible to run FreeRTOS, etc. Peta Linux is Yocto Linux version used by Xilinx. FPGA boots from ARM.
 
 .. figure:: pics/210309-zynq-7020-chip.jpeg
    :width: 230
@@ -20,11 +22,13 @@ EBAZ4205: Used crypto miner board. Low cost ~$10 to get Zync development board.
 EBAZ4205 board
 ******************************************
 
-There is very good article series about getting started with EBAZ4205 by embed-me.com. This is not detailed instructions, but rather give good overview how to get started. You can get find article series by googling:
+There is very good article series about getting started with EBAZ4205 by embed-me.com. It is not a detailed instructions, but rather give good overview how to get started. You can get find article series by googling:
 
 :: 
 
     EBAZ4205 - "Recycle" a cheap crypto-miner (Part 1) - embed-me
+
+I followed the article series, and these are my additional notes. 
 
 The EBAZ4205 board do come with varying flavors:
 
@@ -41,16 +45,14 @@ Prepare Linux SD
 ******************
 
 * Try first using buildroot ISO image known to work (embed-me.com article). 
-* You might move on to Petalinux or set up your own Yocto linux.
+* You might move on to Peta Linux or set up your own Yocto linux.
 
 Connect UART, connect with putty, power up and boot linux
-*************************************************
+**********************************************************
 
-FTDI USB to "TTL" level serial converter.
-
-UART is 115200, no parity, one stop bit, no handshake. Three wires: Rx, Tx, ground.
-
-Power 12V, ~100 mA avergae.
+* FTDI USB to "TTL" level serial converter.
+* UART is 115200, no parity, one stop bit, no handshake. Three wires: Rx, Tx, ground.
+* Power 12V, ~100 mA avergae.
 
 Installing Vivado
 *******************
