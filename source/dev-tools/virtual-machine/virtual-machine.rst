@@ -10,4 +10,5 @@ Virtual machines
    :caption: Contents:
 
    200116-controlled-development-environment
+   210309-resize-vmware-virtual-machine-hd
 
