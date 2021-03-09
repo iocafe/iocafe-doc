@@ -1,5 +1,5 @@
 Micro-controllers
-=================
+====================
 
 * C/C++, mostly plain vanilla C. gcc is dominant and always good + some others are also fine, plain standard C needed. 
 * Arduino library derivatives like stm32duino and teensyduino simplify and make apps more portable.
@@ -14,5 +14,6 @@ Micro-controllers
    :caption: Contents:
 
    esp32/esp32
+   zynq/EBAZ4205/EBAZ4205
    
 
