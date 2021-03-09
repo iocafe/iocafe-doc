@@ -1,5 +1,5 @@
-Controlled development environment
-==================================
+Resizing virtual machine hard drive
+=====================================
 It is not unusal to run out of virtual machine disc space. The virtual machine can be hd resized, but it is not exactly simple. To do list:
 
 * Use vmware virtual machine settings to expand the hard drive. This will not change linux partitions.
