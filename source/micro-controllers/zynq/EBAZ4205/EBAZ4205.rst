@@ -18,6 +18,8 @@ EBAZ4205: Used crypto miner board. Low cost ~$10 to get Zync development board.
 
    My test setup.
 
+The vmware virtual machine for Zynq development is named "ubuntu-20-04-ZYNQ". 
+
 
 EBAZ4205 board
 ******************************************
