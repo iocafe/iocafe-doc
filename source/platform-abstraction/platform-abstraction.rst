@@ -45,7 +45,6 @@ network topology, etc, thus need these features.
    :maxdepth: 2
    :caption: Contents:
 
-   security/210310-platform security-functionality
    serialization/191026-serialization-and-streams
    serialization/191026-integer-serialization
    serialization/191026-float-serialization

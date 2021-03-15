@@ -19,6 +19,7 @@ I believe that good security is as simple as possible, so that requirements whic
    authentication/200127-pairing-io-device-and-control-computer
    authentication/191024-security-vunerabilities
    network-topology/190919-iocom-network-topology
-   network-topology/210221-network-topology-connection-forwarding.rst
+   network-topology/210221-network-topology-connection-forwarding
+   platform-security-functionality/210310-platform-security-functionality
 
-updated 28.2.2021/pekka
+updated 15.3.2021/pekka
