@@ -1,7 +1,7 @@
 Steps to get started
 ================================
 
-When working with micro-controllers, we have much detail to sort out. One step at a time approach has worked well for me.
+When working with micro-controllers, we have plenty of detail to sort out. One step at a time.
 
 .. toctree::
    :maxdepth: 2
