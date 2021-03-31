@@ -34,7 +34,7 @@ is added.
    operation of switchbox socket (connects IO network service to switchbox in cloud). 
 
 TODO:
-*****
+*******
 
 - Automatic establishment of trust. if server certificate verification fails in client, client requests certificate from server. More advanced processes, like user interface have parameters to control this and/or certificate still needs to be accepted by user.
 - Automatic user accounts. Switchbox implementation can in some cases establish automatically user accounts with password. This is can be used for low security applications, like multiplayer game sharing trough cloud.  
