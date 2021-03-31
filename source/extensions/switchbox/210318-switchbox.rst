@@ -30,3 +30,19 @@ IF SERVER CERTIFICATE VERIFICATION FAILS IN CLIENT, CLIENT MUST BE ABLE TO ASK F
 
    IO service connects to switchbox.
 
+
+
+ioc_switchboxSocket
+*********************
+The iocSwitchboxSocket is part of iocom library. It is used by IO network service to forward it's connection end point to switchbox cloud server. 
+
+The iocSwitchboxSocket implements EOSAL stream API  and is used as socket or other stream by iocom/ecom communication protocol to accept connections and to transfer data.
+It tunnels data from from multiple socket clients connected to switchbox cloud server to IO network service in local network using single TLS socket. 
+It doesn't interfere with communication protocol, protocol data is passed trough as is. Some additional framing data, like purpose of message, length and connection ID
+are added. 
+
+
+.. figure:: pics/210330-ioc-switchbox-socket-connecting-to-switchbox.png
+
+   operation of switchbox socket (connects IO network service to switchbox in cloud). 
+
