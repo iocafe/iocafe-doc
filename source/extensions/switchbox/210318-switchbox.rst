@@ -1,48 +1,40 @@
 switchbox
 ==================================
 
-The switchbox library is intended for writing a passtrough service to connect to set of IO networks.
+The switchbox library is intended for writing a pass-trough service to connect to set of IO networks.
 
 Connection netween IO network service in local LAN and switchbox service in cloud
-- IO network service on local LAN connects to switchbox service and announces that I have network "pekkanet", etc. 
-- This TLS connection is established by an end point specific for the purpose class in IO network service. 
+- IO network service on local LAN established TLS connection to switchbox service. IO network name of local service is used to label this connection at switchbox, for example as "pekkanet", etc. 
+- The ioc_switchbox_socket class manages this TLS connection at IO network service end. 
+- Note: "IO network name" is used for IOCOM. 
 
-IO device connecting to IO network trough cloud server
-- When a device can connect to IO network service trough cloud, it connects first to switchbox service.
-- This connection is normal IOCOM or ECOM connection, requested IO network is specified in authentication header. 
-- When switchbox server recives a socket connection, it checks if this IO network server with given network name
-  is connected. If so, it generates a passtrough to it. 
-- Switchbox sends "new connection" message to IO server in local LAN. The IO server needs to create a iocom or exom connection object using switchbox stream class as transport.
+IO device connects to IO network trough cloud server
+- An IO device or other client connect first to switchbox service in cloud.
+- This connection is normal IOCOM or ECOM TLS connection, requested IO network is specified in handshake header. 
+- When switchbox server recives a socket connection, it checks if this IO network service with given network name
+  is connected. If so, it generates a pass-trough to it. If not, the client connection is dropped.
+- Switchbox sends "new connection" message to IO server in local LAN. The IO server needs to create a IOCOM or ECOM connection object using switchbox socket class as transport.
 - Data from IO device passtrough is forwared "as is" trough switchbox.
-
-UPDATE THIS TEXT AND DOCUMENT
-
-NETWORK SELECTION REQUEST MUST BE SEPARATED FROM AUTHENTICATION FRAME TO WORK WITH SWITCHBOX.
-- Network selection is sent from only from socket client to server.
-- Authentication is sent both ways IOCOM: first from upper level in device hierarchy to lower, then lower to upper. This will not do with switchbox, because network selection in authentication frame is not available to select the IO service before IO service is connected.
-
-Automatic establishment of trust
-IF SERVER CERTIFICATE VERIFICATION FAILS IN CLIENT, CLIENT MUST BE ABLE TO ASK FOR SERVER, ETC, CERTIFICATE FROM SERVER. CURRENT IMPLEMENTATION WITH IOCOM USING BRICK TRANSFER TO GET THE CERTIFICATE IS NOT WORKING WITH SWITCBOX. IF SWITCHBOX IS USED, THIS WOULD GET IO NETWORK SERVER'S CERTIFICATE, WHILE WE NEED CLOUD SERVER'S CERTIFICATE.
-
-
 
 .. figure:: pics/210317-IO-service-connects-to-switchbox.png
 
-   IO service connects to switchbox.
+   IO network service connects to switchbox.
 
+ioc_switchbox_socket
+**********************
+The switchbox socket is part of iocom library. It is used by IO network service to forward it's connection end point to switchbox cloud server. 
 
-
-ioc_switchboxSocket
-*********************
-The iocSwitchboxSocket is part of iocom library. It is used by IO network service to forward it's connection end point to switchbox cloud server. 
-
-The iocSwitchboxSocket implements EOSAL stream API  and is used as socket or other stream by iocom/ecom communication protocol to accept connections and to transfer data.
+The switchbox socket class implements EOSAL stream API  and is used as socket or other stream by iocom/ecom communication protocol to accept connections and to transfer data.
 It tunnels data from from multiple socket clients connected to switchbox cloud server to IO network service in local network using single TLS socket. 
 It doesn't interfere with communication protocol, protocol data is passed trough as is. Some additional framing data, like purpose of message, length and connection ID
-are added. 
-
+is added. 
 
 .. figure:: pics/210330-ioc-switchbox-socket-connecting-to-switchbox.png
 
    operation of switchbox socket (connects IO network service to switchbox in cloud). 
 
+TODO:
+*****
+
+- Automatic establishment of trust. if server certificate verification fails in client, client requests certificate from server. More advanced processes, like user interface have parameters to control this and/or certificate still needs to be accepted by user.
+- Automatic user accounts. Switchbox implementation can in some cases establish automatically user accounts with password. This is can be used for low security applications, like multiplayer game sharing trough cloud.  
