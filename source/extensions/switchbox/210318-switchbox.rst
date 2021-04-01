@@ -33,6 +33,16 @@ is added.
 
    operation of switchbox socket (connects IO network service to switchbox in cloud). 
 
+
+switchbox service 
+**********************
+The switchbox service runs on cloud server. It is implemented as iocom extension "switchbox", which is compiled inpu switchbox library. There is eobjects based main program eswitch, which
+is general purpose switchbox service application and example how to use the switchbox library.
+
+.. figure:: pics/210401-switchbox-operation.png
+
+   operation of switchbox library (functional code that runs on cloud server). 
+
 TODO:
 *******
 
