@@ -34,6 +34,14 @@ is added.
    operation of switchbox socket (connects IO network service to switchbox in cloud). 
 
 
+Between IO service and switchbox multiple data fdata stream (to/from multiple devices, user interfaces, etc) is tunneled trough single TLS socket. 
+Extra framing data (connection id and data length/control code) are is added to keep these streams separate and to pass control codes like "new connection" or "disconnected".
+
+
+.. figure:: pics/210402-switchbox-io-service-tunnel-data-framing
+
+   framing to tunnel separate data streams and to pass control codes like "new connection" or "disconnected".
+
 switchbox service 
 **********************
 The switchbox service runs on cloud server. It is implemented as iocom extension "switchbox", which is compiled inpu switchbox library. There is eobjects based main program eswitch, which
