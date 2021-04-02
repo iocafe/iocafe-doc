@@ -36,20 +36,21 @@ is added.
    operation of switchbox socket (connects IO network service to switchbox in cloud). 
 
 
-Between IO service and switchbox multiple data fdata stream (to/from multiple devices, user interfaces, etc) is tunneled trough single TLS socket. 
-Extra framing data (connection id and data length/control code) are is added to keep these streams separate and to pass control codes like "new connection" or "disconnected".
-
-
-.. figure:: pics/210402-switchbox-io-service-tunnel-data-framing
-
-   framing to tunnel separate data streams and to pass control codes like "new connection" or "disconnected".
-
 switchbox service 
 **********************
 
 .. figure:: pics/210401-switchbox-operation.png
 
    operation of switchbox library (functional code that runs on cloud server). 
+
+
+Multiple data streams (to/from IO devices, user interfaces, etc) are tunneled trough single TLS socket to IO network service. 
+Extra framing data (connection id and data length/control code) are is added to keep these streams separate and to pass control codes like "new connection" or "disconnected".
+
+
+.. figure:: pics/210402-switchbox-io-service-tunnel-data-framing.png
+
+   framing to tunnel separate data streams and to pass control codes like "new connection" or "disconnected".
 
 TODO:
 *******
