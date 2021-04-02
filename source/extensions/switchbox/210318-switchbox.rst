@@ -1,7 +1,7 @@
 switchbox
 ==================================
 
-The switchbox service runs on cloud server. The switchbox library is iocom extension library, which implements a pass-trough service to connect to set of IO networks. 
+A switchbox service runs on cloud server. The switchbox library is an iocom extension, which implements a pass-trough service to connect to IO network services in local LANs. 
 eswitch is is a general purpose switchbox service application, and also example how to use the switchbox library. The base iocom library includes ioc_switchbox_socket
 stream implementation, which allows IO network service (device, process) to publish it's own end point at cloud server without linking the switchbox library.
 
