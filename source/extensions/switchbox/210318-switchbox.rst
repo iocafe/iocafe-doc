@@ -71,6 +71,22 @@ Extra framing data (connection id and data length/control code) are is added to 
 
    framing to tunnel separate data streams and to pass control codes like "new connection" or "disconnected".
 
+client connection to switchbox
+*******************************
+
+Clients connects to switchbox service using iocom/ecom protocol as is, and client end doesn't know if it is connected to IO network service tough switchbox or directly.
+Notice that even glass user interface separates "ecom" and "ecloud" in "connect to" setup, this selection changes only default TCP port to connect to, not the protocol.
+
+authentication and security
+****************************
+
+* switchbox service authenticates IO network services which connect to it by device name or user name and password. Same ioc_switchbox_auth_frame.c code is used as for direct iocom/ecom connections.
+
+* IO network services and clints connecting to switchbox authenticate switchbox by server certificate.
+
+* Client connecting to switchbox is authenticated by IO network service. 
+
+
 TODO:
 *******
 
