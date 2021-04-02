@@ -1,11 +1,13 @@
 switchbox
 ==================================
 
-* A switchbox service runs on cloud server. The switchbox library is an iocom extension, which implements a pass-trough service to connect to IO network services in local LANs. 
+* A switchbox service runs on cloud server. 
 
-* "eswitch" is is a general purpose switchbox service application, and also example how to use the switchbox library. 
+* The switchbox library is an iocom extension, which implements a pass-trough service to connect to IO network services in local LANs. 
 
-* The base iocom library includes ioc_switchbox_socket stream implementation, which allows IO network service (device, process) to publish it's own end point at cloud server without linking the switchbox library.
+* "eswitch" is a general purpose switchbox service application, and also example how to use the switchbox library. 
+
+* The base iocom library includes ioc_switchbox_socket implementation, which allows IO network service to publish it's own end point at cloud server.
 
 Connection netween IO network service in local LAN and switchbox service in cloud
 
@@ -35,7 +37,9 @@ IO device connects to IO network trough cloud server
 ioc_switchbox_socket
 **********************
 
-* The switchbox socket is part of iocom library. It is used by IO network service to forward it's connection end point to switchbox cloud server. 
+* The switchbox socket is part of base iocom library, so it can be used without linking the switchbox library.
+
+*  It is used by IO network service to forward it's connection end point to switchbox cloud server. 
 
 * The switchbox socket class implements EOSAL stream API  and is used as socket or other stream by iocom/ecom communication protocol to accept connections and to transfer data.
 
