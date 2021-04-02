@@ -1,22 +1,32 @@
 switchbox
 ==================================
 
-A switchbox service runs on cloud server. The switchbox library is an iocom extension, which implements a pass-trough service to connect to IO network services in local LANs. 
-eswitch is is a general purpose switchbox service application, and also example how to use the switchbox library. The base iocom library includes ioc_switchbox_socket
-stream implementation, which allows IO network service (device, process) to publish it's own end point at cloud server without linking the switchbox library.
+* A switchbox service runs on cloud server. The switchbox library is an iocom extension, which implements a pass-trough service to connect to IO network services in local LANs. 
+
+* "eswitch" is is a general purpose switchbox service application, and also example how to use the switchbox library. 
+
+* The base iocom library includes ioc_switchbox_socket stream implementation, which allows IO network service (device, process) to publish it's own end point at cloud server without linking the switchbox library.
 
 Connection netween IO network service in local LAN and switchbox service in cloud
-- IO network service on local LAN established TLS connection to switchbox service. IO network name of local service is used to label this connection at switchbox, for example as "pekkanet", etc. 
-- The ioc_switchbox_socket class manages this TLS connection at IO network service end. 
-- Note: "IO network name" is used for IOCOM. 
+
+* IO network service on local LAN established TLS connection to switchbox service. IO network name of local service is used to label this connection at switchbox, for example as "pekkanet", etc. 
+
+* The ioc_switchbox_socket class manages this TLS connection at IO network service end. 
+
+* Note: "IO network name" is used for IOCOM. 
 
 IO device connects to IO network trough cloud server
-- An IO device or other client connect first to switchbox service in cloud.
-- This connection is normal IOCOM or ECOM TLS connection, requested IO network is specified in handshake header. 
-- When switchbox server recives a socket connection, it checks if this IO network service with given network name
+
+* An IO device or other client connect first to switchbox service in cloud.
+
+* This connection is normal IOCOM or ECOM TLS connection, requested IO network is specified in handshake header. 
+
+* When switchbox server recives a socket connection, it checks if this IO network service with given network name
   is connected. If so, it generates a pass-trough to it. If not, the client connection is dropped.
-- Switchbox sends "new connection" message to IO server in local LAN. The IO server needs to create a IOCOM or ECOM connection object using switchbox socket class as transport.
-- Data from IO device passtrough is forwared "as is" trough switchbox.
+
+* Switchbox sends "new connection" message to IO server in local LAN. The IO server needs to create a IOCOM or ECOM connection object using switchbox socket class as transport.
+
+* Data from IO device passtrough is forwared "as is" trough switchbox.
 
 .. figure:: pics/210317-IO-service-connects-to-switchbox.png
 
