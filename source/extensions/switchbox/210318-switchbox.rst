@@ -56,6 +56,9 @@ switchbox service
    operation of switchbox service (functional code that runs on cloud server). 
 
 
+data framing in shared TLS socket
+**********************************
+
 Multiple data streams (to/from IO devices, user interfaces, etc) are tunneled trough single TLS socket to IO network service. 
 Extra framing data (connection id and data length/control code) are is added to keep these streams separate and to pass control codes like "new connection" or "disconnected".
 
