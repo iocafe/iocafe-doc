@@ -34,12 +34,14 @@ IO device connects to IO network trough cloud server
 
 ioc_switchbox_socket
 **********************
-The switchbox socket is part of iocom library. It is used by IO network service to forward it's connection end point to switchbox cloud server. 
 
-The switchbox socket class implements EOSAL stream API  and is used as socket or other stream by iocom/ecom communication protocol to accept connections and to transfer data.
-It tunnels data from from multiple socket clients connected to switchbox cloud server to IO network service in local network using single TLS socket. 
-It doesn't interfere with communication protocol, protocol data is passed trough as is. Some additional framing data, like purpose of message, length and connection ID
-is added. 
+* The switchbox socket is part of iocom library. It is used by IO network service to forward it's connection end point to switchbox cloud server. 
+
+* The switchbox socket class implements EOSAL stream API  and is used as socket or other stream by iocom/ecom communication protocol to accept connections and to transfer data.
+
+* It tunnels data from from multiple socket clients connected to switchbox cloud server to IO network service in local network using single TLS socket. 
+
+* It doesn't interfere with communication protocol, protocol data is passed trough as is. Some additional framing data, like purpose of message, length and connection ID is added. 
 
 .. figure:: pics/210330-ioc-switchbox-socket-connecting-to-switchbox.png
 
@@ -65,5 +67,6 @@ Extra framing data (connection id and data length/control code) are is added to 
 TODO:
 *******
 
-- Automatic establishment of trust. if server certificate verification fails in client, client requests certificate from server. More advanced processes, like user interface have parameters to control this and/or certificate still needs to be accepted by user.
-- Automatic user accounts. Switchbox implementation can in some cases establish automatically user accounts with password. This is can be used for low security applications, like multiplayer game sharing trough cloud.  
+* Automatic establishment of trust. if server certificate verification fails in client, client requests certificate from server. More advanced processes, like user interface have parameters to control this and/or certificate still needs to be accepted by user.
+
+* Automatic user accounts. Switchbox implementation can in some cases establish automatically user accounts with password. This is can be used for low security applications, like multiplayer game sharing trough cloud.  
