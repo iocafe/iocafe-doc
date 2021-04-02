@@ -41,7 +41,7 @@ switchbox service
 
 .. figure:: pics/210401-switchbox-operation.png
 
-   operation of switchbox library (functional code that runs on cloud server). 
+   operation of switchbox service (functional code that runs on cloud server). 
 
 
 Multiple data streams (to/from IO devices, user interfaces, etc) are tunneled trough single TLS socket to IO network service. 
