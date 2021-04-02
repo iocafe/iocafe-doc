@@ -1,7 +1,9 @@
 switchbox
 ==================================
 
-The switchbox library is intended for writing a pass-trough service to connect to set of IO networks.
+The switchbox service runs on cloud server. The switchbox library is iocom extension library, which implements a pass-trough service to connect to set of IO networks. 
+eswitch is is a general purpose switchbox service application, and also example how to use the switchbox library. The base iocom library includes ioc_switchbox_socket
+stream implementation, which allows IO network service (device, process) to publish it's own end point at cloud server without linking the switchbox library.
 
 Connection netween IO network service in local LAN and switchbox service in cloud
 - IO network service on local LAN established TLS connection to switchbox service. IO network name of local service is used to label this connection at switchbox, for example as "pekkanet", etc. 
@@ -44,8 +46,6 @@ Extra framing data (connection id and data length/control code) are is added to 
 
 switchbox service 
 **********************
-The switchbox service runs on cloud server. It is implemented as iocom extension "switchbox", which is compiled inpu switchbox library. There is eobjects based main program eswitch, which
-is general purpose switchbox service application and example how to use the switchbox library.
 
 .. figure:: pics/210401-switchbox-operation.png
 
