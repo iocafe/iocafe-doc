@@ -19,7 +19,7 @@ Connection netween IO network service in local LAN and switchbox service in clou
 
 IO device connects to IO network trough cloud server
 
-* An IO device or other client connect first to switchbox service in cloud.
+* An IO device, user interface or other client connect first to switchbox service in cloud.
 
 * This connection is normal IOCOM or ECOM TLS connection, requested IO network is specified in handshake header. 
 
@@ -85,6 +85,8 @@ authentication and security
 * IO network services and clints connecting to switchbox authenticate switchbox by server certificate.
 
 * Client connecting to switchbox is authenticated by IO network service. 
+
+* Switchbox is intended for cloud use. It supports only TLS protocol, unsecured sockets over internet are disabled.
 
 
 TODO:
