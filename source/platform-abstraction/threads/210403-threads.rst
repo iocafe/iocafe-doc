@@ -61,9 +61,9 @@ The OSAL_THREAD_PRIORITY_LOW, OSAL_THREAD_PRIORITY_NORMAL and OSAL_THREAD_PRIORI
 threads. The OSAL_THREAD_PRIORITY_TIME_CRITICAL is reserved for real time tasks only, and using this priority will put special 
 requirements on the thread.
 
-Linux specific note: Linux thread scheduler does amazingly good job without application specific thread priority settings, so these are not supported for nor.
-While it is possible to use real time scheduling and set priorities and we may add support for this in esoal, I have found this often counterproductive. 
-It requires serious knowledge and effort to get better performance than what linux scheduler provides easily.
+Linux specific note: Linux thread scheduler does amazingly good job without application specific thread priority settings, so these are not supported for now.
+calling osal_thread_set_priority() does nothing. While it is possible to use real time scheduling and set priorities and we may add support for this in eosal, 
+I have found this often counterproductive: It requires serious effort and knowledge to get better performance than the default linux scheduler provides easily.
 
 sleep functions
 ******************
