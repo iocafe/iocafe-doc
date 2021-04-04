@@ -10,6 +10,17 @@ Attached threads are bound to parent thread which start then, and must exit and 
 
 .. figure:: pics/210403-attached-thread.png
 
+::
+
+    osalThread *osal_thread_create(
+        osal_thread_func *func,
+        void *prm,
+        osalThreadOptParams *opt,
+        os_int flags);
+
+    void osal_thread_join(
+        osalThread *handle);
+
 - :doc:`210404-attached-thread-code-example`
 
 create and terminate detached thread
