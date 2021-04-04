@@ -11,8 +11,6 @@ Attached threads are bound to parent thread which start then, and must exit and 
 
 .. figure:: pics/210403-attached-thread.png
 
-   creating, run and terminate attached thread, flow chart
-
 - :doc:`210404-attached-thread-code-example`
 
 create and terminate detached thread
