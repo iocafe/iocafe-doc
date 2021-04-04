@@ -1,12 +1,10 @@
 /**
 
-  @file    eosal/examples/ecollection/code/osal_threads_example.c
+  @file    eosal/examples/ecollection/code/osal_detached_thread_example.c
   @brief   Example code, create detached thread.
   @author  Pekka Lehtikoski
   @version 1.0
   @date    8.1.2020
-
-  This example demonstrates how to create threads.
 
   Copyright 2020 Pekka Lehtikoski. This file is part of the eosal and shall only be used,
   modified, and distributed under the terms of the project licensing. By continuing to use, modify,
@@ -18,7 +16,7 @@
 #include "eosal.h"
 #include "osal_example_collection_main.h"
 
-/** Parameter structure for creating thread.
+/** Parameter structure for creating new thread.
  */
 typedef struct
 {
@@ -45,7 +43,8 @@ void osal_detached_thread_example(void)
     os_int i;
     osal_console_write("detached thread example started\n");
 
-    /* Clear parameter structure and create thread event.
+    /* Clear parameter structure and create thread event. OSAL_EVENT_SET_AT_EXIT is set
+     * that event is triggered when the process exit is requested by osal_exit(), etc.
      */
     os_memclear(&myprm, sizeof(myprm));
     myprm.thread_event = osal_event_create(OSAL_EVENT_SET_AT_EXIT);
@@ -54,6 +53,8 @@ void osal_detached_thread_example(void)
      */
     osal_thread_create(my_detached_thread, &myprm, OS_NULL, OSAL_THREAD_DETACHED);
 
+    /* Just print some text.
+     */
     for (i = 0; i < 10; i++) {
         osal_console_write("detached thread example running\n");
         os_sleep(1000);
@@ -91,6 +92,8 @@ static void my_detached_thread(
      */
     osal_event_set(done);
 
+    /* Print some text every 800 ms. React to process exit request immediately
+     */
     for (i = 0; i<8; i++)
     {
         osal_event_wait(myprm.thread_event, 800);
