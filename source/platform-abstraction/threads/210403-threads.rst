@@ -1,7 +1,7 @@
 threads
 ==================================
 
-The eosal thread API is wrapper for operating system threads. It exist to provide unified interface to thread specific functionality.
+The eosal thread API is wrapper for operating system threads. It provides unified interface to thread functionality.
 
 
 create and terminate attached thread
@@ -23,6 +23,18 @@ create and terminate detached thread
 *******************************************
 
 Detached threads run completely independently from thread that started them, and do continue executing after parent thread has exited. 
+The parent thread is not responsible for any clean up tasks.
+
+
+terminating threads when process exits
+****************************************
+
+Terminating individual threads is not part of this API, but on application's responsibility. Typically reauest_exist, thread_event, etc.
+are passed in application's parameter structure to the new thread. 
+
+Process exit is triggered by osal_request_exit() function. 
+The thread events which may be waited for and prevent the process from existing need to be flagged as osal_event_create(OSAL_EVENT_SET_AT_EXIT),
+which adds those event to list of events to set when the osal_request_exit() is called.
 
 thread priority
 ******************
