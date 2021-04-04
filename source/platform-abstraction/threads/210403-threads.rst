@@ -13,11 +13,7 @@ Attached threads are bound to parent thread which start then, and must exit and 
 
    creating, run and terminate attached thread, flow chart
 
-Code example
-
-.. literalinclude:: code/osal_attached_thread_example.c
-   :language: c
-
+- :doc:`210404-attached-thread-code-example`
 
 create and terminate detached thread
 *******************************************
@@ -27,9 +23,7 @@ The parent thread is not responsible for any clean up tasks.
 
 .. figure:: pics/210403-detached-thread.png
 
-   starting a detached thread, flow chart
-
-- :doc:`210404-attached-thread-code-example`
+- :doc:`210404-detached-thread-code-example`
 
 terminating threads when process exits
 ****************************************
