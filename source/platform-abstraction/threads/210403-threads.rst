@@ -11,7 +11,7 @@ Attached threads are bound to parent thread which start then, and must exit and 
 
 .. figure:: pics/210403-attached-thread.png
 
-   creating, run and terminate attached thread flow chart
+   creating, run and terminate attached thread, flow chart
 
 Code example
 
@@ -25,6 +25,11 @@ create and terminate detached thread
 Detached threads run completely independently from thread that started them, and do continue executing after parent thread has exited. 
 The parent thread is not responsible for any clean up tasks.
 
+.. figure:: pics/210403-detached-thread.png
+
+   starting a detached thread, flow chart
+
+- :doc:`210404-attached-thread-code-example`
 
 terminating threads when process exits
 ****************************************
