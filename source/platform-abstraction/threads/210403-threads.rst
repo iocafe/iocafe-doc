@@ -1,8 +1,7 @@
 threads
 ==================================
 
-The eosal thread API is wrapper for operating system threads. It provides unified interface to thread functionality.
-
+The eosal thread API is wrapper for operating system threads. It provides unified interface to OS thread functions.
 
 create and terminate attached thread
 ********************************************
