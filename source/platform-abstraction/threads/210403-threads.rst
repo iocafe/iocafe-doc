@@ -160,7 +160,6 @@ without multithreading support (OSAL_MULTITHREAD_SUPPORT is 0), the os_timeslice
 Sleep functions
 ******************
 
-The os_timeslice() function sleep for very short time, like one time slice. Real sleep period is operating system/HW dependent, in order of 1 ms.
 To sleep for a specific period, use either os_sleep(milliseconds) or  os_microsleep(microseconds).  
 The sleep function precision varies by operating system, and may be longer if high priority threads eat the processor time. 
 
