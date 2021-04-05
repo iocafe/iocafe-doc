@@ -41,7 +41,8 @@ The parent thread is not responsible for any clean up tasks.
 Create and join thread functions 
 *******************************************
 
-Functions for creating, joining and priorizing threads.
+Use osal_thread_create() to create attached or detached thread, and osal_thread_join to join an attached
+thread back to parent. 
 
 ::
 
@@ -53,11 +54,6 @@ Functions for creating, joining and priorizing threads.
 
    void osal_thread_join(
       osalThread *handle);
-
-   osalStatus osal_thread_set_priority(
-      osalThreadPriority priority);
-
-    void os_timeslice(void);
 
 Thread entry point function type:  When a new thread is created by osal_thread_create() function, pointer to user defined
 thread entry point function is given as argument. The user defined entry point function must be a function with no return 
@@ -141,7 +137,6 @@ Multiprocessor or multi-core environment will change this, since one processor o
     osalStatus osal_thread_set_priority(
         osalThreadPriority priority);
 
-
 The OSAL_THREAD_PRIORITY_LOW, OSAL_THREAD_PRIORITY_NORMAL and OSAL_THREAD_PRIORITY_HIGH are used to prioritize execution of normal 
 threads. The OSAL_THREAD_PRIORITY_TIME_CRITICAL is reserved for real time tasks only, and using this priority will put special 
 requirements on the thread.
@@ -149,6 +144,16 @@ requirements on the thread.
 Linux specific note: Linux thread scheduler does amazingly good job without application specific thread priority settings, so these are not supported for now.
 Calling osal_thread_set_priority() does nothing. While it is possible to use real time scheduling and set priorities and we may add support for this in eosal, 
 I have found this often counterproductive: It requires serious effort and knowledge to get better performance than the default linux scheduler provides easily.
+
+Poll loop delay
+******************
+
+The os_timeslice is short sleep, somewhere around 1 ms. It is used in "poll" loops to avoid eating up all processor time. If building
+without multithreading support (OSAL_MULTITHREAD_SUPPORT is 0), the os_timeslice is defined as empty macro and does nothing.
+
+::
+
+    void os_timeslice(void);
 
 Sleep functions
 ******************
