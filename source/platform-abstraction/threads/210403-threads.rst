@@ -10,6 +10,8 @@ This context switching generally happens frequently enough that the user perceiv
 the same time. On a multiprocessor or multi-core system, multiple threads or tasks will generally run at 
 the same time, workload is split between processor cores.
 
+- :doc:`210405-osal-thread-header`
+
 Prerequisites and build without multithread support
 *****************************************************
 
@@ -169,5 +171,3 @@ The sleep function precision varies by operating system, and may be longer if hi
 
     void os_microsleep(
         os_long time_us);
-
-
