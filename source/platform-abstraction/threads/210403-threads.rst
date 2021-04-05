@@ -3,23 +3,28 @@ Threads
 
 The eosal thread API is wrapper for operating system threads. It provides unified interface to OS thread functions.
 
+A process can run multiple tasks concurrently, and these concurrently running tasks are called threads of execution. 
+The treads of the same process and share memory and other processe's resources. Typically access to shared resources 
+must be synchronized, see mutexes. On a single core processor, the processor switches between different threads. 
+This context switching generally happens frequently enough that the user perceives the threads as running at 
+the same time. On a multiprocessor or multi-core system, multiple threads or tasks will generally run at 
+the same time, workload is split between processor cores.
+
+Prerequisites and build without multithread support
+*****************************************************
+
+The osal thread API is just wrapper to underlying operating system threads. Thus operating system threads are needed.
+
+Build time define OSAL_MULTITHREAD_SUPPORT, either 0 or 1 selects if osal thread functions are used. If zero, 
+osal_thread_create, osal_thread_join, osal_thread_set_priority, and os_timeslice() are defined
+as empty macros and produce no code. Sleep functions, os_sleep and os_microsleep, are always available.
+
 Create and terminate attached thread
 ********************************************
 
 Attached threads are bound to parent thread which start then, and must exit and be joined to parent thread before it can exit.
 
 .. figure:: pics/210403-attached-thread.png
-
-::
-
-    osalThread *osal_thread_create(
-        osal_thread_func *func,
-        void *prm,
-        osalThreadOptParams *opt,
-        os_int flags);
-
-    void osal_thread_join(
-        osalThread *handle);
 
 - :doc:`210404-attached-thread-code-example`
 
@@ -32,6 +37,86 @@ The parent thread is not responsible for any clean up tasks.
 .. figure:: pics/210403-detached-thread.png
 
 - :doc:`210404-detached-thread-code-example`
+
+Create and join thread functions 
+*******************************************
+
+Functions for creating, joining and priorizing threads.
+
+::
+
+   osalThread *osal_thread_create(
+      osal_thread_func *func,
+      void *prm,
+      osalThreadOptParams *opt,
+      os_int flags);
+
+   void osal_thread_join(
+      osalThread *handle);
+
+   osalStatus osal_thread_set_priority(
+      osalThreadPriority priority);
+
+    void os_timeslice(void);
+
+Thread entry point function type:  When a new thread is created by osal_thread_create() function, pointer to user defined
+thread entry point function is given as argument. The user defined entry point function must be a function with no return 
+value, and taking two arguments. Void pointer to parameters (prm), which is typically pointer to user defined parameter
+structure for the new thread. Second  argument is done event, which the new thread must set by calling osal_event_set() 
+function once the new thread has processed parameters and as far as needed.
+
+::
+
+   typedef void osal_thread_func(
+      void *prm,
+      osalEvent done);
+
+Flags for creating thread: Either OSAL_THREAD_ATTACHED or OSAL_THREAD_DETACHED given to osal_thread_create
+sets if the newly created thread is to be attached to a thread handle.
+If flag OSAL_THREAD_ATTACHED is given, the new thread is attached and must eventually be joined back to it 
+by osal_thread_join() function. In this case the osal_thread_create() returns thread handle which is used as 
+argument to join. If OSAL_THREAD_DETACHED is given, newly created thread is detached from thread which
+created it, the osal_thread_create() returns OS_NULL.
+
+::
+
+   #define OSAL_THREAD_ATTACHED 1
+   #define OSAL_THREAD_DETACHED 2
+
+Optional thread parameters: This parameter structure can be given when creating a new thread. 
+It contains opetional and some platform dependent settings for a new thread. Allocate this 
+structure from stack, ose oe_memclear to fill it with zeros and set only parameters you want 
+to modify from defaults.
+
+::
+
+   typedef struct osalThreadOptParams
+   {
+      /** Name for the new thread. Some operating systems allow naming threads, which is very
+         useful for debugging. If no name is needed this can be NULL.
+      */
+      const os_char *thread_name;
+
+      /** Stack size for the new thread in bytes. Value 0 creates thread with default stack
+         size for operating system.
+      */
+      os_memsz stack_size;
+
+      /** Priority for the new thread, for example OSAL_THREAD_PRIORITY_NORMAL. If zero, default
+         is used.
+      */
+      osalThreadPriority priority;
+
+      /** Pin thread to specific processor core.
+      */
+      os_boolean pin_to_core;
+
+      /** Core number to pin to if pin_to_core is set.
+      */
+      os_short pin_to_core_nr;
+   }
+   osalThreadOptParams;
+
 
 Terminating threads when process exits
 ****************************************
@@ -62,7 +147,7 @@ threads. The OSAL_THREAD_PRIORITY_TIME_CRITICAL is reserved for real time tasks 
 requirements on the thread.
 
 Linux specific note: Linux thread scheduler does amazingly good job without application specific thread priority settings, so these are not supported for now.
-calling osal_thread_set_priority() does nothing. While it is possible to use real time scheduling and set priorities and we may add support for this in eosal, 
+Calling osal_thread_set_priority() does nothing. While it is possible to use real time scheduling and set priorities and we may add support for this in eosal, 
 I have found this often counterproductive: It requires serious effort and knowledge to get better performance than the default linux scheduler provides easily.
 
 Sleep functions
@@ -73,8 +158,6 @@ To sleep for a specific period, use either os_sleep(milliseconds) or  os_microsl
 The sleep function precision varies by operating system, and may be longer if high priority threads eat the processor time. 
 
 :: 
-
-    void os_timeslice(void);
 
     void os_sleep(
         os_long time_ms);
