@@ -3,7 +3,7 @@ eosal initialization and shut down
 The eosal library needs to be initialized before use, and shut down to release allocated resources. It is possible to do this
 void 
 
-eosal initialization
+Initialization
 ********************************************
 The eosal library must be initialized before use (There are a few low level functions, like os_strncpy(), etc which can be used without initialization).
 What is done during initialization depends on platform: Do we have dynamic memory allocation, multi-threading, TLS encryption,  etc. Platform support 
@@ -18,7 +18,7 @@ Warning: Many micro-controllers do not clear memory at soft reboot, so programme
 filled with zeroes when the software starts. It is proper to clear these programmatically in some initialization function.
 
 
-eosal shut down
+Shut down
 ********************************************
 On Windows, Linux, Android, etc, terminating a process is orderly process to complete writes, terminate threads, and release allocated
 resources. This is different from typical micro-controller, which is shut down by disconnecting the power, and even rebooted trough soft
@@ -44,17 +44,16 @@ If  OSAL_MULTITHREAD_SUPPORT is 0, the osal_shutdown releases allocated resource
 
 Transport support
 ********************************************
-Support for sockets, TLS and serial port is not initialized by osal_initialize(). If use, these need to be initialized
-by own function, typically at beginning of osal_main().
-
-Do not call both osal_socket_initialize() and osal_tls_initialize(), both initialize sockets. Same goes for 
-osal_socket_initialize() and osal_socket_shutdown(). Network interface card and WiFi configuration are for 
-microcontrollers, and ignored in PC. 
+Support for sockets, TLS and serial port is not initialized by osal_initialize(). If used, it need to be initialized
+separately, typically at beginning of osal_main(). Network interface card and WiFi configuration arguments are for 
+micro-controllers, and ignored in PC environment. 
 
 ::
 
     osal_socket_initialize(nics->nic, nics->n_nics, wifis->wifi, wifis->n_wifi);
     osal_tls_initialize(nics->nic, nics->n_nics, wifis->wifi, wifis->n_wifi, security);
+
+Do not call both osal_socket_initialize() and osal_tls_initialize(), The osal_tls_initialize also initializes sockets.
 
 Similarly serial port code is initialized by:
 
@@ -109,24 +108,28 @@ In micro-controllers, code what the EOSAL_C_MAIN macro creates varies.
     }
 
 In micro-controller applications, we preserve the traditional setup/loop thinking. The osal_main()
-function can be taught as setup() and 
+function can be taught as setup() and osal_loop() as loop().
+Application's loop function for micro-controller to run the main loop. In PC simulation, This
+is called by osal_simulated_loop(), not by platform framework.
 
-Application's loop function. This is implemented for micro-controller
- environment to process single thread model loop calls.
+::
 
-osalStatus osal_loop(
-    void *app_context);
+    osalStatus osal_loop(
+        void *app_context);
 
 Prototype for application defined cleanup function to release resources allocated by osal_main().
 This is often just 
 
-void osal_main_cleanup(
-    void *app_context);
+::
+
+    void osal_main_cleanup(
+        void *app_context);
 
 The osal_simulated_loop() function is used to create repeated osal_loop function calls in PC.
 On micro-controller this is only saves context pointer. 
 
 ::
+
     void osal_simulated_loop(
         void *app_context);
 
