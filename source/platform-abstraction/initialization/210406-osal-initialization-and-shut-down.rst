@@ -95,6 +95,8 @@ Then the application's entry point function will be as below:
 In PC computer, the EOSAL_C_MAIN macro use to generate entry point is roughly same as code below.
 In micro-controllers, code what the EOSAL_C_MAIN macro creates varies.
 
+::
+
     int main(int argc,char *argv[])
     {
         osal_initialize(OSAL_INIT_DEFAULT);
