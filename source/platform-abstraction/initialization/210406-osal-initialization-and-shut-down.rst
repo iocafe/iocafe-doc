@@ -165,7 +165,7 @@ How worker thread knows when to exit?
 ********************************************
 Forget threads need to monitor global "exit request" flag using either osal_go() or osal_stop() macro. 
 Only difference of the two that osal_go returns TRUE if we need to keep on running, and osal_stop
-returns OS_TRUE if exit has been requested, osal_go() == !osal_stop. 
+returns OS_TRUE if exit has been requested, osal_go() == !osal_stop(). 
 
 Worker threads often wait for an OS event, select, etc. While waiting, the thread cannot't check for 
 global "exit request" flag. This is solved so that events which are used this way are created
