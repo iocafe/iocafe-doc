@@ -177,10 +177,11 @@ the "exit request" flag.
 When thread is created by osal_thread_create, global thread count is incremented. When the
 thread exists (and is joined, if it is attached thread), the thread count is decremented.
 
-The osal_shutdown calls osal_request_exit() and osal_wait_for_threads_to_exit functions.
+The osal_shutdown calls osal_request_exit() and osal_wait_for_threads_to_exit() functions.
 The osal_request_exit() function sets global exit_process flag and sets all thread events listed
 in "at exit" event list so that threads can start shutting themselves down. Main thread which does
-eosal, etc, clean up should wait until child thread count reaches zero before final clean up.
+eosal, etc, clean calls osal_wait_for_threads_to_exit() to wait until child thread count reaches 
+zero before final clean up.
 
 Quitting worker threads earlier
 ********************************************
