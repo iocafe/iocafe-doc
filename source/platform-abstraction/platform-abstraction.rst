@@ -8,8 +8,13 @@ all platforms: Purpose of the operating system abstraction is to separate platfo
 the library. Thus the IOCOM library can run on multiple platforms, like Windows, Linux and several micro-controllers, 
 and be ported to new systems.
 
-Core functionality
-*******************
+The eosal core functionality is general purpose functionality which we build on, and extensions are options which can be included.
+
+Extensions can be turned on or off by complier defines. 
+This provides the scalability: For example if we are to run serial communications on Arduino UNO board, we need to turn
+almost all extensions and options off to save resources. Then in some other environment we may need security, handle 
+network topology, etc, thus need these features.
+
 
 .. toctree::
    :maxdepth: 1
@@ -19,8 +24,6 @@ Core functionality
    threads/210403-threads
 
 * platform configuration defines
-* initialization
-* threads
 * events
 * thread synchronization
 * timers
@@ -32,12 +35,16 @@ Core functionality
 * error handling
 * memory allocation
 
-Extensions
-*******************
-Optional eosal features are implemented as extensions, which can be turned on or off by complier defines. 
-This provides the scalability: If we are to run serial communications on Arduino UNO board, we need to turn
-almost all extensions off to save resources. Then in some other environment we may need security, handle 
-network topology, etc, thus need these features.
+.. toctree::
+   :maxdepth: 1
+   :caption: Extensions
+
+   serialization/191026-serialization-and-streams
+   serialization/191026-integer-serialization
+   serialization/191026-float-serialization
+   serialization/191026-json-serialization
+   persistent-data/200202-persistent-parameters
+   programming-flash/flashcode
 
 * network initialization 
 * transport, security and streams
@@ -48,13 +55,3 @@ network topology, etc, thus need these features.
 * iocom as framework
 * helper functions (math, checksum, etc)
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
-
-   serialization/191026-serialization-and-streams
-   serialization/191026-integer-serialization
-   serialization/191026-float-serialization
-   serialization/191026-json-serialization
-   persistent-data/200202-persistent-parameters
-   programming-flash/flashcode
