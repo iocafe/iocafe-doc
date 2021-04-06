@@ -11,6 +11,13 @@ and be ported to new systems.
 Core functionality
 *******************
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Core functionality
+
+   initialization/210406-osal-initialization-and-shut-down
+   threads/210403-threads
+
 * platform configuration defines
 * initialization
 * threads
@@ -42,11 +49,9 @@ network topology, etc, thus need these features.
 * helper functions (math, checksum, etc)
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-   initialization/210406-osal-initialization-and-shut-down
-   threads/210403-threads
    serialization/191026-serialization-and-streams
    serialization/191026-integer-serialization
    serialization/191026-float-serialization
