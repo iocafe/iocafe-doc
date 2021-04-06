@@ -88,7 +88,7 @@ Then the application's entry point function will be as below:
         os_int argc,
         os_char *argv[])
         {
-            ... application code ... 
+            ... application code, rval = ? ... 
             return rval;
         }
 
@@ -100,8 +100,7 @@ In micro-controllers, code what the EOSAL_C_MAIN macro creates varies.
         osal_initialize(OSAL_INIT_DEFAULT);
         osal_thread_set_priority(OSAL_THREAD_PRIORITY_NORMAL);
     
-        ... application code ...
-        int rval = ?
+        ... application code, rval = ? ...
 
         osal_shutdown();
         return rval;
