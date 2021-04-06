@@ -1,4 +1,4 @@
-eosal initialization and shut down
+eosal library initialization and shut down
 ==========================================================
 The eosal library needs to be initialized before use, and shut down to release allocated resources. The initialization
 and shut down functions can be called from existing code, or application can include osal_main() function as entry point.
