@@ -1,7 +1,7 @@
 ﻿Integer serialization
 =========================
-Serialization format is packed  by integer value. Packed format is type and architecture 
-independent, number of  bytes generated depends only on value. Maximum integer size is 64 bits.
+Serialized format is type and architecture independent, number of bytes generated depends only on value. 
+Maximum integer size to be serialized is 64 bits.
 
 Bits in first byte byte NNNNSxxx:
     • NNNN number of follower bytes.
@@ -13,6 +13,7 @@ Follower bytes hold the remaining data bits.
 Required defines:
 
 ::
+
     OSAL_SERIALIZE_SUPPORT = 1
 
 Serializing an integer 

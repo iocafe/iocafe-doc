@@ -193,3 +193,5 @@ threads to stop and wait until these exit.
 
     osal_request_exit();
     osal_wait_for_threads_to_exit();
+
+210406, 7.4.2021/pekka
