@@ -1,4 +1,4 @@
-IOCOM prototyping hardware specs
+IOCOM hardware specs
 ====================================
 
 .. toctree::
