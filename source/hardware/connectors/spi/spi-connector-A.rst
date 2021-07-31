@@ -7,7 +7,6 @@ Connectors soldered to both microcontroller and device boards are male.
 Ends of connecting cable are female. The cable is straight cable, and connects pin 1 to pin 1, pin 2 to pin 2...
 Flat ribbon cable can be used.
 
-
 .. figure:: pics/spi-connector-and-cable.png
 
    SPI connector and cable orientation - both controller board end and device end use the same pinout.
@@ -50,3 +49,9 @@ Flat ribbon cable can be used.
     - GPIO B
     - Application specific GPIO pin B.
 
+
+Cable to connect SPI from 2x5 IDC to breadboard
+**************************************************
+
+Straight 1 x 10 pin strip (pin numbers 1 - 10) which can be presssed into breadboard.
+Pin use as described in "connector pinout" above.
