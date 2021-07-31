@@ -13,7 +13,7 @@ Ends of connecting cable are female. The cable is straight cable, and connects p
 
 AAA
 
-.. list-table:: connecor pins,
+.. list-table:: Connector pinout,
   :widths: 20 20 60
   :header-rows: 1
 
@@ -48,4 +48,30 @@ AAA
 
 BB
 
+.. list-table:: Current network configuration as signals
+  :widths: 25 75
+  :header-rows: 1
 
+  * - signal name
+    - description
+  * - nc_nr
+    - Device number.
+  * - nc_net
+    - IO device network name.
+  * - nc_connect
+    - IP address (or host name) and port of a server to connect to. Port is optional. Single '*' indicates that 
+      light house will be used to find server, but it has not been found yet. String ending with
+      '*' means IP address determined to by lighthouse. Ending '^' indicates new user setting.
+  * - nc_wifi
+    - WiFi network name (SSID).
+  * - nc_pass
+    - WiFi password, only new set value is shown (pre shared key).
+  * - nc_ip
+    - Network address, like "192.168.1.220". This can be static IP address set by user,
+      IP address by DHCP (indicated with '*') or new set value for IP address (indicated with  '^').
+  * - nc_status
+    - Zero indicates that all is fine. Other values indicate an error code. Error codes are the same as 
+      blinked by IO device LED's morse code, etc. 
+
+
+CC
