@@ -14,7 +14,7 @@ Ends of connecting cable are female. The cable is straight cable, and connects p
 AAA
 
 .. list-table:: Connector pinout
-  :widths: 25 75
+  :widths: 20 20 60
   :header-rows: 1
 
   * - pin number
@@ -75,3 +75,16 @@ BB
 
 
 CC
+
+.. list-table:: Current network configuration as signals
+  :widths: 25 75
+  :header-rows: 1
+
+  * - pin number
+    - pin name
+    - description
+  * - 1
+    - GND
+    - Ground.
+
+SS
