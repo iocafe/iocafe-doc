@@ -45,6 +45,12 @@ AAA
   * - pin 8
     - SS
     - Chip select, activates SPI device. This signal is inverted, the device is activated when this is 0V and deactivated when 3.3V.
+  * - pin 9
+    - GPIO A
+    - Application specific GPIO pin A, optional. Specific use like display backlight control, etc.
+  * - pin 10
+    - GPIO B
+    - Application specific GPIO pin B.
 
 BB
 
