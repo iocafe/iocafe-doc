@@ -11,6 +11,7 @@ Ends of connecting cable are female. The cable is straight cable, and connects p
 
    SPI connector and cable orientation - both controller board end and device end use the same pinout. 
 
+AAA
 
 .. list-table:: connecor pins,
   :widths: 20 20 60
@@ -45,6 +46,6 @@ Ends of connecting cable are female. The cable is straight cable, and connects p
     - SS
     - Chip select, activates SPI device. This signal is inverted, the device is activated when this is 0V and deactivated when 3.3V.
 
-XX
+BB
 
 
