@@ -3,7 +3,7 @@ SPI connector A
 
 SPI interface uses 2x5 FC-10P 2.54mm dual row IDC sockets connectors.
 
-Connectors soldered to both microcontroller and device boards are male.
+Connectors soldered to both microcontroller and device PCB boards are male.
 Ends of connecting cable are female. The cable is straight cable, and connects pin 1 to pin 1, pin 2 to pin 2...
 Flat ribbon cable can be used.
 
