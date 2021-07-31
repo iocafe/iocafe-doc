@@ -9,7 +9,7 @@ Ends of connecting cable are female. The cable is straight cable, and connects p
 
 .. figure:: pics/spi-connector-and-cable.png
 
-   SPI connector and cable orientation - both controller board end and device end use the same pinout. 
+   SPI connector and cable orientation - both controller board end and device end use the same pinout.
 
 AAA
 
@@ -25,7 +25,7 @@ AAA
     - Ground.
   * - 2
     - V
-    - 3.3V 
+    - 3.3V
     - SPI operating voltage, typically 3.3V. Controller board powers the device.
   * - 3
     - 5V
@@ -35,13 +35,13 @@ AAA
     - Not connected, used to avoid connecting wrong cable. Box header pin should be cut, and cable plugged for this pin.
   * - 5
     - SCLK
-    - SPI clock from controller (master) to device (slave). 
+    - SPI clock from controller (master) to device (slave).
   * - 6
     - MOSI
-    - Data from controller to device, master out/slave in. 
+    - Data from controller to device, master out/slave in.
   * - 7
     - MISO
-    - Data from device to controller, master in/slave out. 
+    - Data from device to controller, master in/slave out.
   * - 8
     - SS
     - Chip select, activates SPI device. This signal is inverted, the device is activated when this is 0V and deactivated when 3.3V.
@@ -59,7 +59,7 @@ BB
   * - nc_net
     - IO device network name.
   * - nc_connect
-    - IP address (or host name) and port of a server to connect to. Port is optional. Single '*' indicates that 
+    - IP address (or host name) and port of a server to connect to. Port is optional. Single '*' indicates that
       light house will be used to find server, but it has not been found yet. String ending with
       '*' means IP address determined to by lighthouse. Ending '^' indicates new user setting.
   * - nc_wifi
@@ -70,8 +70,8 @@ BB
     - Network address, like "192.168.1.220". This can be static IP address set by user,
       IP address by DHCP (indicated with '*') or new set value for IP address (indicated with  '^').
   * - nc_status
-    - Zero indicates that all is fine. Other values indicate an error code. Error codes are the same as 
-      blinked by IO device LED's morse code, etc. 
+    - Zero indicates that all is fine. Other values indicate an error code. Error codes are the same as
+      blinked by IO device LED's morse code, etc.
 
 
 CC
@@ -83,7 +83,7 @@ CC
   * - pin number
     - pin name
     - description
-  * - 1
+  * - x1
     - GND
     - Ground.
 
