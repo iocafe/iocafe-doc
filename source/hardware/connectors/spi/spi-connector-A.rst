@@ -14,7 +14,7 @@ Ends of connecting cable are female. The cable is straight cable, and connects p
 AAA
 
 .. list-table:: Connector pinout,
-  :widths: 20 20 60
+  :widths: 25 75
   :header-rows: 1
 
   * - pin number
