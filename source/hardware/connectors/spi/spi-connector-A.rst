@@ -82,9 +82,7 @@ CC
 
   * - pin number
     - pin name
-    - description
   * - x1
     - GND
-    - Ground.
 
 SS
