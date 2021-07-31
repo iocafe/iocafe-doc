@@ -13,7 +13,7 @@ Ends of connecting cable are female. The cable is straight cable, and connects p
 
 AAA
 
-.. list-table:: Connector x pinout
+.. list-table:: Connector pinout
   :widths: 20 20 60
   :header-rows: 1
 
@@ -24,7 +24,6 @@ AAA
     - GND
     - Ground.
   * - pin 2
-    - V
     - 3.3V
     - SPI operating voltage, typically 3.3V. Controller board powers the device.
   * - pin 3
@@ -93,4 +92,4 @@ CC
     - GND
     - keke
 
-SS2
+SS4
