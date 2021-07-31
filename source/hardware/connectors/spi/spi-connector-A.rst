@@ -76,7 +76,7 @@ BB
 
 CC
 
-.. list-table:: Current network configuration as signals
+.. list-table:: Current 2 network configuration as signals
   :widths: 25 75
   :header-rows: 1
 
@@ -85,4 +85,4 @@ CC
   * - x1
     - GND
 
-SS
+SS2
