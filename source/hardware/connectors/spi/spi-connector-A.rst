@@ -9,7 +9,7 @@ Flat ribbon cable can be used.
 
 .. figure:: pics/spi-connector-and-cable.png
 
-   SPI connector and cable orientation - both controller board end and device end use the same pinout.
+   SPI connector and cable orientation - both controller board and device end the same pinout.
 
 .. list-table:: Connector pinout
   :widths: 20 20 60
