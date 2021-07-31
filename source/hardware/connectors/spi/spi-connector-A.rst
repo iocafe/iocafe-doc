@@ -20,29 +20,29 @@ AAA
   * - pin number
     - pin name
     - description
-  * - 1
+  * - pin 1
     - GND
     - Ground.
-  * - 2
+  * - pin 2
     - V
     - 3.3V
     - SPI operating voltage, typically 3.3V. Controller board powers the device.
-  * - 3
+  * - pin 3
     - 5V
     - Controller board powers the device.
-  * - 4
+  * - pin 4
     - NC
     - Not connected, used to avoid connecting wrong cable. Box header pin should be cut, and cable plugged for this pin.
-  * - 5
+  * - pin 5
     - SCLK
     - SPI clock from controller (master) to device (slave).
-  * - 6
+  * - pin 6
     - MOSI
     - Data from controller to device, master out/slave in.
-  * - 7
+  * - pin 7
     - MISO
     - Data from device to controller, master in/slave out.
-  * - 8
+  * - pin 8
     - SS
     - Chip select, activates SPI device. This signal is inverted, the device is activated when this is 0V and deactivated when 3.3V.
 
