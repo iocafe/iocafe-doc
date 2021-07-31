@@ -13,7 +13,7 @@ Ends of connecting cable are female. The cable is straight cable, and connects p
 
 AAA
 
-.. list-table:: Connector pinout
+.. list-table:: Connector x pinout
   :widths: 20 20 60
   :header-rows: 1
 
@@ -88,7 +88,9 @@ CC
 
   * - pin number
     - pin name
+    - duke
   * - x1
     - GND
+    - keke
 
 SS2
