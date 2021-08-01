@@ -19,7 +19,7 @@ Flat ribbon cable can be used.
   :widths: 20 20 60
   :header-rows: 1
 
-  * - pin number
+  * - pin nr
     - pin name
     - description
   * - 1

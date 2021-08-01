@@ -15,8 +15,8 @@ Microcontroller PCB board has male 3 pins.
   :header-rows: 1
 
   * - pin nr
-    - wire color
-    - pin name
+    - color
+    - name
     - description
   * - 1 
     - black
