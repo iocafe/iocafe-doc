@@ -1,4 +1,4 @@
-SPI connector A
+SPI connector v1
 ==================================
 
 Ready products use the SPI bus for communication between chips on same PCB, it is wired case by case.
