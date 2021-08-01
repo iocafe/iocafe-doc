@@ -1,4 +1,4 @@
-Servo connector A
+Servo connector v1
 ====================
 
 The connector provides PWM position control amd operating voltage around 5V to a servo or other device.
