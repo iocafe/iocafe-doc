@@ -13,3 +13,4 @@ Connectors used for IOCOM prototype testing.
    ethernet/ethernet-connector-v1
    serial/rs422-connector-v1
    serial/rs232-connector-v1
+   serial/rs485-connector-v1

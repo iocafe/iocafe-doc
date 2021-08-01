@@ -21,10 +21,10 @@ Both ends use same pinout, cross over needs to be in the cable.
     - Data carrier detect (optional).
   * - 2
     - RxD
-    - Received data (optional).
+    - Received data.
   * - 3
     - TxD
-    - Transmitted data (optional).
+    - Transmitted data.
   * - 4
     - DTR
     - Data terminal ready (optional).
