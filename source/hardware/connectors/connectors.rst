@@ -10,3 +10,4 @@ Connectors used for IOCOM prototype testing.
    spi/spi-connector-v1
    pwm/servo-connector-v1
    power/power-connector-v1
+   ethernet/ethernet-connector-v1
