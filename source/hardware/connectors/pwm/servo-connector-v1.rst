@@ -31,10 +31,10 @@ Microcontroller PCB board has male 3 pins.
     - SIGNAL
     - PWM signal to control servo position. Pulse amplitude may be less than operating voltage in pin 2, down to 3V.
 
-For servos, the pulse frequency is typically 50 Hz, but the exact frequency does not matter. 
+Servo control: The pulse frequency is typically 50 Hz, but the exact frequency does not matter. 
 The servo position is controlled by changing pulse width. 1.5 ms corresponds to center point of the servo.
 Shortening or lengthening the pulse (1.0 ms to 2.0 ms) will turn the servo.
 
-Higher pulse frequency is used to control LED brightness and especially audio by PWM. 
+Higher pulse frequency is used to control LED brightness and especially PWM audio.
 
 1.8.2021/pekka

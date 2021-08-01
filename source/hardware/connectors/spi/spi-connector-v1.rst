@@ -22,34 +22,34 @@ Flat ribbon cable can be used.
   * - pin number
     - pin name
     - description
-  * - pin 1
+  * - 1
     - GND
     - Ground.
-  * - pin 2
+  * - 2
     - 3.3V
     - SPI operating voltage, typically 3.3V. Controller board powers the device.
-  * - pin 3
+  * - 3
     - 5V
     - Controller board powers the device.
-  * - pin 4
+  * - 4
     - NC
     - Not connected, used to avoid connecting wrong cable. Box header pin should be cut, and cable plugged for this pin.
-  * - pin 5
+  * - 5
     - SCLK
     - SPI clock from controller (master) to device (slave).
-  * - pin 6
+  * - 6
     - MOSI
     - Data from controller to device, master out/slave in.
-  * - pin 7
+  * - 7
     - MISO
     - Data from device to controller, master in/slave out.
-  * - pin 8
+  * - 8
     - SS
     - Chip select, activates SPI device. This signal is inverted, the device is activated when this is 0V and deactivated when 3.3V.
-  * - pin 9
+  * - 9
     - GPIO A
     - Application specific GPIO pin A, optional. Specific use like display backlight control, etc.
-  * - pin 10
+  * - 10
     - GPIO B
     - Application specific GPIO pin B.
 
