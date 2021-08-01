@@ -1,42 +1,51 @@
-RS422 connector v1
+RS232 "3 wire serial" connector v1
 ==================================
 
-RS422 (4 wire serial communication) uses standard RJ-45 ethernet connector. Pin order is selected so that cross over ethernet cable can be used.
+RS232r connector is 2x5 FC-10P 2.54mm dual row IDC socket connector.
 
-.. figure:: pics/ethernet-cable.png
+.. figure:: pics/rs232-connector-and-cable.png
 
-   RS422 uses RJ-45 and ethernet cable.
+   RS232 connector and cable orientation
 
-Only pins 1,2,3 and 6 are needed. 
+Both ends use same pinout, cross over needs to be in the cable.
 
 .. list-table:: Connector pinout
-  :widths: 15 15 15 55
+  :widths: 20 20 60
   :header-rows: 1
 
   * - pin nr
-    - color
     - name
     - description
   * - 1 
-    - green/white
-    - TX+
-    - Transmit data +.
+    - DCD
+    - Data carrier detect (optional).
   * - 2
-    - green
-    - TX-
-    - Transmit data -.
-  * - 3 
-    - orange/white
-    - RX+
-    - Receive data +.
+    - RxD
+    - Received data (optional).
+  * - 3
+    - TxD
+    - Transmitted data (optional).
+  * - 4
+    - DTR
+    - Data terminal ready (optional).
+  * - 5 
+    - GND
+    - Signal ground.
   * - 6
-    - orange
-    - RX-
-    - Receive data -.
+    - DSR
+    - Data set ready (optional).
+  * - 7
+    - RTS
+    - Request to send (optional).
+  * - 8
+    - CTS
+    - Clear to send (optional).
+  * - 9
+    - RI
+    - Ring indicator (optional).
+  * - 10
+    - NC
+    - Not connected, used to avoid connecting wrong cable. Box header pin should be cut, and cable plugged for this pin.
 
-
-.. figure:: pics/rj45-breakout-board.jpeg
-
-   RJ-45 breakout board can be used with bread board.
 
 1.8.2021/pekka

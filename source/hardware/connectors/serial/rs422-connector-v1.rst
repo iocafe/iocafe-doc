@@ -1,7 +1,7 @@
-RS422 connector v1
+RS422 "4 wire serial" connector v1
 ==================================
 
-RS422 (4 wire serial communication) uses standard RJ-45 ethernet connector. Pin order is selected so that cross over ethernet cable can be used.
+RS422 uses standard RJ-45 ethernet connector. Pin order is selected so that cross over ethernet cable can be used.
 
 .. figure:: pics/ethernet-cable.png
 
