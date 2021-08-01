@@ -30,7 +30,7 @@ Flat ribbon cable can be used.
     - SPI operating voltage, typically 3.3V. Controller board powers the device.
   * - 3
     - 5V
-    - Controller board powers the device.
+    - Controller board powers the device. This voltage is not yet decided.
   * - 4
     - SCLK
     - SPI clock from controller (master) to device (slave).
