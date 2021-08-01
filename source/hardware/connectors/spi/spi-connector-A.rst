@@ -50,7 +50,15 @@ Flat ribbon cable can be used.
     - Application specific GPIO pin B.
 
 
-Cable to connect SPI from 2x5 IDC to breadboard:
-Straight 1 x 10 pin strip (pin numbers 1 - 10) which can be presssed into breadboard.
-Pin use as described in "connector pinout" above. The pin strip can be divided into
-two 1 x 5 parts, which makes pushing/pulling it into/from breadboard easier.
+Cable to connect SPI IDC to breadboard:
+Two separate "straight 1 x 5 pin strips" (pin numbers 1 - 5 and  6- 10) or one "breadboard friendly ribbon crimp connector"
+can be presssed into breadboard. Pin use as described in "connector pinout" above.
+
+.. figure:: pics/breadboard-connector.jpeg
+
+   Ready breadboard friendly ribbon crimp connector 2x5.
+
+
+PCB modules which can be pressed into breadboard should pin out same as ready breadboard ready crimp connector.
+The top row should contain pins 6 to 10 and the bottom row pins 1 to 5 as in connector pinout (VERIFY TOP/BOTTOM ROW ORDER).
+
