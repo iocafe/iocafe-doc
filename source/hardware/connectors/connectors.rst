@@ -11,3 +11,5 @@ Connectors used for IOCOM prototype testing.
    pwm/servo-connector-v1
    power/power-connector-v1
    ethernet/ethernet-connector-v1
+   serial/rs422-connector-v1
+   serial/rs232-connector-v1
