@@ -32,26 +32,26 @@ Flat ribbon cable can be used.
     - 5V
     - Controller board powers the device.
   * - 4
-    - NC
-    - Not connected, used to avoid connecting wrong cable. Box header pin should be cut, and cable plugged for this pin.
-  * - 5
     - SCLK
     - SPI clock from controller (master) to device (slave).
-  * - 6
+  * - 5
     - MOSI
     - Data from controller to device, master out/slave in.
-  * - 7
+  * - 6
     - MISO
     - Data from device to controller, master in/slave out.
+  * - 7
+    - SS_1
+    - Chip select, activates first SPI device. This signal is inverted, the device is activated when this is 0V and deactivated when 3.3V.
   * - 8
-    - SS
-    - Chip select, activates SPI device. This signal is inverted, the device is activated when this is 0V and deactivated when 3.3V.
+    - SS_2
+    - Chip select, activates second SPI device. This signal is inverted, the device is activated when this is 0V and deactivated when 3.3V.
   * - 9
-    - GPIO A
-    - Application specific GPIO pin A, optional. Specific use like display backlight control, etc.
+    - SS_3, GPIO A
+    - Either chip select, activates third SPI device. Or application specific GPIO pin A, optional. 
   * - 10
     - GPIO B
-    - Application specific GPIO pin B.
+    - Application specific GPIO pin B, optional. Specific use like display backlight control, etc..
 
 
 Connect SPI IDC to breadboard:
