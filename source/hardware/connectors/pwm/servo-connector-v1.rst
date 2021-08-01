@@ -1,29 +1,33 @@
 Servo connector v1
 ====================
 
-The connector provides PWM position control amd operating voltage around 5V to a servo or other device.
-Servo control uses 1x3 2.54mm pin strip.
+The connector provides PWM position control and operating voltage to a servo or other device.
+Servo connector is 1x3 2.54mm pin strip.
 
-Microcontroller PCB board has male 3 pin connector, and the cable from servo the female.
+Microcontroller PCB board has male 3 pins.
 
 .. figure:: pics/210801-servo.jpeg
 
-   Servo and cable.
+   Generic servo and cable.
 
 .. list-table:: Connector pinout
-  :widths: 20 20 60
+  :widths: 15 15 15 55
   :header-rows: 1
 
-  * - pin nr and color
-    - pin names
+  * - pin nr
+    - wire color
+    - pin name
     - description
-  * - 1 black
+  * - 1 
+    - black
     - GND
     - Ground.
-  * - pin 2 red
+  * - 2
+    - red
     - VDC
     - Power for the servo, nominally 5V (4.8V - 6.0 V), but can be as low as 3.3 V.
-  * - pin 3 white
+  * - 3 
+    - white
     - SIGNAL
     - PWM signal to control servo position. Pulse amplitude may be less than operating voltage in pin 2, down to 3V.
 
