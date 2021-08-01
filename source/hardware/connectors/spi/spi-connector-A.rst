@@ -1,6 +1,10 @@
 SPI connector A
 ==================================
 
+Ready products use the SPI bus for communication between chips on same PCB, it is wired case by case.
+Anyhow, while prototyping it is convinient to have a specified pinout: Connector for test PCBs and
+specific pin order for breadboard. This allows switching SPI device - microcontroller setups quickly.
+
 SPI interface uses 2x5 FC-10P 2.54mm dual row IDC sockets connectors.
 
 Connectors soldered to both microcontroller and device PCB boards are male.
@@ -62,3 +66,5 @@ can be presssed into breadboard. Pin use as described in "connector pinout" abov
 PCB modules which can be pressed into breadboard should pin out same as ready breadboard ready crimp connector.
 The top row should contain pins 6 to 10 and the bottom row pins 1 to 5 as in connector pinout (VERIFY TOP/BOTTOM ROW ORDER).
 
+
+31.7.2021/pekka
