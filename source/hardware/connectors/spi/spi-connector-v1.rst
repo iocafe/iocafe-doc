@@ -8,8 +8,8 @@ specific pin order for breadboard. This allows switching SPI device - microcontr
 SPI interface uses 2x5 FC-10P 2.54mm dual row IDC sockets connectors.
 
 Connectors soldered to both microcontroller and device PCB boards are male.
-Ends of connecting cable are female. The cable is straight cable, and connects pin 1 to pin 1, pin 2 to pin 2...
-Flat ribbon cable can be used.
+Ends of connecting cable are female. Flat ribbon cable can be used, and connect pin 1 to pin 1, pin 2 to pin 2...
+This spec supports connecting up to three slave devices to one master.
 
 .. figure:: pics/spi-connector-and-cable.png
 
@@ -48,10 +48,10 @@ Flat ribbon cable can be used.
     - Chip select, activates second SPI device. This signal is inverted, the device is activated when this is 0V and deactivated when 3.3V.
   * - 9
     - SS_3, GPIO A
-    - Either chip select, activates third SPI device. Or application specific GPIO pin A, optional. 
+    - Either chip select, activates third SPI device. Or application specific GPIO pin A. (optional)
   * - 10
     - GPIO B
-    - Application specific GPIO pin B, optional. Specific use like display backlight control, etc..
+    - Application specific GPIO pin B. Specific use like display backlight control, etc. (optional)
 
 
 Connect SPI IDC to breadboard:

@@ -35,7 +35,7 @@ Flat ribbon cable can be used.
     - Regulated 5V, often 5.2V to allow some loss.
   * - 9, 10
     - unregulated V
-    - Unregulated or higher voltage Regulated 5V, often 5.2V to allow some loss.
+    - Unregulated or higher voltage, for example 12V.
 
 
 Cable to connect power to/from breadboard:

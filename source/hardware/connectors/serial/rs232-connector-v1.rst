@@ -7,7 +7,7 @@ RS232r connector is 2x5 FC-10P 2.54mm dual row IDC socket connector.
 
    RS232 connector and cable orientation
 
-Both ends use same pinout, cross over needs to be in the cable.
+Both ends use same pinout, cross over needs to be in the cable. Pins 2, 3, and 5 must be connected.
 
 .. list-table:: Connector pinout
   :widths: 20 20 60

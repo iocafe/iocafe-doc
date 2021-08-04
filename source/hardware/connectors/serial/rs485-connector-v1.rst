@@ -19,7 +19,7 @@ RS485 two wire communication uses simple twisted pair.
     - DATA+
     - Data +.
   * - 2
-    - DATA+
+    - DATA-
     - Data -.
 
 1.8.2021/pekka
