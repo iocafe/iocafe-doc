@@ -43,7 +43,9 @@ To activate the OpenGL drivers you need to run raspi-config from a terminal wind
 Select "GL (Fake KMS) Desktop Driver"
 
 
-I think OpenGL ES 2.0 is needed???
+I think OpenGL ES 2.0 is needed??? Check:
+- https://github.com/zertyz/hello_imgui_rpi
+- https://github.com/ocornut/imgui/pull/2837
 
 
 200111, updated 7.8.2021/pekka
