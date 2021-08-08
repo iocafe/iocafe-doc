@@ -37,14 +37,13 @@ Raspberry PI, openGL for egui/glass
 
 To activate the OpenGL drivers you need to run raspi-config from a terminal window as this option is not available in the version in the menu.
 
-    Enter the comand: sudo raspi-config
-    Select 7 Advance Options
-    GL Drivers
-
-Select "GL (Fake KMS) Desktop Driver"
-
+- Enter the comand: sudo raspi-config
+- Select 7 Advance Options
+- GL Drivers
+- Select "GL (Fake KMS) Desktop Driver"
 
 I think OpenGL ES 2.0 is needed??? Check:
+
 - https://github.com/zertyz/hello_imgui_rpi
 - https://github.com/ocornut/imgui/pull/2837
 
