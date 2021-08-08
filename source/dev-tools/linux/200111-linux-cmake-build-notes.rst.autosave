@@ -24,5 +24,8 @@ Raspberry PI specific:
 - raspicam, see /coderoot/pins/downloads/raspberry
 - pigpio, see /coderoot/pins/downloads/raspberry
 
+egui/glass:
+
+
 
 200111, updated 7.8.2021/pekka
