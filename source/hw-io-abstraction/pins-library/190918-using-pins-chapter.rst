@@ -194,10 +194,33 @@ The attributes for PWM pin:
   1023 for 10-bit DAC and 4095 for 12 bit DAC, etc.
 * init: Set initial value. for example 1024 with 12 bit resolution would mean 25% duty cycle.
 
+
+Inverted servo control (directional throttle control, tested with raspberry pi/pigpio).
+Servo frequency 60 Hz, input -100.0 (smin/10^digs = -10000/100 = -100) to 100.0 degrees:
+
 ::
 
-{"name": "servo", "bank": 0, "addr": 22, "frequency": 50, "resolution": 12, "init": 2048, "max": 4095}
-{"name": "ccd_clock",  "bank": 0, "addr": 22, "timer": 0, "frequency-kHz": 1000, "resolution": 1, "init": 1}
+{"name": "throttle", "addr": 1, "frequency": 60, "resolution": 12, "init": 3755, "min": 3995, "max": 3515, "smin": -10000, "smax": 10000, "digs": 2}
+
+Servo control using pca9685 board connected to Raspberry pi with SPI. Servo frequency 60 Hz, input -90.0 to 90.0 degrees
+scaled to 12 bit signal (default for pca9685) from 100 (0.41ms) to 580 (2.36 ms), neural position 340 (340÷4095×1000÷60 = 1.38ms):
+
+::
+
+{"name": "left_wheel", "device": "i2c.pwmboard", "addr": 0, "frequency": 60, "init": 340, "min": 100, "max": 580, "smin": -9000, "smax": 9000, "digs": 2}
+
+LED brightness control (tested with ESP32), input directly 0 .. 4095:
+
+::
+
+{"name": "led_morse", "timer": 1, "bank": 5, "addr": 4, "frequency": 5000, "resolution": 12, "init": 0, "max": 4095}
+
+
+800 kHz clock pulse (tested with ESP32):
+
+::
+
+{"name": "ccd_clock",  "bank": 0, "addr": 22, "timer": 0, "frequency-kHz": 800, "resolution": 1, "init": 1, "hpoint": 0}
 
 ESP32 notes
 
