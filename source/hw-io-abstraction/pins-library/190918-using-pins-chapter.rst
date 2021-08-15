@@ -200,7 +200,7 @@ Servo frequency 60 Hz, input -100.0 (smin/10^digs = -10000/100 = -100) to 100.0 
 
 ::
 
-{"name": "throttle", "addr": 1, "frequency": 60, "resolution": 12, "init": 3755, "min": 3995, "max": 3515, "smin": -10000, "smax": 10000, "digs": 2}
+{"name": "throttle", "addr": 1, "frequency": 50, "resolution": 12, "init": 3787, "min": 3829, "max": 3747, "smin": -10000, "smax": 10000, "digs": 2}
 
 Servo control using pca9685 board connected to Raspberry pi with SPI. Servo frequency 60 Hz, input -90.0 to 90.0 degrees
 scaled to 12 bit signal (default for pca9685) from 100 (0.41ms) to 580 (2.36 ms), neural position 340 (340÷4095×1000÷60 = 1.38ms):
