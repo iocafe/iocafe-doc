@@ -22,3 +22,14 @@ I used EasyEDA to make Candy ESP32 test PCB, here some pictures.
 
    Home made prototypes and PCBs from JLCBCB (ordered trough EasyEDA)
 
+.. figure:: pics/210815-3r-esp-proto-for-web.jpg
+
+   Candy board can show camera and control throttle/steering on RC car. 
+
+.. figure:: pics/210816-candy-esp32-cam-programming-wiring.jpg
+
+   Candy board serial programming wiring, etc. 
+
+.. figure:: pics/210816-candy-esp32-cam-serial-programming-adapter-wiring.jpg
+
+   Serial adapter wiring to candy board (3.3V level). 
