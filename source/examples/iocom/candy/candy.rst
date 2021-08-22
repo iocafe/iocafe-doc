@@ -29,5 +29,6 @@ More
    :caption: Contents:
 
    200727-candy-esp32-hw
+   210822-candy-3-racing-demo
 
 notes 27.7.2020/pekka
