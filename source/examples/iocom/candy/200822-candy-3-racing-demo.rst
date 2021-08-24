@@ -2,7 +2,7 @@ Candy 3-Racing RC car.
 =================================
 This test/demo is based on 3-racing RC car kit.
 
-.. figure:: pics/210815-3r-esp-proto-for-web.jpg
+.. figure:: pics/210824-candy-3-racing-demo.jpg
 
    Candy board can show camera and control throttle/steering on RC car, etc. 
 
