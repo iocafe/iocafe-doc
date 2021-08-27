@@ -1,4 +1,5 @@
 Electricbanana ESP32 HW (can run Candy)
+==============================================
 
 .. figure:: pics/210827-electricbanana-3d.jpeg
 
