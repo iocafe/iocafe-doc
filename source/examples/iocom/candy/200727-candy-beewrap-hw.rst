@@ -1,4 +1,4 @@
-Candy ESP32 hardware.
+Candy ESP32 hardware (beewrap).
 =================================
 I used EasyEDA to make Candy ESP32 test PCB, here some pictures.
 

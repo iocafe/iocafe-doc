@@ -28,7 +28,8 @@ More
    :maxdepth: 1
    :caption: Contents:
 
-   200727-candy-esp32-hw
+   200727-candy-beewrap-hw
    200822-candy-3-racing-demo
+   210827-candy-electricbanana-hw
 
-notes 27.7.2020/pekka
+notes 27.8.2021/pekka
