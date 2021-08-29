@@ -1,7 +1,7 @@
 RS232 "3 wire serial" connector v1
 ==================================
 
-RS232r connector is 2x5 FC-10P 2.54mm dual row IDC socket connector.
+RS232 connector is 2x5 FC-10P 2.54mm dual row IDC socket connector.
 
 .. figure:: pics/rs232-connector-and-cable.png
 
