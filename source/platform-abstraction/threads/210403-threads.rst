@@ -19,7 +19,7 @@ The osal thread API is just wrapper to underlying operating system threads. Thus
 
 Build time define OSAL_MULTITHREAD_SUPPORT, either 0 or 1 selects if osal thread functions are used. If zero, 
 osal_thread_create, osal_thread_join, osal_thread_set_priority, and os_timeslice() are defined
-as empty macros and produce no code. Sleep functions, os_sleep and os_microsleep, are always available.
+as empty macros and produce no code. Sleep functions, osal_sleep and os_microsleep, are always available.
 
 Create and terminate attached thread
 ********************************************
@@ -160,12 +160,12 @@ without multithreading support (OSAL_MULTITHREAD_SUPPORT is 0), the os_timeslice
 Sleep functions
 ******************
 
-To sleep for a specific period, use either os_sleep(milliseconds) or  os_microsleep(microseconds).  
+To sleep for a specific period, use either osal_sleep(milliseconds) or  os_microsleep(microseconds).  
 The sleep function precision varies by operating system, and may be longer if high priority threads eat the processor time. 
 
 :: 
 
-    void os_sleep(
+    void osal_sleep(
         os_long time_ms);
 
     void os_microsleep(

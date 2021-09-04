@@ -8,7 +8,6 @@ proceeding to compile examples or other IO applications.
 
 * /coderoot/eosal/util/json - Command line utility to compress/decompress JSON
 * /coderoot/iocom/extensions/iocompython - Python API to IOCOM
-* /coderoot/eosal/dependencies/eosal_jpeg - JPEG compression library
 
 
 Copy library code for ESP32/Arduino development
