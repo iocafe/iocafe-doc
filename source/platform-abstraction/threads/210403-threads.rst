@@ -83,7 +83,7 @@ created it, the osal_thread_create() returns OS_NULL.
 
 Optional thread parameters: This parameter structure can be given when creating a new thread. 
 It contains opetional and some platform dependent settings for a new thread. Allocate this 
-structure from stack, ose oe_memclear to fill it with zeros and set only parameters you want 
+structure from stack, use os_memclear to fill it with zeros and set only parameters you want
 to modify from defaults.
 
 ::
