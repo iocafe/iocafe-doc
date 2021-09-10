@@ -10,7 +10,7 @@ Initialize persistent storage access. Call this first. prm can be OS_NULL if not
 
 ::
 
-    void os_persistent_initialze(
+    void os_persistent_initialize(
         osPersistentParams *prm);
 
 Load parameter structure identified by block number from persistent storage. Load all parameters when micro controller starts, not during normal operation. If data cannot be loaded, leaves the block as is. Returned value maxes at block_sz.

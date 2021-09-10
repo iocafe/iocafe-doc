@@ -7,7 +7,7 @@ The AES encryption key is a combination of simple fixed key, application hard co
 define) and optionally CPUID, which intends to uniquely identifiy the individual computer.
 
 Application hard coded key is set by define OSAL_AES_KEY at build time. 
-OSAL_AES_KEY="myseacretkey" can be defined in Cmakelists.txt, platformio.ini,
+OSAL_AES_KEY="mysecretkey" can be defined in Cmakelists.txt, platformio.ini,
 in /coderoot/eosal/eosal_linux_config.h, etc.
 
 eosal_linux_config.h to set hard coded key and to force using CPUID even on PC:
