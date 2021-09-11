@@ -1,5 +1,5 @@
-﻿Data framing
-==============
+Message framing
+=================
 
 DATA FORMAT HAS BEEN MODIFIED AFTER WRITING THIS, THIS NEEDS TO BE REVIEWED
 
