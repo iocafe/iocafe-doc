@@ -28,7 +28,7 @@ No data is transferred before authentication messages have been exchanged and ac
       IOC_AUTH_DEVICE_NR_2_BYTES (32) - Two bytes needed for device number in this message.
       IOC_AUTH_DEVICE_NR_4_BYTES (64) - Four bytes needed for device number in this message.
       IOC_AUTH_BIDIRECTIONAL_COM (128) - Bidirectional memory blocks supported. This may be OBSOLETED.
-  * - USER_NAME
+  * - DEVICE_NAME
     - N
     - char[N]
     - Device or user name, without serial number. NULL terminated C string.
@@ -46,14 +46,14 @@ No data is transferred before authentication messages have been exchanged and ac
       client which doesn't request a specific device number. This field is optional, flag 
       IOC_AUTH_UNIQUE_ID indicates if it is here.
   * - NETWORK_NAME
-    - 1/2/4
+    - N
     - char[N]
     - Network name, without serial number. NULL terminated C string. Client may use this
       to select IO network to connect to and server publishes it's default IO network. 
       Asterisk * or empty value mean unspecified. 
   * - PASSWORD
+    - N
     - char[N]
-    - uchar[]
     - User's or devices password. NULL terminated C string. For unsecured connections
       this is always empty string, just NULL character.
 
