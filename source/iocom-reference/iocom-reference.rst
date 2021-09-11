@@ -9,7 +9,7 @@ IOCOM reference
    classes/classes
    json-configuration/json-configuration
    signals/signals
-   data-format/data-format
+   message-format/message-format
    technical/technical
    transport/transport
 

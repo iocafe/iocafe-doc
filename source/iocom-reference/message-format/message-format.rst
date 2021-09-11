@@ -1,5 +1,5 @@
-Data format
-============
+Message framing and formats
+=============================
 
 .. toctree::
    :maxdepth: 2
