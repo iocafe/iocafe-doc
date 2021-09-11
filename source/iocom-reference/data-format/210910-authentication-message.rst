@@ -1,5 +1,5 @@
 Authentication message
-=======================s
+=======================
 
 Authentication message is sent by both ends of connection immediately after connection is transferred.
 No data is transferred befor authenticatin messages have been exchanged and accepted. 
@@ -52,7 +52,7 @@ No data is transferred befor authenticatin messages have been exchanged and acce
       to select IO network to connect to and server publishes it's default IO network. 
       Asterisk * or empty value mean unspecified. 
   * - PASSWORD
-    - ?
+    - char[N]
     - uchar[]
     - User's or devices password. NULL terminated C string. For unsecured connections
       this is always empty string, just NULL character.
