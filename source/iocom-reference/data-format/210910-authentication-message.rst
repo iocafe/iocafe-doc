@@ -1,8 +1,8 @@
 Authentication message
 =======================
 
-Authentication message is sent by both ends of connection immediately after connection is transferred.
-No data is transferred before authentication messages have been exchanged and accepted. 
+Authentication message is sent by both ends of connection once connection is established.
+No data is transferred until authentication messages have been exchanged and accepted. 
 
 .. list-table:: Message content
   :widths: 25 15 15 45
