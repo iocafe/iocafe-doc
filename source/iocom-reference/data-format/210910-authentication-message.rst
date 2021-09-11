@@ -8,7 +8,7 @@ No data is transferred before authentication messages have been exchanged and ac
   :widths: 25 15 15 45
   :header-rows: 1
 
-  * - name/address
+  * - name
     - bytes
     - type
     - use
