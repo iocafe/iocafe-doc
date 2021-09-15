@@ -22,7 +22,7 @@ Camera:
 
 egui/glass:
 
-- sudo apt-get install libglfw3-dev libglew-dev libgl3w-dev
+- sudo apt-get install libglfw3-dev libglew-dev 
 
 
 Raspberry PI specific
