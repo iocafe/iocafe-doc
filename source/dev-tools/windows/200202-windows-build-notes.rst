@@ -1,8 +1,9 @@
 ﻿Windows build notes 
 ====================
-So far only used build system for Windows has been Visual Studio 2019. There are many other tools
-the build for Windows: It is possible to use CMAKE files also on Windows and build with MinGW/Qtcreator,
-other Visual Studio version, etc, but these are likely to require minor tinkering with build setup and possibly with code.  
+Microsoft Visual Studio 2019 has been used for Windows build, Visual Studio Code only for microcontroller builds
+under windows. There are many other tools the build for Windows: It is possible to use Visual Studio Code CMAKE files also on
+Windows and build with Visual Studio Code, MinGW/Qtcreator, or us other Visual Studio version, etc, but these are likely
+to require minor tinkering with build setup and possibly with code.
 
 Build folder organization and .sln files
 *****************************************
@@ -31,5 +32,5 @@ releases of Visual Studio 2019, at least these have not annoyed me lately.
   networking. Otherwise debugging doesn’t start, but Visual studio just locks up.
 
 
-200202, updated 23.5.2020/pekka
+200202, updated 6.6.2022/pekka
 
