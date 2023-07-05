@@ -24,6 +24,10 @@ egui/glass:
 
 - sudo apt-get install libglfw3-dev libglew-dev 
 
+cmake specific:
+
+- sudo apt-get install --reinstall pkg-config cmake-data
+
 
 Raspberry PI specific
 **********************
@@ -48,4 +52,4 @@ I think OpenGL ES 2.0 is needed??? Check:
 - https://github.com/ocornut/imgui/pull/2837
 
 
-200111, updated 7.8.2021/pekka
+200111, updated 6.7.2023/pekka
