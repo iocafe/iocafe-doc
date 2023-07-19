@@ -6,7 +6,7 @@ Virtual machines
    "Ubuntu 20.04 DDE remix" virtual machine for ESP32 development.
 
    User name for iocafe development virtual machines is "iocafe"
-   and password "IOcafe2019!".
+   and password "talvi333".
 
 .. toctree::
    :maxdepth: 2
