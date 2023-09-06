@@ -30,6 +30,7 @@ But if you want the build the house, use a good hammer. And this is the best I h
 
    200314-debugging-esp32-visual-studio-code-platform-io
    200517-linux-usb-device-not-working
+   230906-platformio-cannot-find-python-3-6-interprenter-on-linux
 
 
 DETAIL, NEEDS TO MOVE FROM HERE:s

@@ -1,5 +1,5 @@
-Issue: Platform IO cannot use USB device
-========================================
+Issue: Platform IO cannot use USB device (linux)
+================================================
 
 Symptoms
 *********
