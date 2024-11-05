@@ -28,6 +28,9 @@ cmake specific:
 
 - sudo apt-get install --reinstall pkg-config cmake-data
 
+Mbed TLS:
+
+- sudo apt-get install libmbedtls-dev
 
 Raspberry PI specific
 **********************
@@ -52,4 +55,4 @@ I think OpenGL ES 2.0 is needed??? Check:
 - https://github.com/ocornut/imgui/pull/2837
 
 
-200111, updated 6.7.2023/pekka
+200111, updated 5.11.2024/pekka
