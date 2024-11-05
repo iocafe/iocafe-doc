@@ -7,10 +7,10 @@ You can as well build with cmake from command line, or use Eclipse, other IDE, e
 it can use CmakeLists.txt directly. The cmake version should not make much difference, the projects here do not
 use the new cmake features.
 
-Visual Studio Code or QT creator are good choices for IDE. I have mostly used QT creator 4.0.1, QT 5.6 and cmake for
+Visual Studio Code or QT creator are good choices for IDE. In past I have mostly used QT creator 4.0.1, QT 5.6 and cmake for
 Linux builds. To build a project, start QT creator and open CmakeLists.txt file from project’s root folder.
-QT creator is easy to set up and use, and works well. I appreciate easy debugging and it pointing out the build
-errors.
+QT creator is easy to set up and use, and works well. I appreciate easy set up, debugging and it pointing out the build
+errors. 
 
 
 Dependencies:
@@ -26,7 +26,7 @@ egui/glass:
 
 cmake specific:
 
-- sudo apt-get install --reinstall pkg-config cmake-data
+- sudo apt-get install pkg-config cmake-data
 
 Mbed TLS:
 
