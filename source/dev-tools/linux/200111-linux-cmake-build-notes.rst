@@ -32,6 +32,9 @@ Mbed TLS:
 
 - sudo apt-get install libmbedtls-dev
 
+Document build:
+- sudo apt-get install python3-sphinx
+
 Raspberry PI specific
 **********************
 
