@@ -1,5 +1,5 @@
-Imgui notes, 21.2.2026/pekka
-==========================================
+Copy imgui source files into egui library code
+==============================================
 
 Dear ImGui is a bloat-free graphical user interface library for C++. It outputs optimized vertex buffers that
 you can render anytime in your 3D-pipeline-enabled application. It is fast, portable, renderer agnostic, and
@@ -24,3 +24,5 @@ Selected imgui source code files are copied into egui project.
 
 - Some problem with egui, assert for table fails. I needed to comment an assert away to be able to run.
   The assert is in file imgui.cpp, line 3429. Marked with string "PEKKA, I HAVE SOME ERROR HERE".
+
+260221, updated 25.2.2026/pekka
