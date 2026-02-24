@@ -4,12 +4,12 @@ MbedTLS 3.6.5 Windows "Visual Studio 2026" build for eosal library
 The eosal repository contains ready static precompiled mbedTLS libraries for Windows.
 If it is acceptable to use precompiled mbedTLS, there is no need to do anything to
 enable TLS.  
+
 The 64 bit .lib files are in C:\\coderoot\\eosal\\dependencies\\windows\\lib_win64_vs folder
 and 32 bit C:\\coderoot\\eosal\\dependencies\\windows\\lib_win32_vs folder.
-
 Corresponding include headers are in C:\\coderoot\\eosal\\dependencies\\windows\\include\\mbedtls folder.
 
-In Windows, all necessary mbedTLS components are in one single library. The mbedTLS.lib is 
+In Windows, all necessary mbedTLS components are in one single library: The mbedTLS.lib is 
 release version and mbedTLSd.lib is the debug version. 
 
 Note:Select C++ and Python packages in Visual Studio 2026 installer: Select "Desktop 
@@ -43,4 +43,4 @@ Development with C++" and select "Python Development" and manually select all su
 
 
  
-260222, updated 24.2.2026
+260222, updated 25.2.2026
