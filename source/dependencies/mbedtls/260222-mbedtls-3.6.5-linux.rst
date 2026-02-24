@@ -1,5 +1,7 @@
-MbedTLS 3.6.5 Linux build with Cmake
-22.2.2026/pekka
+MbedTLS 3.6.5 Linux build with Cmake for eosal library.
+=======================================================
+eosal comes with readily built mbedTLS libraries and headers for 64 bit linux (AMD64).
+This instruction can be used as reference for other hardware or to update mbedTLS version.   
 
 Install Build Dependencies:
 
@@ -45,4 +47,4 @@ Copy libraries to use (for 64 bit PC linux computer)
 	  Then copy the renamed files t 
 	  to /coderoot/eosal/dependencies/linux/linux_generic_amd64_gcc.
 
-260222, updated 24.2.2026
+260222, updated 24.2.2026/pekka

@@ -5,7 +5,9 @@
 
 IOCOM library
 =============
-IoT/IO device networks over TCP/IP or serial port.
+IoT/IO device networks over TCP/IP or serial port. 
+Warning: This code is not in working order, requires serious effort to make it run.
+Do not waste your time. 
 
 
 .. toctree::
