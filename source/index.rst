@@ -21,6 +21,7 @@ IoT/IO device networks over TCP/IP or serial port.
    platform-abstraction/platform-abstraction
    hw-io-abstraction/hw-io-abstraction
    dev-tools/dev-tools
+   dependencies/dependencies
    micro-controllers/micro-controllers
    hardware/hardware
    infra/application_infrastructure

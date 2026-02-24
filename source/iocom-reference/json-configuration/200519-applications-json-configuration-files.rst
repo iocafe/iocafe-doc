@@ -31,7 +31,7 @@ Typical directory tree of most example applications (/coderoot/iocom/examples/gi
     │   └── signals
     ├── doc
     ├── osbuild
-    │   └── vs2019
+    │   └── vs
     └── scripts
 
 

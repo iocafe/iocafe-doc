@@ -1,13 +1,21 @@
-Development tools 
-=================
+Dependencies
+============
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   arduino/210126-arduino-api.rst
-   platform-io/platform-io
-   cmake/200725-cmake
+eosal
+
+   mbedtls/260222-mbedtls-3.6.5-readme-for-linux
+   mbedtls/260215-mbedtls-3.6.5-windows-visual-studio
+
+pins
+
+iocom
+   python
+
+bluetree
    virtual-machine/virtual-machine
    stm32duino/180920-debugging-stm32duino
    stm32duino/180920-LwIP-in-stm32duino
@@ -18,3 +26,5 @@ Development tools
    truestudio/190830-metal-code-repository-setup
    windows/200202-windows-build-notes
    windows/200111-building-with-opensll-on-windows
+
+dependencies.rst, updated 24.2.2026

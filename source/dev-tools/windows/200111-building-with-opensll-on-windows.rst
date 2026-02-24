@@ -43,7 +43,7 @@ Read the openssl/INSTALL note containing some specific build information common 
 
 Copy OpenSSL libraries to use
 ******************************
-Copy libssl.lib and libcrypto.lib from c:\coderoot\openssl directory to c:\coderoot\eosal\libraries\win64_vs2019. This will move these two libraries to be part of eosal repository, so steps in this paper are not needed in every computer using Visual Studio 2019. 
+Copy libssl.lib and libcrypto.lib from c:\coderoot\openssl directory to c:\coderoot\eosal\libraries\win64_vs. This will move these two libraries to be part of eosal repository, so steps in this paper are not needed in every computer using Visual Studio 2019. 
 
 Copy also the “openssl” include directory from c:\coderoot\openssl\include to c:\coderoot\eosal\libraries\include. This will move necessary headers to be part of eosal repository. 
 Do the same for the 32 bit build
@@ -54,7 +54,7 @@ Do the same for the 32 bit build
 * perl Configure -MT -Z7 threads no-deprecated no-shared VC-WIN32
 * nmake
 
-Copy libssl.lib and libcrypto.lib from c:\coderoot\openssl directory to c:\coderoot\eosal\libraries\win32_vs2019. Headers were already copied with 64 bit build.
+Copy libssl.lib and libcrypto.lib from c:\coderoot\openssl directory to c:\coderoot\eosal\libraries\win32_vs. Headers were already copied with 64 bit build.
 
 
 200111, updated 22.5.2020/pekka

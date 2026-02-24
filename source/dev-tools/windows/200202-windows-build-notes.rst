@@ -7,8 +7,8 @@ to require minor tinkering with build setup and possibly with code.
 
 Build folder organization and .sln files
 *****************************************
-Each library and example project directory contains subdirectory named build/vs2019. The <projectname>.sln solution
-file and the <projectname>.vcxproj is project file. All the other files and folders within vs2019 folder are temporary
+Each library and example project directory contains subdirectory named build/vs. The <projectname>.sln solution
+file and the <projectname>.vcxproj is project file. All the other files and folders within vs folder are temporary
 intermediate build and user setting files. For libraries, the solution file contains only reference library’s project
 file. For example projects, the solution file, in addition to example’s project file, lists all library projects
 needed to build the example. To build, open the solution file .sln in Visual Studio 2019, select if you want
