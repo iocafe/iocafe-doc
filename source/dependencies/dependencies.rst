@@ -11,8 +11,15 @@ use in both open source and propriatery projects.
 
 .. toctree::
    :maxdepth: 2
-   :caption: eosal:
+   :caption: eosal
 
    mbedtls/260224-mbedtls.rst
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: egui
+
+   imgui/260221-imgui-sources-are-copied-into-egui-library-code
    
 dependencies.rst, updated 24.2.2026
