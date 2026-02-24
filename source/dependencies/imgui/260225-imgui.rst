@@ -1,0 +1,16 @@
+imgui 
+==============================================
+
+Dear ImGui is a bloat-free graphical user interface library for C++. It outputs optimized vertex buffers that
+you can render anytime in your 3D-pipeline-enabled application. It is fast, portable, renderer agnostic, and
+self-contained (no external dependencies). The imgui library is high quality work by ocornut, who has invested ten 
+years of work on it.
+
+Selected imgui source code files have been readily copied into egui project. 
+
+.. toctree::
+   :maxdepth: 2
+
+   260221-copy-imgui-sources-into-egui
+   
+260221, updated 25.2.2026/pekka
