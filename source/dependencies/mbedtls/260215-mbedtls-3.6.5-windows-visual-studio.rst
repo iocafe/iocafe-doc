@@ -25,10 +25,11 @@ Development with C++" and select "Python Development" and manually select all su
 
 .. figure:: pics/260215-select-MT-or-MTd-to-run-without-DLL.png
    
-   "Select configuration Debug and Platform "all platforms". Debug information format is in C/C++, General."
+   "Select configuration Debug and Platform "all platforms". Runtime library is in C/C++, Code Generation tab."
 
 - Similarly you can change Debug information format to C7 compatible for 32/64 bit debug builds, so .lib will include debug information and .pdb is not needed. 
-- In Visual Studio, select the appropriate configuration (e.g., Release or Debug) and platform (e.g., x64 or Win32). Similarly change Debug Information format to None for all release builds.
+- In Visual Studio, select the appropriate configuration (e.g., Release or Debug) and platform (e.g., x64 or Win32). Debug information format is in C/C++, General tab.
+  You may change also Debug Information format to None for all release builds.
 - Build the solution from the Build menu. This will compile the static library.
 
 - Copy library mbedTLS.lib, debug/releases, 32 and 64 bit. Copy C:\\Users\\<user>\\mbed-tls-build\\mbedtls-3.6.5\\visualc\\VS2017\\x64\\Debug\\mbedTLS.lib -> C:\\coderoot\\eosal\\dependencies\\windows\\lib_win64_vs\\mbedTLSd.lib (notice 'd' added to library name for debug).
