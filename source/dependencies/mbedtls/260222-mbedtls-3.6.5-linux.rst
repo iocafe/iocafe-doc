@@ -1,6 +1,8 @@
 MbedTLS 3.6.5 Linux build with cmake for eosal library.
 =======================================================
 eosal comes with readily built mbedTLS libraries and headers for 64 bit linux (AMD64).
+If it is acceptable to use precompiled mbedTLS, there is no need to do anything to
+enable TLS.  
 This instruction can be used as reference for other hardware or to update mbedTLS version.   
 
 The 64 bit .a library files are in /coderoot/eosal/dependencies/linux/linux_generic_amd64_gcc
@@ -12,7 +14,7 @@ In Linux, there are three libraries for mbedTLS components: libmbedtls.a libmbed
 Debug builds end with extra 'd', for example libmbedtls.a is release build while libmbedtlsd.a is
 debug build. Compile with -lmbedtls -lmbedx509 -lmbedcrypto, order of these libraries is important.
 
-Install Build Dependencies.
+Install build dependencies.
 
 ::
 
