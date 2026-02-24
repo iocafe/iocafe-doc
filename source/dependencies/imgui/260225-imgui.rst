@@ -1,4 +1,4 @@
-imgui 
+Imgui for graphical user interface 
 ==============================================
 
 Dear ImGui is a bloat-free graphical user interface library for C++. It outputs optimized vertex buffers that
@@ -7,6 +7,8 @@ self-contained (no external dependencies). The imgui library is high quality wor
 years of work on it.
 
 Selected imgui source code files have been readily copied into egui project. 
+
+The rendering used is opengl/glfw/glew for windows and linux.  
 
 .. toctree::
    :maxdepth: 2
