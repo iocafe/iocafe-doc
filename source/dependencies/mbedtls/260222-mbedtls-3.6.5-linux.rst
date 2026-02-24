@@ -1,4 +1,4 @@
-MbedTLS 3.6.5 Linux build with Cmake for eosal library.
+MbedTLS 3.6.5 Linux build with cmake for eosal library.
 =======================================================
 eosal comes with readily built mbedTLS libraries and headers for 64 bit linux (AMD64).
 This instruction can be used as reference for other hardware or to update mbedTLS version.   
@@ -17,19 +17,25 @@ Run cmake and build/install with GNU make
 
 	I created directory /home/iocafe/mbedtls/build to be used as build directory:
 	
+:: 
+	
 	cd /home/iocafe/mbedtls
 	mkdir build
 	cd build
-	cmake cmake -DCMAKE_BUILD_TYPE=Release -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off ../mbedtls-3.6.5
+    cmake -DCMAKE_BUILD_TYPE=Release -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off ../mbedtls-3.6.5
 	make
 
 	cd /home/iocafe/mbedtls
 	mkdir buildd
 	cd buildd
-	cmake cmake -DCMAKE_BUILD_TYPE=Debug -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off ../mbedtls-3.6.5
+	cmake -DCMAKE_BUILD_TYPE=Debug -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off ../mbedtls-3.6.5
 	make
 
 Optional, install to operating sysem and update library cache:
+
+	This allows other project to use mbedTLS just built.
+
+::
 
 	cd /home/iocafe/mbedtls/build
 	sudo make install
@@ -44,7 +50,7 @@ Copy libraries to use (for 64 bit PC linux computer)
         - Rename libmbedtls.a, libmbedcrypto.a, and libmbedx509.a
 	  in /home/iocafe/mbedtls/build/library directory 
           to libmbedtlsd.a, libmbedcryptod.a, and libmbedx509d.a
-	  Then copy the renamed files t 
+	  Then copy the renamed files 
 	  to /coderoot/eosal/dependencies/linux/linux_generic_amd64_gcc.
 
 260222, updated 24.2.2026/pekka
