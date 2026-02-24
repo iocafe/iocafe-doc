@@ -23,6 +23,6 @@ Selected imgui source code files are copied into egui project.
   and imgui_impl_opengl3_loader.h.
 
 - Some problem with egui, assert for table fails. I needed to comment an assert away to be able to run.
-  The assert is in file imgui.cpp, line 3429. Marked with string "PEKKA, I HAVE SOME ERROR HERE".
+  The assert is in file imgui.cpp, line 3429. Marked with string "PEKKA, I HAVE SOME ERROR HERE". 
 
 260221, updated 25.2.2026/pekka

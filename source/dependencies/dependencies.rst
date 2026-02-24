@@ -20,6 +20,6 @@ use in both open source and propriatery projects.
    :maxdepth: 2
    :caption: egui
 
-   imgui/260221-imgui-sources-are-copied-into-egui-library-code
+   imgui/260221-copy-imgui-sources-into-egui
    
 dependencies.rst, updated 24.2.2026
