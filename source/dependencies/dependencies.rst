@@ -3,10 +3,10 @@ Dependencies
 
 The eosal, iocom, pins and egui libraries depend on other libraries,
 for example mbedTLS for network security, libjpeg for compression,
-python for building iocom as Python module, imgui for graphic user interface, etc.
+python for building iocom python module, imgui for graphic user interface, etc.
 
 These libraries come with Apache or MIT style licensing, similar to iocafe 
-libraries. So that final application can be built royalty free, allowing
+libraries. Final application can be built royalty free, allowing
 use in both open source and propriatery projects.
 
 .. toctree::

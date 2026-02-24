@@ -26,7 +26,7 @@ Run cmake and build/install with GNU make
 
 	I created directory /home/iocafe/mbedtls/build to be used as build directory:
 	
-:: 
+	:: 
 	
 	cd /home/iocafe/mbedtls
 	mkdir build
@@ -44,7 +44,7 @@ Optional, install to operating sysem and update library cache:
 
 	This allows other project to use mbedTLS just built.
 
-::
+	::
 
 	cd /home/iocafe/mbedtls/build
 	sudo make install
@@ -52,12 +52,12 @@ Optional, install to operating sysem and update library cache:
 
 Copy libraries to use (for 64 bit PC linux computer)
  
-        - Copy libmbedtls.a, libmbedcrypto.a, and libmbedx509.a
+    - Copy libmbedtls.a, libmbedcrypto.a, and libmbedx509.a
 	  from /home/iocafe/mbedtls/build/library 
 	  to /coderoot/eosal/dependencies/linux/linux_generic_amd64_gcc.
 	  This is the release build.
 	
-        - Rename libmbedtls.a, libmbedcrypto.a, and libmbedx509.a
+    - Rename libmbedtls.a, libmbedcrypto.a, and libmbedx509.a
 	  in /home/iocafe/mbedtls/buildd/library debug build directory 
           to libmbedtlsd.a, libmbedcryptod.a, and libmbedx509d.a
 	  Then copy the renamed files 

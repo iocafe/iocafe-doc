@@ -6,7 +6,7 @@ Transport Layer Security, TLS. This enables secure communication
 trough insecure network, like internet.   
 The mbedTLS library is used for platforms like Linux, Windows 
 and ESP32, which are powerful enough to support secured TCP communication.
-It is not needed for light weight microcontrollers, wchich use
+It is not needed for light weight microcontrollers, which use
 serial or unencrypted sockets for communication. 
 
 Notice that OpenSLL has been tested with eosal, but implementation
