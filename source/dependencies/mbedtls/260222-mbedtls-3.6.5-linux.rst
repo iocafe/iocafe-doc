@@ -12,19 +12,18 @@ In Linux, there are three libraries for mbedTLS components: libmbedtls.a libmbed
 Debug builds end with extra 'd', for example libmbedtls.a is release build while libmbedtlsd.a is
 debug build. Compile with -lmbedtls -lmbedx509 -lmbedcrypto, order of these libraries is important.
 
-Install Build Dependencies:
+Install Build Dependencies.
 
-	sudo apt update
-	sudo apt install build-essential cmake git
+::
 
-Uncompress source code 
+		sudo apt update
+		sudo apt install build-essential cmake git
 
-- I uncompressed mbedtls-3.6.5.tar.bz2 to /home/iocafe/mbedtls/mbedtls-3.6.5
-  (now this is the MbedTLS source root folder). 
+Uncompress source code. I uncompressed mbedtls-3.6.5.tar.bz2 to /home/iocafe/mbedtls/mbedtls-3.6.5 
+(now this is the MbedTLS source root folder). 
 
-Run cmake and build/install with GNU make. 
-
-- I created directory /home/iocafe/mbedtls/build to be used as build directory:
+Run cmake and build/install with GNU make. I created directory /home/iocafe/mbedtls/build 
+to be used as build directory:
 	
 :: 
 	
@@ -40,9 +39,7 @@ Run cmake and build/install with GNU make.
 		cmake -DCMAKE_BUILD_TYPE=Debug -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off ../mbedtls-3.6.5
 		make
 
-Optional, install to operating sysem and update library cache:
-
-- This allows other project to use mbedTLS just built.
+Optional, install to operating sysem and update library cache. This allows other project to use mbedTLS just built.
 
 ::
 
