@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\source",
+    "\\source\\dependencies",
+    "\\source\\dev-tools"
   ],
   "PreviewInSolutionExplorer": false
 }
