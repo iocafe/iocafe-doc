@@ -7,7 +7,7 @@ self-contained (no external dependencies). The imgui library is high quality wor
 years of work on it.
 
 HOW TO SWITCH TO A NEW IMGUI VERSION: 
-Imgui source code is downloaded as \coderoot\bluetree\egui\dependencies\downloads\imgui\imgui-1.92.6-docking.
+Imgui source code is downloaded as /coderoot/bluetree/egui/dependencies/downloads/imgui/imgui-1.92.6-docking.
 Selected imgui source code files are copied into egui project. 
 
 - Copy source files from /coderoot/bluetree/egui/dependencies/downloads/imgui/imgui-1.92.6-docking directory 
