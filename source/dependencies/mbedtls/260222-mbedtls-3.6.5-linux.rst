@@ -3,6 +3,15 @@ MbedTLS 3.6.5 Linux build with cmake for eosal library.
 eosal comes with readily built mbedTLS libraries and headers for 64 bit linux (AMD64).
 This instruction can be used as reference for other hardware or to update mbedTLS version.   
 
+The 64 bit .a library files are in /coderoot/eosal/dependencies/linux/linux_generic_amd64_gcc
+directory.
+
+Corresponding include headers are in /coderoot/eosal/dependencies/linux/include/mbedtls directory.
+
+In Linux, there are three libraries for mbedTLS components: libmbedtls.a libmbedx509.a libmbedcrypto.a. 
+Debug builds end with extra 'd', for example libmbedtls.a is release build while libmbedtlsd.a is
+debug build. Compile with -lmbedtls -lmbedx509 -lmbedcrypto, order of these libraries is important.
+
 Install Build Dependencies:
 
 	sudo apt update
@@ -22,7 +31,7 @@ Run cmake and build/install with GNU make
 	cd /home/iocafe/mbedtls
 	mkdir build
 	cd build
-    cmake -DCMAKE_BUILD_TYPE=Release -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off ../mbedtls-3.6.5
+	cmake -DCMAKE_BUILD_TYPE=Release -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off ../mbedtls-3.6.5
 	make
 
 	cd /home/iocafe/mbedtls
@@ -46,9 +55,10 @@ Copy libraries to use (for 64 bit PC linux computer)
         - Copy libmbedtls.a, libmbedcrypto.a, and libmbedx509.a
 	  from /home/iocafe/mbedtls/build/library 
 	  to /coderoot/eosal/dependencies/linux/linux_generic_amd64_gcc.
+	  This is the release build.
 	
         - Rename libmbedtls.a, libmbedcrypto.a, and libmbedx509.a
-	  in /home/iocafe/mbedtls/build/library directory 
+	  in /home/iocafe/mbedtls/buildd/library debug build directory 
           to libmbedtlsd.a, libmbedcryptod.a, and libmbedx509d.a
 	  Then copy the renamed files 
 	  to /coderoot/eosal/dependencies/linux/linux_generic_amd64_gcc.
