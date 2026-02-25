@@ -1,11 +1,6 @@
 Copy imgui source files into egui library code
 ==============================================
 
-Dear ImGui is a bloat-free graphical user interface library for C++. It outputs optimized vertex buffers that
-you can render anytime in your 3D-pipeline-enabled application. It is fast, portable, renderer agnostic, and
-self-contained (no external dependencies). The imgui library is high quality work by ocornut, who has invested ten 
-years of work on it.
-
 HOW TO SWITCH TO A NEW IMGUI VERSION: 
 Imgui source code is downloaded as /coderoot/bluetree/egui/dependencies/downloads/imgui/imgui-1.92.6-docking.
 Selected imgui source code files are copied into egui project. 

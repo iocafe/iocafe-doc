@@ -1,4 +1,4 @@
-MbedTLS 3.6.5 communication security
+MbedTLS library for communication security
 =======================================================
 
 The MbedTLS library is used by eosal library for network communication 

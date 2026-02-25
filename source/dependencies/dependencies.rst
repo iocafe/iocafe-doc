@@ -15,7 +15,6 @@ use in both open source and propriatery projects.
 
    mbedtls/260224-mbedtls.rst
 
-
 .. toctree::
    :maxdepth: 2
    :caption: egui
@@ -24,4 +23,4 @@ use in both open source and propriatery projects.
    glew/260225-glew
    glfw/260225-glfw
    
-dependencies.rst, updated 24.2.2026
+dependencies.rst, updated 25.2.2026
