@@ -1,7 +1,7 @@
 GLEW on Windows 
 ==============================================
 
-The GLEW library comes prebuild for 32 bit Windows (i386 architecture) 
+The bluetree repository (eobject, egui and glass) contains prebuilt GLEW libraries for 32 bit Windows (i386 architecture) 
 and for 64 bit Windows (AMD64 architecture).
 
 - Headers for prebuilt GLEW are in /coderoot/bluetree/egui/dependencies/windows/include/GL directory.
