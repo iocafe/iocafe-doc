@@ -1,4 +1,4 @@
-GLFW EW library
+GLFW on Linux
 ==============================================
 
 Linux GLFW library is installed using Debian, etc package.
