@@ -1,4 +1,4 @@
-Copy imgui source files into egui library code
+Imgui source files within egui library code
 ==============================================
 
 HOW TO SWITCH TO A NEW IMGUI VERSION: 
