@@ -3,7 +3,9 @@
     "",
     "\\source",
     "\\source\\dependencies",
+    "\\source\\dependencies\\imgui",
     "\\source\\dev-tools"
   ],
+  "SelectedNode": "\\source\\dependencies\\imgui\\260221-copy-imgui-sources-into-egui.rst",
   "PreviewInSolutionExplorer": false
 }

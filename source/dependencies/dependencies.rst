@@ -21,5 +21,7 @@ use in both open source and propriatery projects.
    :caption: egui
 
    imgui/260221-copy-imgui-sources-into-egui
+   glew/260225-glew
+   glfw/260225-glfw
    
 dependencies.rst, updated 24.2.2026
