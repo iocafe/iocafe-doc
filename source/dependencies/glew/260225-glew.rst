@@ -1,5 +1,21 @@
 GLEW library
 ==============================================
 
+The GLEW library (OpenGL Extension Wrangler Library) is a cross-platform, open-source C/C++ library that solves a common problem in OpenGL development: managing and loading OpenGL extensions .
 
+Its main purpose is to simplify your code by handling the complex, platform-specific details of accessing modern OpenGL features, which are often available as extensions .
+🔧 What Problems Does GLEW Solve? To understand why GLEW is useful, it helps to know a bit about how OpenGL works:
+
+- The OpenGL Extension Mechanism: OpenGL is an evolving standard. New features and capabilities are introduced as "extensions." Hardware vendors (like NVIDIA or AMD) implement these extensions in their drivers .
+
+- The Challenge for Developers: On most operating systems, the standard OpenGL library (gl.h) only guarantees access to OpenGL 1.1 functions. To use any feature from OpenGL 1.2 or later (including modern 3.x and 4.x features), you must manually load function pointers at runtime. Doing this for dozens or hundreds of functions across different platforms is tedious and error-prone .
+
+- GLEW's Solution: GLEW automates this entire process. It provides a single, easy-to-use mechanism to load all OpenGL core and extension functions, making your code simpler and more portable .
+
+.. toctree::
+   :maxdepth: 2
+
+   260225-glew-on-linux
+   260225-glew-on-windows
+   
 260225, updated 25.2.2026/pekka

@@ -1,5 +1,36 @@
-GLEW library
+GLFW library
 ==============================================
 
+GLFW (Graphics Library Framework) is an open-source, cross-platform library that handles 
+all the platform-specific "plumbing" required to get an OpenGL or Vulkan application 
+up and running. While libraries like GLEW manage the "what" (OpenGL functions/extensions),
+GLFW manages the "where" and "how" (the window and user interaction).
+
+OpenGL itself is only concerned with rendering, and doesn't include functions for creating
+windows or handling input. GLFW fills this gap by providing a simple, uniform API for these
+tasks. 
+
+GLFW's main jobs can be broken down into a few key areas:
+
+- Window and Context Creation: This is its primary task. GLFW allows you to create a window,
+  specify its size and title, and crucially, create a valid OpenGL or OpenGL ES context
+  attached to that window. This context is what your rendering commands will draw into.
+
+- Input Event Handling: It abstracts the complexities of handling user input. You can easily
+  set up callbacks to be notified of keyboard key presses, mouse movement, button clicks, 
+  and joystick connections, all in a uniform way across different platforms.
+
+- Cross-Platform Abstraction: GLFW supports Windows, macOS, and Linux (via Wayland and X11).
+  You write your window and input code once using the GLFW API, and it works on all these
+  operating systems without modification.
+
+- Utility Functions: It provides basic but essential utilities like a high-resolution timer
+  glfwGetTime() for animation and frame-rate management.
+
+.. toctree::
+   :maxdepth: 2
+
+   260225-glfw-on-linux
+   260225-glfw-on-windows
 
 260225, updated 25.2.2026/pekka
