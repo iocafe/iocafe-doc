@@ -7,6 +7,7 @@ on top of Video4Linux2 (V4L2) devices, making it easier for applications to
 work with video hardware (like webcams and TV tuners).
 
 Here is a breakdown of what it is and why it exists:
+
 - Video capture devices (especially webcams) output video in many different
   raw formats (like MJPEG, YUYV, RGB3, etc.). If an application wants to display
   or process this video, it must understand and convert all these formats, 
