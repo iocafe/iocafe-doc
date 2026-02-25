@@ -31,6 +31,7 @@ But for standard desktop OpenGL development on Ubuntu, the libgl1-mesa-dev
 package is the correct starting point.
 
 ::
+
     sudo apt update
     sudo apt install libgl1-mesa-dev
 
@@ -38,6 +39,7 @@ package is the correct starting point.
 It could be also, but I have not tried this:
 
 ::
+  
     sudo apt update
     sudo apt install libgl-dev
 
