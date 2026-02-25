@@ -20,6 +20,7 @@ use in both open source and propriatery projects.
    :caption: egui
 
    imgui/260221-copy-imgui-sources-into-egui
+   opengl/260225-opengl
    glew/260225-glew
    glfw/260225-glfw
    
