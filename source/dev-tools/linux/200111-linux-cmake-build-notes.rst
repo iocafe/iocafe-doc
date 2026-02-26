@@ -1,22 +1,19 @@
 Linux build notes
 ===================
-Build is cmake based, so any tool which can works with cmake should work fine. The cmake is like preprocessor
-to generate platform specific make, etc. files. One writes build instructions in cmake syntax in CmakeLists.txt
-file, and cmake will generate the make files for actual build system to use. It can generate many different ones.
-You can as well build with cmake from command line, or use Eclipse, other IDE, etc. QTCreator is an exception,
-it can use CmakeLists.txt directly. The cmake version should not make much difference, the projects here do not
-use the new cmake features.
+Build is cmake based, so any IDE, etc tool which can works with cmake should
+be fine. I recommend Visual Studio Code. As well, it is possible to run cmake directly from the command.
 
-Visual Studio Code or QT creator are good choices for IDE. In past I have mostly used QT creator 4.0.1, QT 5.6 and cmake for
-Linux builds. To build a project, start QT creator and open CmakeLists.txt file from project’s root folder.
-QT creator is easy to set up and use, and works well. I appreciate easy set up, debugging and it pointing out the build
-errors. 
+The developer writes build instructions in CmakeLists.txt file at project's root directory. The cmake is like a preprocessor, it generates platform and build tool specific make, etc. files. It supports many build tools, like GNU make, Ninja...
+
+QTCreator is an exception, it uses CmakeLists.txt files directly.
+
+Visual Studio Code or QT creator are good choices for IDE. In past I have mostly used QT creator for Linux builds, nowdays mostly Visual Studio Code.
 
 
 Dependencies:
 **************
 
-Camera:
+pins (for camera):
 
 - sudo apt-get install libv4l-dev
 
@@ -54,5 +51,4 @@ I think OpenGL ES 2.0 is needed??? Check:
 - https://github.com/zertyz/hello_imgui_rpi
 - https://github.com/ocornut/imgui/pull/2837
 
-
-200111, updated 6.11.2024/pekka
+200111, updated 25.2.2026/pekka

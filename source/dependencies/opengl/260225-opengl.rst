@@ -1,0 +1,49 @@
+OpenGL library
+==============================================
+
+OpenGL (Open Graphics Library) is a cross-language, cross-platform API 
+for rendering 2D and 3D vector graphics.
+
+Unlike GLEW (which loads functions) and GLFW (which creates windows), 
+OpenGL itself is the thing that actually draws the pixels on your screen. 
+Think of it this way:
+
+- GLFW: Creates the window and handles input- The easel and canvas
+- OpenGL: Does the actual drawing	- The paint and brushes
+- GLEW: Loads modern OpenGL functions	- The instruction manual for
+  advanced techniques What OpenGL Actually Does
+
+At its core, OpenGL is a state machine that provides hundreds of 
+functions for graphics programming:
+
+1. Drawing Primitives
+2. Vertex and Fragment Processing
+3. Texturing
+4. Transformations
+5. Lighting and Materials
+6. Blending and Transparency
+
+
+On linux, installation of OpenGL library: If you are specifically targeting
+OpenGL for Embedded Systems (OpenGL ES), for example on mobile or embedded
+devices, there are separate packages like libgles2-mesa-dev. 
+But for standard desktop OpenGL development on Ubuntu, the libgl1-mesa-dev 
+package is the correct starting point.
+
+::
+
+    sudo apt update
+    sudo apt install libgl1-mesa-dev
+
+
+It could be also, but I have not tried this:
+
+::
+  
+    sudo apt update
+    sudo apt install libgl-dev
+
+
+Windows Visual Studio 2026 seems to contain openGL, ready for use.
+
+260225, updated 25.2.2026/pekka
