@@ -7,7 +7,7 @@
 * Video stream will use flat memory buffer instead of ring buffer to allow multiple recipients. 
   JPEG compression can be selected to fit image to buffer. 
 * Cloud: Cloudia type of forwarding using IOCOM protocol in cloud server is replaced by 
-  TSL -> TLS byte stream forwarding.
+  TLS -> TLS byte stream forwarding.
 * Pushing signal "connected" state downwards will not be implemnted (at least for now):
   Too complex and rarely, if ever, useful feature. 
 
