@@ -17,4 +17,3 @@ Development tools
    truestudio/200111-true-studio-build-notes
    truestudio/190830-metal-code-repository-setup
    windows/200202-windows-build-notes
-   windows/200111-building-with-opensll-on-windows

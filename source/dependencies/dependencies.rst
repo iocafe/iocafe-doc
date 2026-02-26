@@ -13,7 +13,8 @@ use in both open source and propriatery projects.
    :maxdepth: 2
    :caption: eosal
 
-   mbedtls/260224-mbedtls.rst
+   mbedtls/260224-mbedtls
+   openssl/200111-building-with-opensll-on-windows
 
 .. toctree::
    :maxdepth: 2

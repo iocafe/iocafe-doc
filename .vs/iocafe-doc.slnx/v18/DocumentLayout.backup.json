@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,10 +33,6 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": ".gitignore",
@@ -44,7 +40,7 @@
               "RelativeDocumentMoniker": ".gitignore",
               "ToolTip": "C:\\coderoot\\iocafe-doc\\.gitignore",
               "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-02-25T02:19:00.559Z",
               "EditorCaption": ""
@@ -57,10 +53,9 @@
               "RelativeDocumentMoniker": "source\\dependencies\\dependencies.rst",
               "ToolTip": "C:\\coderoot\\iocafe-doc\\source\\dependencies\\dependencies.rst",
               "RelativeToolTip": "source\\dependencies\\dependencies.rst",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-24T07:43:46.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T07:43:46.052Z"
             },
             {
               "$type": "Document",
