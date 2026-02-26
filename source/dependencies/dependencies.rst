@@ -14,7 +14,7 @@ use in both open source and propriatery projects.
    :caption: eosal
 
    mbedtls/260224-mbedtls
-   openssl/200111-building-with-opensll-on-windows
+   openssl/200111-building-opensll-on-windows
 
 .. toctree::
    :maxdepth: 2
