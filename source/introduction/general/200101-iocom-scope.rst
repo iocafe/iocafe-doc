@@ -42,8 +42,8 @@ Notes
 * The server and IO device use the same IOCOM library to communicate. These may be very different environments: IO microcontroller could
   have 100kB or RAM run on plain metal. Server side could have full fledged linux. The library is scaled to target platform by set of
   compiler defines, which enable or disable use of features like multi threading, dynamic memory allocation, device authentication, etc.
-* Real time multiplayer games: Communication between player and game service ovr internet is very similar to one needed for connecting
-  IoT/IO devices. There are many game oriented GUI libraries for Python, like Panda3D, Pyglet, Kivy. I have written simple games this way 
+* Real time multiplayer games: Communication between player and game service over network is very similar to one needed for connecting
+  IoT/IO devices. There are many game oriented GUI libraries for Python, like pygame, pyglet... I have written simple games this way
   to test communcation, just for fun.
 
 

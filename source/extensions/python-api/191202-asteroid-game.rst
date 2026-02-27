@@ -22,7 +22,7 @@ Linux notes:
 Note 1: Build and run dependencies (already in dev. virtual machine)
     • sudo apt-get install cmake
     • python (3.5 or newer preferred)
-    • pyglet
+    • pyglet: python3 -m pip install pyglet
 
 Note 2: Build iocompython from C code 
     • cd /coderoot/iocom/extensions/iocompython
@@ -49,7 +49,7 @@ Note 5: Start asteroid test client
     • ./asteroid.sh
 
 Note 6: General 
-    • Line  "import pyglet" or "import kivy" in .py file causes python to load Pyglet, or Kivy, if the library is installed.
+    • Line  "import pyglet" in .py imports game graphics library "Pyglet".
     • Python starts with command python3 Python.
     • Ofter several different Python 3 versions are installed in same computer, so sometimes we use "/usr/bin/python3" and sometimes just “python3” to start Python.
     • Python needs to find /coderoot/bin/linux/iocompython.so. To make this happen environment variable "export PYTHONPATH=/coderoot/bin/linux" is set. 

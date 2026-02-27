@@ -1,4 +1,4 @@
-Extension libraries
+iocom extension libraries
 ================================
 
 .. toctree::

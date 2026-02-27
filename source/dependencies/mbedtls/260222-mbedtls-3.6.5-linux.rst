@@ -32,13 +32,13 @@ to be used as build directory:
 		cd /home/iocafe/mbedtls
 		mkdir build
 		cd build
-		cmake -DCMAKE_BUILD_TYPE=Release -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off ../mbedtls-3.6.5
+		cmake -DCMAKE_BUILD_TYPE=Release -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off -DCMAKE_POSITION_INDEPENDENT_CODE=On ../mbedtls-3.6.5
 		make
 
 		cd /home/iocafe/mbedtls
 		mkdir buildd
 		cd buildd
-		cmake -DCMAKE_BUILD_TYPE=Debug -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off ../mbedtls-3.6.5
+		cmake -DCMAKE_BUILD_TYPE=Debug -DUSE_STATIC_MBEDTLS_LIBRARY=On -DUSE_SHARED_MBEDTLS_LIBRARY=Off -DCMAKE_POSITION_INDEPENDENT_CODE=On ../mbedtls-3.6.5
 		make
 
 Optional, install to operating sysem and update library cache. This allows other project to use mbedTLS just built.
@@ -62,4 +62,4 @@ Copy libraries to use (for 64 bit PC linux computer)
   Then copy the renamed files 
   to /coderoot/eosal/dependencies/linux/linux_generic_amd64_gcc.
 
-260222, updated 24.2.2026/pekka
+260222, updated 28.2.2026/pekka
