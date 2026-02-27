@@ -20,8 +20,9 @@ If not, install Python 3 for Linux:
     sudo apt install python3-pip
 
 
-Python libraries and headers are needed to build iocompython. This is
-C extension to allow Python to use iocom. To install these:
+Python libraries and headers are needed to build iocompython. The iocompython
+is a C extension to allow use of iocom from Python. To install Python components
+for this use:
 
 ::
 

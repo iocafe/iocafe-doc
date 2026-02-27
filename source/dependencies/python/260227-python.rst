@@ -6,9 +6,9 @@ for its simplicity and readability.
 The iocafe packages use Python is used to run scripts which process
 JSON files, copy files for specific micro controller builds, etc.
 
-Python interface is compliled to iocompython, which is C extension
-to provide Python API to iocom.
-
+The iocompython is a C extension to provide Python API on iocom.
+iocompython is compliled with Python C interface library
+and headers.
 
 .. toctree::
    :maxdepth: 2
