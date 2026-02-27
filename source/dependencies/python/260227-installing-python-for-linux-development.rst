@@ -1,7 +1,7 @@
 Installing Python for Linux development
 ===================================================================
 
-At the time of writing, Python version is 3.12.3, but any Python 3
+At the time of writing, Python version is 3.12.3, any Python 3
 version should work just fine.
 
 Check version number, you may already have python3 installed
@@ -27,7 +27,6 @@ C extension to allow Python to use iocom. To install these:
 
    sudo apt update
    sudo apt install build-essential
-   sudo apt build-dep python3.X (change X with your Python version number)
    sudo apt install python3-dev
 
 260227, last updated 27.2.2026/pekka
