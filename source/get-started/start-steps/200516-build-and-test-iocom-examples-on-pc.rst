@@ -7,9 +7,8 @@ To make sure that everything works, one can build gina and frank examples, start
 output that they start communication. Both examples are in /coderoot/iocom/examples directory.
 
 
-Visualize with ispy
+Visualize with glass
 *******************
-The ispy can be used to connect to frank example to provide simple UI. It is started by ispy.sh or ispy.bat in 
-/coderoot/iocom/extensions/iocompython/examples/ispy directory. It is Python program and requires Kivy library.
+The glass user interface can be used to connect iocom apps to provide simple UI.
 
-200516, updated 19.5.2020/pekka
+200516, updated 28.2.2026/pekka

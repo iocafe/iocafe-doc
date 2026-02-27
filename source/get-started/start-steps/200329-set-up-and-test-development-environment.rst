@@ -5,12 +5,11 @@ PC development environment
 **************************
 I list here the tools which we have used. Code is plain C code, and it is possible to use other tools as well. 
 
-* Linux: cmake build system and QT creator as IDE.
-* Windows: Visual Studio 2019 community edition. Large business with > $1 million revenue need to use the commercial version. 
-* Most of scripting and some server side programming is Python 3.
-* Kivy and Pyglet Python libraries are used in some examples (kivy in ispy).
+* Linux: cmake build system, Visual Studio Code or QT creator as IDE.
+* Windows: Visual Studio 2026 community edition. Large business with > $1 million revenue need to use the commercial version.
+* Most of scripting and some programming is Python 3.
 * Sphinx is used for documentation.
-* I recommend Git Kraken, it is free for non commercial use.
+* I like Git Kraken, it is free for non commercial use.
 
 Micro-controller development tools
 **********************************

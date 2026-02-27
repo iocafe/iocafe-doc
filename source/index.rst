@@ -18,7 +18,7 @@ Do not waste your time.
    get-started/get-started
    security/security
    iocom-reference/iocom-reference
-   extensions/extensions
+   extensions/iocom-extensions
    eobjects/eobjects
    platform-abstraction/platform-abstraction
    hw-io-abstraction/hw-io-abstraction
