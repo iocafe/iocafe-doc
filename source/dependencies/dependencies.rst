@@ -24,6 +24,12 @@ use in both open source and propriatery projects.
 
 .. toctree::
    :maxdepth: 2
+   :caption: iocom
+
+   python/260227-python
+
+.. toctree::
+   :maxdepth: 2
    :caption: egui
 
    imgui/260221-copy-imgui-sources-into-egui
