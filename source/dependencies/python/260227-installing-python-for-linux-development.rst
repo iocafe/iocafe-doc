@@ -4,7 +4,7 @@ Installing Python for Linux development
 At the time of writing, Python version is 3.12.3, any Python 3
 version should work just fine.
 
-Check version number, you may already have python3 installed
+Check version number, you may already have a new python3 version installed:
 
 ::
 
@@ -21,7 +21,7 @@ If not, install Python 3 for Linux:
 
 
 Python libraries and headers are needed to build iocompython. The iocompython
-is a C extension to allow use of iocom from Python. To install Python components
+is a C extension to allow use of iocom from Python. To install the Python components
 for this use:
 
 ::
