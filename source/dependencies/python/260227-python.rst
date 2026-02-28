@@ -15,5 +15,6 @@ and headers.
    :caption: iocom
 
    260227-installing-python-for-linux-development
+   260228-installing-python-for-windows-development
 
 260227, last updated 27.2.2026/pekka
