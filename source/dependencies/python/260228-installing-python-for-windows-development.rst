@@ -30,11 +30,15 @@ You may need to modify python include and library paths to match installed pytho
 
 To set the PYTHONPATH environment variable on Windows, you 
 - go to the Start menu search for "Environment Variables," 
-  and then add a new variable named PYTHONPATH with the desired 
-  directory path as its value. Alternatively, you can set it using 
- Command Prompt with the command set PYTHONPATH=c:\path\to\my\modules for a temporary change.
+  and then add a new variable named PYTHONPATH with the "c:\\coderoot\\bin\\windows"
+  as its value.
+  Alternatively, you can set it temporarily using command Prompt with the command
 
-Test with asteroidasteroid C:\coderoot\iocom\extensions\iocompython\examples\asteroid-service
-and C:\coderoot\iocom\extensions\iocompython\examples\asteroid-client-pyglet
+::
+
+  set PYTHONPATH=c:\\coderoot\\bin\\windows
+
+Test with asteroids in C:\\coderoot\\iocom\\extensions\\iocompython\\examples\\asteroid-service
+and C:\\coderoot\\iocom\\extensions\\iocompython\\examples\\asteroid-client-pyglet
 
 260228, last updated 27.2.2026/pekka
