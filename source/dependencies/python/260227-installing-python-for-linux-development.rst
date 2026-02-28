@@ -30,4 +30,11 @@ for this use:
    sudo apt install build-essential
    sudo apt install python3-dev
 
+Set PYTHONPATH in as last line of .profile file in home directory. When user logs in,
+the .profile is processed. This enables Python to find iocompython.pyd, etc.
+
+::
+
+   export PYTHONPATH=${PYTHONPATH}:/coderoot/bin/linux
+
 260227, last updated 27.2.2026/pekka
