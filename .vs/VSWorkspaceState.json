@@ -4,7 +4,10 @@
     "\\source",
     "\\source\\dependencies",
     "\\source\\dependencies\\imgui",
+    "\\source\\dependencies\\mbedtls",
+    "\\source\\dependencies\\python",
     "\\source\\dev-tools"
   ],
+  "SelectedNode": "\\source\\dependencies\\python\\260228-installing-python-for-windows-development.rst",
   "PreviewInSolutionExplorer": false
 }

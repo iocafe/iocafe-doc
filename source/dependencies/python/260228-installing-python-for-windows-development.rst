@@ -1,7 +1,7 @@
 Installing Python for Windows development
 ===================================================================
 
-Download installer for latest stable Python version from https://www.python.org.
+Download installer for latest stable 64 bit AMD Python version from https://www.python.org.
 (python-3.13.12-amd64.exe at time of writing these notes).
 
 
@@ -27,5 +27,14 @@ You may need to modify python include and library paths to match installed pytho
 
    Python library path points to libraries within installed Python version.
 
+
+To set the PYTHONPATH environment variable on Windows, you 
+- go to the Start menu search for "Environment Variables," 
+  and then add a new variable named PYTHONPATH with the desired 
+  directory path as its value. Alternatively, you can set it using 
+ Command Prompt with the command set PYTHONPATH=c:\path\to\my\modules for a temporary change.
+
+Test with asteroidasteroid C:\coderoot\iocom\extensions\iocompython\examples\asteroid-service
+and C:\coderoot\iocom\extensions\iocompython\examples\asteroid-client-pyglet
 
 260228, last updated 27.2.2026/pekka

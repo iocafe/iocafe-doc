@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\coderoot\\iocafe-doc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\coderoot\\iocafe-doc\\source\\dependencies\\python\\260228-installing-python-for-windows-development.rst||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:source\\dependencies\\python\\260228-installing-python-for-windows-development.rst||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\coderoot\\iocafe-doc\\source\\dependencies\\python\\260227-python.rst||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:source\\dependencies\\python\\260227-python.rst||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -43,6 +47,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "260228-installing-python-for-windows-development.rst",
+              "DocumentMoniker": "C:\\coderoot\\iocafe-doc\\source\\dependencies\\python\\260228-installing-python-for-windows-development.rst",
+              "RelativeDocumentMoniker": "source\\dependencies\\python\\260228-installing-python-for-windows-development.rst",
+              "ToolTip": "C:\\coderoot\\iocafe-doc\\source\\dependencies\\python\\260228-installing-python-for-windows-development.rst",
+              "RelativeToolTip": "source\\dependencies\\python\\260228-installing-python-for-windows-development.rst",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-28T01:17:28.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "260227-python.rst",
               "DocumentMoniker": "C:\\coderoot\\iocafe-doc\\source\\dependencies\\python\\260227-python.rst",
               "RelativeDocumentMoniker": "source\\dependencies\\python\\260227-python.rst",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "260215-mbedtls-3.6.5-windows-visual-studio.rst",
               "DocumentMoniker": "C:\\coderoot\\iocafe-doc\\source\\dependencies\\mbedtls\\260215-mbedtls-3.6.5-windows-visual-studio.rst",
               "RelativeDocumentMoniker": "source\\dependencies\\mbedtls\\260215-mbedtls-3.6.5-windows-visual-studio.rst",
@@ -68,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\coderoot\\iocafe-doc\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -80,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "dependencies.rst",
               "DocumentMoniker": "C:\\coderoot\\iocafe-doc\\source\\dependencies\\dependencies.rst",
               "RelativeDocumentMoniker": "source\\dependencies\\dependencies.rst",
@@ -93,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "dev-tools.rst",
               "DocumentMoniker": "C:\\coderoot\\iocafe-doc\\source\\dev-tools\\dev-tools.rst",
               "RelativeDocumentMoniker": "source\\dev-tools\\dev-tools.rst",
