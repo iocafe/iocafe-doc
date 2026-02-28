@@ -28,7 +28,4 @@ You may need to modify python include and library paths to match installed pytho
    Python library path points to libraries within installed Python version.
 
 
-    python --version
-
-
 260228, last updated 27.2.2026/pekka
