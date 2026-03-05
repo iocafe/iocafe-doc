@@ -1,0 +1,7 @@
+These setting have been added to end of .profile file in user's home directory. 
+
+::
+
+  alias get_idf='. $HOME/esp/v5.5/esp-idf/export.sh
+  export IDF_PATH=$HOME/esp/v5.5/esp-idf
+  export PATH="$IDF_PATH/tools:/home/iocafe/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin:$PATH"
