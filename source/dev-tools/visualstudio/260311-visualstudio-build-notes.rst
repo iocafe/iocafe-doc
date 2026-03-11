@@ -8,11 +8,11 @@ Build statically linked libraries for linking with eosal, etc.
 
 .. figure:: pics/260215-select-all-in-projects-manager-right-click-and-select-properties.png
 
-   Select all projects
+   Select all projects, right click and select properties.
 
 .. figure:: pics/260215-select-MTd.png
 
-   Select all projects
+   See /MTor MTd for all projects, right click and select properties. 
 
 
 Python is needed for Visual Studio development.
