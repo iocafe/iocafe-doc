@@ -5,7 +5,6 @@ Development tools
    :maxdepth: 2
    :caption: Contents:
 
-   cmake/200725-cmake
    vscode/260311-vscode-build-notes
    stm32duino/180920-LwIP-in-stm32duino
    windows/200202-windows-build-notes
