@@ -6,7 +6,6 @@ Development tools
    :caption: Contents:
 
    vscode/260311-vscode-build-notes
-   stm32duino/180920-LwIP-in-stm32duino
    windows/200202-windows-build-notes
    visualstudio/260311-visualstudio-build-notes
    linux/200111-linux-cmake-build-notes
@@ -16,4 +15,5 @@ Development tools
    platform-io/platform-io
    truestudio/200111-true-studio-build-notes
    truestudio/190830-metal-code-repository-setup
+   stm32duino/180920-LwIP-in-stm32duino
    
