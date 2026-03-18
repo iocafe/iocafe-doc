@@ -1,0 +1,28 @@
+ESP-IDF for ESP32 development
+=========================================================================
+
+Esp-IDF use
+***********************
+
+The ESP-IDF can be used from command line, or with Visual Studio code extension.
+
+
+
+Installing ESP-IDF
+***********************
+
+Follow Espressif instructions. 
+
+Configuration in .profile
+********************************************
+
+Condiguration file .progile is loaded when user logs on. User's environment variables can be set
+there. The setting below have been added to end of .profile file in user's home directory. 
+
+::
+
+	alias get_idf='. $HOME/esp/esp-idf-v5.5.3/export.sh'
+	export IDF_PATH=$HOME/esp/esp-idf-v5.5.3
+  
+  
+

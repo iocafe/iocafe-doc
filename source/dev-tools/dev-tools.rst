@@ -6,6 +6,7 @@ Development tools
    :caption: Contents:
 
    vscode/260311-vscode-build-notes
+   espidf/260318-esp-idf
    windows/200202-windows-build-notes
    visualstudio/260311-visualstudio-build-notes
    linux/200111-linux-cmake-build-notes

@@ -3,6 +3,9 @@ Visual Studio Code - Linux/Windows desktop C/C++ build notes
 
 Visual Studio Code extension "C/C++ IntelliSense, debugging, and code browsing".
 
+Visual Studio Code has been used for Linux, Windows, ESP32 (ESP-IDF extension) 
+and for Arduino style builds (Platform IO extension).
+
 Switching between debug and release builds
 ***********************
 
