@@ -21,7 +21,7 @@ Do not waste your time.
    extensions/iocom-extensions
    eobjects/eobjects
    platform-abstraction/platform-abstraction
-   hw-io-abstraction/hw-io-abstraction
+   pins-library/260319-pins-library
    dev-tools/dev-tools
    dependencies/dependencies
    micro-controllers/micro-controllers
