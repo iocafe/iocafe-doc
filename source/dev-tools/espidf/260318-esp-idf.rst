@@ -25,4 +25,10 @@ there. The setting below have been added to end of .profile file in user's home 
 	export IDF_PATH=$HOME/esp/esp-idf-v5.5.3
   
   
+Troubleshooting
+********************************************
 
+ESP-IDF set target fails on Windows: 
+ESP-IDF complains about illegal escape character '\E'. Select configure ESP-IDF 
+Extension, Advanced. And simply replace backslashes '\' in "Enter ESP-IDF 
+directory (IDF_PATH)" with forward slashes '/'. 
